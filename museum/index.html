@@ -221,37 +221,56 @@
           <h2 class="section__title title-underline">
             Buy tickets
           </h2>
-          <div class="tickets__order-form order-form">
-            <div class="order-form__ticket-types">
-              <h4 class="order-form___title">
+          <form class="tickets__order-form order-form">
+            <fieldset class="order-form__ticket-types">
+              <legend class="order-form___legend">
                 Ticket Type
-              </h4>
-
+              </legend>
               <label class="order-form__ticket-type radio">
-                <input class="radio__btn" type="radio" name="permanent">
+                <input class="radio__btn" type="radio" name="permanent_exhibition" id="permanent_exhibition">
                 <span class="radio__label">Permanent exhibition</span>
               </label>
               <label class="order-form__ticket-type radio">
-                <input class="radio__btn" type="radio" name="permanent">
+                <input class="radio__btn" type="radio" name="temporary_exhibition" id="temporary_exhibition"">
                 <span class="radio__label">Temporary exhibition</span>
               </label>
               <label class="order-form__ticket-type radio">
-                <input class="radio__btn" type="radio" name="permanent">
-                <span class="radio__label">Combined Admissionn</span>
+                <input class="radio__btn" type="radio" name="combined_admission" id="combined_admission">
+                <span class="radio__label">Combined Admission</span>
               </label>
-            </div>
-            <div class="order-form__amount">
-              <h4 class="order-form__title">
+            </fieldset>
+            <fieldset class="order-form__amount">
+              <legend class="order-form__legend">
                 Amount
-              </h4>
-            </div>
+              </legend>
+              <fieldset class="order-form__ticket-category">
+                <label for="" class="order-form__label">Basic 18+</label>
+                  <button type="button" class="order-form__btn-remove" aria-label="remove one ticket">
+                    <svg></svg>
+                  </button>
+                  <input type="number" class="order-form__amount">
+                  <button type="button" class="order-form__btn-add" aria-label="add one ticket">
+                    <svg></svg>
+                  </button>
+              </fieldset>
+              <fieldset class="order-form__ticket-category">
+                <label for="" class="order-form__label">Senior 65+</label>
+                  <button type="button" class="order-form__btn-remove" aria-label="remove one ticket">
+                    <svg></svg>
+                  </button>
+                  <input type="number" class="order-form__amount">
+                  <button type="button" class="order-form__btn-add" aria-label="add one ticket">
+                    <svg></svg>
+                  </button>
+              </fieldset>
+            </fieldset>
             <span class="order-form__total">
               Total €220 
             </span>
-            <button type="button" class="order-form__btn">
+            <button type="submit" class="order-form__btn">
               Buy Now
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
