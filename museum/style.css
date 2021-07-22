@@ -38,6 +38,9 @@ body {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+}
 
 .header {
   background-color: var(--bg-dark);
@@ -84,10 +87,6 @@ body {
 
 .navigation__item:last-child {
   margin-right: 0;
-}
-
-.link {
-  text-decoration: none;
 }
 
 .navigation__link {
