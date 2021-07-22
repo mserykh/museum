@@ -81,9 +81,19 @@ body {
   margin-right: 0;
 }
 
-.navigation__link {
+.link {
   text-decoration: none;
+}
+
+.navigation__link {
   color: var(--white);
   font-weight: 100;
   padding: 17px 0 20px;
+  transition: color 0.2s ease-in-out;
+}
+
+.navigation__link:hover,
+.navigation__link:active {
+  color: var(--font-gold);
+  transition: color 0.2s ease-in-out;
 }
