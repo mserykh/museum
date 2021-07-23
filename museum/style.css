@@ -271,8 +271,12 @@ img {
   gap: 60px;
 }
 
-.content-wrapper {
+.wrapper--thin {
   width: 660px;
+}
+
+.wrapper--wide {
+  width: 720px;
 }
 
 .section__text {
@@ -282,4 +286,18 @@ img {
 
 .section__text:not(:last-of-type) {
   margin-bottom: 25px;
+}
+
+.video__container {
+  flex-direction: column-reverse;
+}
+
+.video__text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.section__text--dark {
+  color: var(--black)
 }
