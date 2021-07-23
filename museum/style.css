@@ -644,3 +644,37 @@ input[type=range] {
   background-color: var(--font-gold);
   transition: background-color 0.2s ease-in-out;
 }
+
+.contacts__list {
+  min-width: calc(100% - 960px - 60px);
+}
+
+.contacts__item-wrapper {
+  display: flex;
+}
+
+.contacts__item-wrapper:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts__item-wrapper dt{
+  font-weight: 300;
+  line-height: 1.2;
+  margin-right: 8px;
+}
+
+.contacts__item {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.contacts__item--title {
+  font-size: var(--font3);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.contacts__link {
+  color: inherit;
+}
