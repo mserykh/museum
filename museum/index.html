@@ -194,29 +194,29 @@
           <div class="video__player player">
             <span class="visually-hidden">Watch videos</span>
             <div class="player__preview">
-              <img src="" alt="" class="player__preview-img">
-              <button class="player__preview-btn"><span class="visually-hidden">Play video</span></button>
+                <button class="player__btn player__btn--preview" type="button" title="Play">
+                <span class="visually-hidden">Play video</span>
+              </button>
             </div>
             <div class="player__controls controls">
-              <div class="controls__play-buttons play-buttons">
-                <div class="play-buttons__back-btn"></div>
-                <div class="play-buttons__play-btn video-paused">
-                  <span class="visually-hidden video-playing">pause</span>
-                  <span class="visually-hidden video-paused">play</span>
-                </div>
-                <div class="play-buttons__forward-btn"></div>
-              </div>
-              <input type="range" value="45" min="0" max="100" step="1" class="controls__progress-bar">
+              <button class="player__btn player__btn--back" type="button">
+                </button>
+                <button class="player__btn--play video-paused player__btn" type="button">
+                    <span class="visually-hidden video-playing">pause</span>
+                    <span class="visually-hidden video-onpause">play</span>
+                </button>
+                <button class="player__btn--forward player__btn" type="button"></button>
+              <input type="range" value="40" min="0" max="100" step="1" class="controls__progress-bar">
               <div class="controls__volume">
-                <div class="controls__volume-btn loud">
+                <button class="player__btn--volume loud player__btn" type="button">
                   <span class="visually-hidden loud">mute</span>
                   <span class="visually-hidden muted">unmute</span>
-                </div>
-                <input type="range" value="20" min="0" max="100" step="1" class="controls__volume-slider">
+                </button>
+                <input type="range" value="40" min="0" max="100" step="1" class="controls__volume-slider">
               </div>
-              <div class="controls__fullscreen">
-                <span class="visually-hidden">fullscreen</span>
-              </div>
+              <button class="player__btn--fullscreen player__btn">
+                <span class="visually-hidden">open the video in fullscreen</span>
+              </button>
             </div>
           </div>
         </div>
