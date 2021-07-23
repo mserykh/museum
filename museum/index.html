@@ -224,57 +224,79 @@
     </section>
     <section id="tickets" class="tickets section">
       <div class="container">
+        <h2 class="section__title section__title--light title--underline">
+          Buy tickets
+        </h2>
         <div class="section__container tickets__container">
-          <h2 class="section__title title--underline">
-            Buy tickets
-          </h2>
-          <form class="tickets__order-form order-form">
-            <fieldset class="order-form__ticket-types">
-              <legend class="order-form___legend">
-                Ticket Type
-              </legend>
-              <label class="order-form__ticket-type radio">
-                <input class="radio__btn" type="radio" name="permanent_exhibition" id="permanent_exhibition">
-                <span class="radio__label">Permanent exhibition</span>
-              </label>
-              <label class="order-form__ticket-type radio">
-                <input class="radio__btn" type="radio" name="temporary_exhibition" id="temporary_exhibition"">
-                <span class="radio__label">Temporary exhibition</span>
-              </label>
-              <label class="order-form__ticket-type radio">
-                <input class="radio__btn" type="radio" name="combined_admission" id="combined_admission">
-                <span class="radio__label">Combined Admission</span>
-              </label>
-            </fieldset>
-            <fieldset class="order-form__amount">
-              <legend class="order-form__legend">
-                Amount
-              </legend>
-              <fieldset class="order-form__ticket-category">
-                <label for="ticket_18_amount" class="order-form__label">Basic 18+</label>
-                  <button type="button" class="order-form__btn-remove" aria-label="remove one ticket">
-                    <svg></svg>
-                  </button>
-                  <input type="number" class="order-form__amount" name="ticket_18_amount" id="ticket_18_amount">
-                  <button type="button" class="order-form__btn-add" aria-label="add one ticket">
-                    <svg></svg>
-                  </button>
+          <div class="wrapper--wide">
+            <img src="assets/img/tickets-img.jpg" width="720" height="550" alt="" class="tickets__img">
+          </div>
+          <form class="tickets__order-form order-form wrapper--thin">
+            <div class="fieldset-wrapper">
+              <fieldset class="order-form__ticket-types">
+                <legend class="order-form___legend order-form___legend--ticket-type">
+                  Ticket Type
+                </legend>
+                <div class="order-form__ticket-wrapper"></div>
+                <label class="order-form__ticket-type radio">
+                  <input class="radio__btn" type="radio" checked="checked" name="ticket_type" value="permanent_exhibition" id="permanent_exhibition">
+                  <span class="radio__label">Permanent exhibition</span>
+                </label>
+                <label class="order-form__ticket-type radio">
+                  <input class="radio__btn" type="radio" name="ticket_type" value="temporary_exhibition" id="temporary_exhibition"">
+                  <span class="radio__label">Temporary exhibition</span>
+                </label>
+                <label class="order-form__ticket-type radio">
+                  <input class="radio__btn" type="radio" name="ticket_type" value="combined_admission" id="combined_admission">
+                  <span class="radio__label">Combined Admission</span>
+                </label>
               </fieldset>
-              <fieldset class="order-form__ticket-category">
-                <label for="ticket_65_amount" class="order-form__label">Senior 65+</label>
-                  <button type="button" class="order-form__btn-remove" aria-label="remove one ticket">
-                    <svg></svg>
-                  </button>
-                  <input type="number" class="order-form__amount" name="ticket_65_amount" id="ticket_65_amount">
-                  <button type="button" class="order-form__btn-add" aria-label="add one ticket">
-                    <svg></svg>
-                  </button>
+              <fieldset class="order-form__amount">
+                <legend class="order-form___legend order-form___legend--right">
+                  Amount
+                </legend>
+                <fieldset class="order-form__ticket-category">
+                  <label for="ticket_18_amount" class="order-form__label">
+                    Basic 18+
+                  </label>
+                  <div class="order-form__amount-wrapper">
+                    <button type="button" class="order-form__btn" aria-label="remove one ticket" onclick="this.nextElementSibling.stepDown(1)">
+                      <svg width="17" height="17" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6875 2.82812H0.03125V0.46875H15.6875V2.82812Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <input type="number" class="order-form__qty" min="0" max="10" value="1" name="ticket_18_amount" id="ticket_18_amount">
+                    <button type="button" class="order-form__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.89062 6.79688H16.2344V9.53125H9.89062V16.7188H6.98438V9.53125H0.640625V6.79688H6.98438V0.15625H9.89062V6.79688Z" fill="white"/>
+                        </svg>
+                    </button>
+                  </div>
+                </fieldset>
+                <fieldset class="order-form__ticket-category">
+                  <label for="ticket_65_amount" class="order-form__label">
+                    Senior 65+
+                  </label>
+                  <div class="order-form__amount-wrapper">
+                    <button type="button" class="order-form__btn" aria-label="remove one ticket" onclick="this.nextElementSibling.stepDown(1)">
+                      <svg width="17" height="17" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6875 2.82812H0.03125V0.46875H15.6875V2.82812Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <input type="number" class="order-form__qty" min="0" max="10" value="1" name="ticket_65_amount" id="ticket_65_amount">
+                    <button type="button" class="order-form__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.89062 6.79688H16.2344V9.53125H9.89062V16.7188H6.98438V9.53125H0.640625V6.79688H6.98438V0.15625H9.89062V6.79688Z" fill="white"/>
+                        </svg>
+                    </button>
+                  </div>
+                </fieldset>
               </fieldset>
-            </fieldset>
+            </div>
             <span class="order-form__total">
               Total €220 
             </span>
-            <button type="submit" class="order-form__btn">
+            <button class="order-form__btn-buy" type="submit">
               Buy Now
             </button>
           </form>
