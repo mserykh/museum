@@ -260,3 +260,26 @@ img {
   font-size: var(--font4);
   font-weight: 100;
 }
+
+.explore {
+  background-color: var(--bg-dark);
+}
+
+.section__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.content-wrapper {
+  width: 660px;
+}
+
+.section__text {
+  color: var(--white);
+  font-weight: 300;
+}
+
+.section__text:not(:last-of-type) {
+  margin-bottom: 25px;
+}
