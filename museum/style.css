@@ -52,6 +52,10 @@ a {
   margin: 0 auto;
 }
 
+.section {
+  margin-bottom: var(--margin-b);
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -100,4 +104,62 @@ a {
 .navigation__link:active {
   color: var(--font-gold);
   transition: color 0.2s ease-in-out;
+}
+
+.welcome {
+  min-height: 750px;
+  background-color: var(--bg-dark);
+  background-image: url('assets/img/louvre-main.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top right;
+}
+
+.welcome__text-wrapper {
+  max-width: 600px;
+  padding: 114px 0 246px
+}
+
+.section__title {
+  font-family: 'Forum', cursive;
+  font-size: var(--headeing1);
+  font-weight: 400;
+  letter-spacing: 5px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: var(--margin-b);
+}
+
+.welcome__title {
+  color: var(--white);
+  line-break: normal;
+  margin-bottom: 26px;
+}
+
+.welcome__text {
+  color: var(--white);
+  font-size: var(--font3);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: var(--margin-b);
+}
+
+.welcome__btn {
+  display: block;
+  width: 360px;
+  height: 75px;
+  padding: 20px 0;
+  border-radius: 10px;
+  background-color: var(--dark-red);
+  color: var(--white);
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-align: center;
+  transition: background-color ease-in-out 0.2s;
+}
+
+.welcome__btn:hover,
+.welcome__btn:active {
+  background-color: var(--font-gold);
+  transition: background-color ease-in-out 0.2s;
 }
