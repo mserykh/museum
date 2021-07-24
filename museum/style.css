@@ -591,10 +591,26 @@ input[type=range] {
   margin-bottom: 0;
 }
 
+.order-form__ticket-type:hover .radio__btn::before {
+  border: 2px solid var(--font-gold);
+  transition: border 0.2s ease-in-out;
+}
+
+.order-form__ticket-type:hover .radio__btn::after {
+  background-color: var(--font-gold);
+  transition: background 0.2s ease-in-out;
+}
+
+.order-form__ticket-type:hover .radio__label {
+  color: var(--font-gold);
+  transition: color 0.2s ease-in-out;
+}
+
 .radio__label {
   font-weight: 300;
   line-height: 1.1;
   color: var(--white);
+  transition: color 0.2s ease-in-out;
 }
 
 .radio__btn {
@@ -615,6 +631,7 @@ input[type=range] {
   border: 2px solid var(--white);
   border-radius: 50%;
   background-color: var(--bg-dark);
+  transition: border 0.2s ease-in-out;
 }
 
 .radio__btn::after {
@@ -625,6 +642,7 @@ input[type=range] {
   width: 7px;
   height: 7px;
   border-radius: 50%;
+  transition: background 0.2s ease-in-out;
 }
 
 .radio__btn:checked::after {
