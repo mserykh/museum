@@ -260,12 +260,6 @@ fieldset {
 .visiting__item-img {
   object-fit: cover;
   margin-bottom: 25px;
-  width: 440px;
-  height: 285px;
-}
-
-.visiting__item:hover .visiting__item img {
-  transform: scale(1.2);
 }
 
 .visiting__item-title {
@@ -288,16 +282,9 @@ fieldset {
   bottom: -9px;
   left: 0;
   background-color: var(--dark-red);
-  transition: width 0.2s ease-in-out;
-}
-
-.visiting__item:hover .visiting__item-title::before {
-  width: 100%;
-  transition: width 0.2s ease-in-out;
 }
 
 .visiting__item-subtitle {
-  color: var(--black);
   font-weight: 100;
   margin-bottom: 10px;
 }
@@ -305,7 +292,6 @@ fieldset {
 .visiting__item-type {
   font-size: var(--font4);
   font-weight: 100;
-  color: var(--black);
 }
 
 .explore {
