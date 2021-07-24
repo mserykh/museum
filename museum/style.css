@@ -321,6 +321,10 @@ fieldset {
   margin-bottom: 25px;
 }
 
+.text-highlighter {
+  color: var(--font-gold);
+}
+
 .video__container {
   flex-direction: column-reverse;
 }
