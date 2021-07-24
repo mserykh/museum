@@ -83,6 +83,7 @@ fieldset {
 .header__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding: 75px 0;
 }
@@ -795,6 +796,7 @@ input[type=range] {
 .footer__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer__logo {
@@ -823,6 +825,7 @@ input[type=range] {
 .social-list {
   display: flex;
   align-self: flex-end;
+  flex-wrap: wrap;
   margin-left: auto;
   padding: 12px 0;
 }
