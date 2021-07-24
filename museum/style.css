@@ -282,6 +282,12 @@ fieldset {
   bottom: -9px;
   left: 0;
   background-color: var(--dark-red);
+  transition: width 0.2s ease-in-out;
+}
+
+.visiting__item:hover .visiting__item-title::before {
+  width: 100%;
+  transition: width 0.2s ease-in-out;
 }
 
 .visiting__item-subtitle {
