@@ -89,7 +89,6 @@ fieldset {
 
 .logo {
   flex-shrink: 0;
-
 }
 
 .logo > svg {
@@ -626,6 +625,16 @@ input[type=range] {
   cursor: pointer;
 }
 
+.order-form__btn path {
+  transition: fill 0.2s ease-in-out;
+}
+
+.order-form__btn:hover path, 
+.order-form__btn:active path {
+  fill: var(--font-gold);
+  transition: fill 0.2s ease-in-out;
+}
+
 .order-form__qty {
   width: 100%;
   background-color: var(--black);
@@ -670,6 +679,7 @@ input[type=range] {
   border-radius: 2px;
   background-color: var(--white);
   transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .order-form__btn-buy:hover,
@@ -710,6 +720,12 @@ input[type=range] {
 
 .contacts__link {
   color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+.contacts__item:hover .contacts__link {
+  color: var(--font-gold);
+  transition: color 0.2s ease-in-out;
 }
 
 .footer {
