@@ -98,17 +98,17 @@ fieldset {
 }
 
 .logo path {
-  transition: fill 0.2s ease-in-out;
+  transition: fill 0.4s ease-in-out;
 }
 
 .logo:hover path{
   fill: var(--font-gold);
-  transition: fill 0.2s ease-in-out;
+  transition: fill 0.4s ease-in-out;
 }
 
 .logo:hover .logo__text {
   color: var(--font-gold);
-  transition: color 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .logo__text {
@@ -118,7 +118,7 @@ fieldset {
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 5px;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .navigation__list {
@@ -140,13 +140,13 @@ fieldset {
   line-height: 1.1;
   color: var(--white);
   letter-spacing: 2px;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .navigation__link:hover,
 .navigation__link:active {
   color: var(--font-gold);
-  transition: color 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .welcome {
@@ -204,13 +204,13 @@ fieldset {
   color: var(--white);
   background-color: var(--dark-red);
   border-radius: 10px;
-  transition: background-color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.4s;
 }
 
 .welcome__btn:hover,
 .welcome__btn:active {
   background-color: var(--font-gold);
-  transition: background-color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.4s;
 }
 
 .section__title--darker {
@@ -244,12 +244,12 @@ fieldset {
   position: relative;
   flex-basis: calc((100% - 60px * 2) / 3);
   margin-bottom: 78px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 }
 
 .visiting__item:hover {
   background-color: #f1f1f1;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 }
 
 .visiting__item > * {
@@ -290,12 +290,12 @@ fieldset {
   right: 31.6%;
   height: 2px;
   background-color: var(--dark-red);
-  transition: right 0.2s ease-in-out;
+  transition: right 0.4s ease-in-out;
 }
 
 .visiting__item:hover .visiting__item-title::before {
   right: 0;
-  transition: right 0.2s ease-in-out;
+  transition: right 0.4s ease-in-out;
 }
 
 .visiting__item-subtitle {
@@ -407,13 +407,13 @@ fieldset {
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  transition: filter 0.2s ease-in-out;
+  transition: filter 0.4s ease-in-out;
 }
 
 .player__btn:hover::before,
 .player__btn:active::before {
   filter: invert(63%) sepia(0%) saturate(0%) hue-rotate(83deg) brightness(95%) contrast(96%);
-  transition: filter 0.2s ease-in-out;
+  transition: filter 0.4s ease-in-out;
 }
 
 .player__btn--preview {
@@ -594,24 +594,24 @@ input[type=range] {
 
 .order-form__ticket-type:hover .radio__btn::before {
   border: 2px solid var(--font-gold);
-  transition: border 0.2s ease-in-out;
+  transition: border 0.4s ease-in-out;
 }
 
 .order-form__ticket-type:hover .radio__btn::after {
   background-color: var(--font-gold);
-  transition: background 0.2s ease-in-out;
+  transition: background 0.4s ease-in-out;
 }
 
 .order-form__ticket-type:hover .radio__label {
   color: var(--font-gold);
-  transition: color 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .radio__label {
   font-weight: 300;
   line-height: 1.1;
   color: var(--white);
-  transition: color 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .radio__btn {
@@ -632,7 +632,7 @@ input[type=range] {
   border: 2px solid var(--white);
   border-radius: 50%;
   background-color: var(--bg-dark);
-  transition: border 0.2s ease-in-out;
+  transition: border 0.4s ease-in-out;
 }
 
 .radio__btn::after {
@@ -643,7 +643,7 @@ input[type=range] {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  transition: background 0.2s ease-in-out;
+  transition: background 0.4s ease-in-out;
 }
 
 .radio__btn:checked::after {
@@ -680,13 +680,13 @@ input[type=range] {
 }
 
 .order-form__btn path {
-  transition: fill 0.2s ease-in-out;
+  transition: fill 0.4s ease-in-out;
 }
 
 .order-form__btn:hover path, 
 .order-form__btn:active path {
   fill: var(--font-gold);
-  transition: fill 0.2s ease-in-out;
+  transition: fill 0.4s ease-in-out;
 }
 
 .order-form__qty {
@@ -732,14 +732,14 @@ input[type=range] {
   background-color: var(--white);
   border: none;
   border-radius: 2px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
   cursor: pointer;
 }
 
 .order-form__btn-buy:hover,
 .order-form__btn-buy:active {
   background-color: var(--font-gold);
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 }
 
 .contacts__container {
@@ -781,12 +781,12 @@ input[type=range] {
 
 .contacts__link {
   color: inherit;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .contacts__item:hover .contacts__link {
   color: var(--font-gold);
-  transition: color 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .footer {
@@ -838,7 +838,7 @@ input[type=range] {
   height: 48px;
   border-radius: 50%;
   border: 1px solid var(--white);
-  transition: fill, border-color 0.2s ease-in-out;
+  transition: fill, border-color 0.4s ease-in-out;
 }
 
 .social-list__item:not(:last-child) {
@@ -853,10 +853,10 @@ input[type=range] {
 
 .social-list__item:hover {
   border-color: var(--font-gold);
-  transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
 }
 
 .social-list__item:hover path {
   fill: var(--font-gold);
-  transition: fill 0.2s ease-in-out;
+  transition: fill 0.4s ease-in-out;
 }
