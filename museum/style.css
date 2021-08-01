@@ -185,7 +185,7 @@ fieldset {
   margin-bottom: var(--margin-b);
   font-size: var(--font3);
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 33px;
   letter-spacing: 2px;
   color: var(--white);
 }
@@ -320,7 +320,7 @@ fieldset {
 }
 
 .wrapper--thin {
-  width: 660px;
+  width: 659px;
 }
 
 .wrapper--wide {
@@ -333,7 +333,7 @@ fieldset {
 
 .section__text {
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 39px;
   color: var(--white);
 }
 
