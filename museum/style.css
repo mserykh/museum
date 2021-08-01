@@ -2,6 +2,7 @@
   --bg-dark: #030303;
   --black: #000000;
   --dark-red: #710707;
+  --text-highlight: #caaa7d;
   --font-gold: #9d8665;
   --white: #ffffff;
   --headeing1: 80px;
@@ -341,7 +342,7 @@ fieldset {
 }
 
 .text-highlighter {
-  color: var(--font-gold);
+  color: var(--text-highlight);
 }
 
 .video {
