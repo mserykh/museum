@@ -67,6 +67,18 @@ fieldset {
   border: none;
 }
 
+.street-view {
+  width: 100%;
+  height: 100vh;
+}
+
+.street-view iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .container {
   max-width: calc(100% - 40px);
   width: 1440px;
