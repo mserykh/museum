@@ -745,6 +745,15 @@ input[type=range] {
   transition: background-color 0.4s ease-in-out;
 }
 
+.paralax {
+  height: 400px;
+  background-image: url("./assets/img/paralax.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .contacts__container {
   display: flex;
   flex-wrap: wrap;
