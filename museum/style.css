@@ -89,6 +89,10 @@ fieldset {
   padding: 75px 0;
 }
 
+.section--dark {
+  background-color: var(--bg-dark);
+}
+
 .header {
   background-color: var(--bg-dark);
 }
@@ -313,10 +317,6 @@ fieldset {
   font-weight: 100;
   line-height: 1.15;
   color: var(--black);
-}
-
-.explore {
-  background-color: var(--bg-dark);
 }
 
 .explore__container {
@@ -547,10 +547,6 @@ input[type=range] {
   background: linear-gradient(to right, #24809E 0%, #24809E 47%, #C4C4C4 40%, #C4C4C4 100%);
 }
 
-.tickets {
-  background-color: var(--bg-dark);
-}
-
 .tickets__container {
   display: flex;
   flex-wrap: wrap;
@@ -573,7 +569,7 @@ input[type=range] {
   font-size: var(--font3);
   line-height: 1.15;
   font-weight: 700;
-  color: var(--white);
+  color: var(--black);
 }
 
 .order-form___legend--ticket-type {
@@ -613,7 +609,7 @@ input[type=range] {
 .radio__label {
   font-weight: 300;
   line-height: 1.1;
-  color: var(--white);
+  color: var(--black);
   transition: color 0.4s ease-in-out;
 }
 
@@ -632,9 +628,9 @@ input[type=range] {
   left: 0;
   width: 17px;
   height: 17px;
-  border: 2px solid var(--white);
+  border: 2px solid var(--black);
   border-radius: 50%;
-  background-color: var(--bg-dark);
+  background-color: var(--white);
   transition: border 0.4s ease-in-out;
 }
 
@@ -650,7 +646,7 @@ input[type=range] {
 }
 
 .radio__btn:checked::after {
-  background-color: var(--white);
+  background-color: var(--black);
 }
 
 .order-form__ticket-category:not(:last-of-type) {
@@ -667,7 +663,7 @@ input[type=range] {
 
 .order-form__amount-wrapper {
   display: flex;
-  border: 3px solid var(--white);
+  border: 3px solid var(--black);
 }
 
 .order-form__amount {
@@ -683,6 +679,7 @@ input[type=range] {
 }
 
 .order-form__btn path {
+  fill: var(--black);
   transition: fill 0.4s ease-in-out;
 }
 
@@ -698,9 +695,9 @@ input[type=range] {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.2;
-  color: var(--white);
+  color: var(--black);
   text-align: center;
-  background-color: var(--black);
+  background-color: var(--white);
   border: none;
 }
 
@@ -721,7 +718,7 @@ input[type=range] {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 1.5px;
-  color: var(--white);
+  color: var(--black);
 }
 
 .order-form__btn-buy {
@@ -731,8 +728,8 @@ input[type=range] {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.2;;
-  color: var(--black);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--black);
   border: none;
   border-radius: 2px;
   transition: background-color 0.4s ease-in-out;
