@@ -181,6 +181,7 @@ fieldset {
 }
 
 .section__title {
+  margin-bottom: var(--margin-b);
   font-family: "Forum", cursive;
   font-size: var(--headeing1);
   font-weight: 400;
@@ -545,6 +546,36 @@ input[type=range] {
 
 .controls__progress-bar[type=range] {
   background: linear-gradient(to right, #24809E 0%, #24809E 47%, #C4C4C4 40%, #C4C4C4 100%);
+}
+
+.gallery {
+  padding-bottom: 0;
+}
+
+.gallery__container {
+  height: 1960px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery__inner-container {
+  columns: 3;
+  column-gap: 36px;
+}
+
+.gallery__item {
+  display: block;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.gallery__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0) 20%);
 }
 
 .tickets__container {
