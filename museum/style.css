@@ -588,7 +588,7 @@ input[type=range] {
   transition: border 0.4s ease-in-out;
 }
 
-.order-form__ticket-type:hover .radio__btn::after {
+.order-form__ticket-type:hover .radio__btn:checked:after {
   background-color: var(--font-gold);
   transition: background 0.4s ease-in-out;
 }
