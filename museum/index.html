@@ -184,34 +184,64 @@
             </p>
           </div>
         </div>
-        <div class="video__player player">
-          <span class="visually-hidden">Watch videos</span>
-          <div class="player__preview">
-              <button class="player__btn player__btn--preview" type="button" title="Play">
-              <span class="visually-hidden">Play video</span>
-            </button>
-          </div>
-          <div class="player__controls controls">
-            <button class="player__btn player__btn--back" type="button">
+        <div class="video__inner-container">
+          <div class="video__player player">
+            <span class="visually-hidden">Watch videos</span>
+            <div class="player__preview">
+                <button class="player__btn player__btn--preview" type="button" title="Play">
+                <span class="visually-hidden">Play video</span>
               </button>
-              <button class="player__btn--play video-paused player__btn" type="button">
-                  <span class="visually-hidden video-playing">pause</span>
-                  <span class="visually-hidden video-onpause">play</span>
-              </button>
-              <button class="player__btn--forward player__btn" type="button"></button>
-            <input type="range" value="47" min="0" max="100" step="1" class="controls__progress-bar">
-            <div class="controls__volume">
-              <button class="player__btn--volume loud player__btn" type="button">
-                <span class="visually-hidden loud">mute</span>
-                <span class="visually-hidden muted">unmute</span>
-              </button>
-              <input type="range" value="40" min="0" max="100" step="1" class="controls__volume-slider">
             </div>
-            <button class="player__btn--fullscreen player__btn">
-              <span class="visually-hidden">open the video in fullscreen</span>
+            <div class="player__controls controls">
+              <button class="player__btn player__btn--back" type="button">
+                </button>
+                <button class="player__btn--play video-paused player__btn" type="button">
+                    <span class="visually-hidden video-playing">pause</span>
+                    <span class="visually-hidden video-onpause">play</span>
+                </button>
+                <button class="player__btn--forward player__btn" type="button"></button>
+              <input type="range" value="47" min="0" max="100" step="1" class="controls__progress-bar">
+              <div class="controls__volume">
+                <button class="player__btn--volume loud player__btn" type="button">
+                  <span class="visually-hidden loud">mute</span>
+                  <span class="visually-hidden muted">unmute</span>
+                </button>
+                <input type="range" value="40" min="0" max="100" step="1" class="controls__volume-slider">
+              </div>
+              <button class="player__btn--fullscreen player__btn">
+                <span class="visually-hidden">open the video in fullscreen</span>
+              </button>
+            </div>
+          </div>
+          <div class="video__list">
+            <div class="video__item">
+              <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video__item">
+              <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video__item">
+              <iframe src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="video__pagination">
+            <button class="pagination__arrow">
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.4777 0.219168C5.87773 0.564178 5.94259 1.19347 5.62256 1.62473L2.37578 6.00004L5.62256 10.3753C5.94259 10.8066 5.87773 11.4359 5.4777 11.7809C5.07766 12.1259 4.49394 12.056 4.17391 11.6247L0 6.00004L4.17391 0.375342C4.49394 -0.0559202 5.07766 -0.125842 5.4777 0.219168ZM9.65184 0.219168C10.0519 0.564178 10.1167 1.19347 9.7967 1.62473L6.54992 6.00004L9.7967 10.3753C10.1167 10.8066 10.0519 11.4359 9.65184 11.7809C9.2518 12.1259 8.66808 12.056 8.34805 11.6247L4.17414 6.00004L8.34805 0.375342C8.66808 -0.0559202 9.2518 -0.125842 9.65184 0.219168Z" fill="#999999"/>
+              </svg>
+            </button>
+            <button class="pagination__page pagination__page--active"></button>
+            <button class="pagination__page"></button>
+            <button class="pagination__page"></button>
+            <button class="pagination__page"></button>
+            <button class="pagination__page"></button>
+            <button class="pagination__arrow">
+              <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.348163 0.219168C0.748196 -0.125842 1.33192 -0.0559202 1.65195 0.375342L5.82586 6.00004L1.65194 11.6247C1.33192 12.056 0.748195 12.1259 0.348162 11.7809C-0.0518709 11.4359 -0.116729 10.8066 0.203297 10.3753L3.45008 6.00004L0.203298 1.62473C-0.116728 1.19347 -0.05187 0.564177 0.348163 0.219168ZM4.5223 0.219168C4.92234 -0.125841 5.50606 -0.0559197 5.82609 0.375342L10 6.00004L5.82609 11.6247C5.50606 12.056 4.92234 12.1259 4.5223 11.7809C4.12227 11.4359 4.05741 10.8066 4.37744 10.3753L7.62422 6.00004L4.37744 1.62473C4.05741 1.19347 4.12227 0.564178 4.5223 0.219168Z" fill="#999999"/>
+              </svg>
             </button>
           </div>
-        </div>
+      </div>
       </div>
     </section>
     <section class="gallery section section--dark">

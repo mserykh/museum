@@ -57,6 +57,8 @@ img {
 
 button {
   display: block;
+  background-color: transparent;
+  border: none;
 }
 
 input {
@@ -358,19 +360,29 @@ fieldset {
 
 .video__container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   flex-wrap: nowrap;
-  gap: 40px;
 }
 
 .video__text-wrapper {
   display: flex;
-  align-items: center;
   gap: 60px;
 }
 
 .section__text--dark {
   color: var(--black)
+}
+
+.video__inner-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.video__player {
+  max-width: 100%;
 }
 
 .player__preview {
@@ -546,6 +558,64 @@ input[type=range] {
 
 .controls__progress-bar[type=range] {
   background: linear-gradient(to right, #24809E 0%, #24809E 47%, #C4C4C4 40%, #C4C4C4 100%);
+}
+
+.video__list{
+  display: flex;
+  column-gap: 42px;
+}
+
+.video__item {
+  width: 452px;
+  height: 254px;
+}
+
+.video__item iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.video__pagination {
+  display: flex;
+  width: 200px;
+  height: 12px;
+  gap: 20px;
+}
+
+.pagination__arrow {
+  width: 12px;
+  height: 12px;
+}
+
+.pagination__arrow svg {
+  display: block;
+}
+
+.pagination__arrow path {
+  transition: fill 0.3s ease-in-out;
+}
+
+.pagination__arrow:hover path {
+  fill: var(--dark-red);
+  transition: fill 0.3s ease-in-out;
+}
+
+.pagination__page {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #999999;
+  transition: background 0.3s ease-in-out;
+}
+
+.pagination__page--active {
+  background-color: #333333;
+  transition: background 0.3s ease-in-out;
+}
+
+.pagination__page:hover {
+  background-color: var(--dark-red);
+  transition: background 0.3s ease-in-out;
 }
 
 .gallery {
