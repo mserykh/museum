@@ -382,7 +382,7 @@ fieldset {
 }
 
 .video__player {
-  max-width: 100%;
+  width: 100%;
 }
 
 .player__preview {
