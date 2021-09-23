@@ -559,6 +559,7 @@ input[type=range] {
 }
 
 .gallery__inner-container {
+  height: calc(580px * 5 + 24px * 4);
   columns: 3;
   column-gap: 36px;
 }
@@ -567,6 +568,22 @@ input[type=range] {
   display: block;
   margin-bottom: 24px;
   width: 100%;
+}
+
+.gallery__item:nth-child(n) {
+  transform: translateY(50px);
+  position: relative;
+}
+
+.gallery__item:nth-child(n + 6) {
+  transform: translateY(0);
+  position: relative;
+}
+
+
+.gallery__item:nth-child(n + 11) {
+  transform: translateY(50px);
+  position: relative;
 }
 
 .gallery__bottom {
