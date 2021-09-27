@@ -174,10 +174,6 @@ fieldset {
 .welcome {
   min-height: 750px;
   background-color: var(--bg-dark);
-  /*background-image: url("assets/img/louvre-main.jpg");*/
-  /*background-repeat: no-repeat;*/
-  /*background-size: auto;*/
-  /*background-position: calc(50% + 353px) 100%;*/
 }
 
 .welcome__container {
