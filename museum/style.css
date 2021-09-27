@@ -635,14 +635,14 @@ input[type=range]::-ms-thumb {
 
 input[type=range] {
   height: 8px;
-  background: linear-gradient(to right, #24809E 0%, #24809E 40%, #C4C4C4 40%, #C4C4C4 100%);
+  background: linear-gradient(to right, var(--dark-red) 0%, var(--dark-red) 40%, #C4C4C4 40%, #C4C4C4 100%);
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
 }
 
 .controls__progress-bar[type=range] {
-  background: linear-gradient(to right, #24809E 0%, #24809E 47%, #C4C4C4 40%, #C4C4C4 100%);
+  background: linear-gradient(to right, var(--dark-red) 0%, var(--dark-red) 47%, #C4C4C4 40%, #C4C4C4 100%);
 }
 
 .video__list{
