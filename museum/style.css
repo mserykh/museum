@@ -1050,6 +1050,7 @@ input[type=range] {
   border-radius: 50%;
   border: 1px solid var(--white);
   transition: border-color 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .social-list__item:not(:last-child) {
