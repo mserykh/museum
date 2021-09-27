@@ -631,14 +631,17 @@ input[type=range] {
 
 .gallery__inner-container {
   height: calc(580px * 5 + 24px * 4);
-  columns: 3;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   column-gap: 36px;
+  max-width: 1440px;
+  width: 100%;
 }
 
 .gallery__item {
   display: block;
   margin-bottom: 24px;
-  width: 100%;
 }
 
 .gallery__item:nth-child(n) {
