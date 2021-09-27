@@ -142,11 +142,12 @@ fieldset {
 
 .navigation__list {
   display: flex;
-  max-width: 720px;
+  width: 775px;
+  max-width: 100%;
 }
 
 .navigation__item {
-  margin-right: 75px;
+  margin-right: auto;
 }
 
 .navigation__item:last-child {
