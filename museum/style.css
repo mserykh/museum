@@ -157,7 +157,7 @@ fieldset {
 }
 
 .navigation__link {
-  padding: 13px 0;
+  /*padding: 13px 0;*/
   font-weight: 100;
   line-height: 1.1;
   color: var(--white);
