@@ -106,7 +106,7 @@ fieldset {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding: 60px 0;
+  padding: 55px 0 60px;
 }
 
 .logo {
@@ -182,7 +182,7 @@ fieldset {
 .welcome__content-wrapper {
   position: relative;
   max-width: 600px;
-  padding-top: 140px;
+  padding-top: 148px;
   grid-column: 1/2;
   grid-row: 1/2;
 }
@@ -225,15 +225,22 @@ fieldset {
 }
 
 .slider__slides-counter {
-  gap: 10px;
   font-size: 22px;
   line-height: 40px;
   color: var(--white);
 }
 
+.slider__current-slide {
+  margin-right: 7px;
+}
+
+.slider__number-divider {
+  margin-right: 7px;
+}
+
 .slider__dots {
   display: flex;
-  gap: 25px;
+  gap: 24px;
 }
 
 .slider__dot {
@@ -604,7 +611,7 @@ fieldset {
 }
 
 .player__btn--volume {
-  margin-right: 20px;
+  margin-right: 57px;
   width: 38px;
   height: 30px;
 }
@@ -760,13 +767,15 @@ input[type=range] {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  column-gap: 20px;
+  column-gap: 30px;
   max-width: 1440px;
   width: 100%;
 }
 
 .gallery__item {
   display: block;
+  max-width: auto;
+  max-height: 100%;
   margin-bottom: 24px;
 }
 
@@ -779,7 +788,6 @@ input[type=range] {
   transform: translateY(0);
   position: relative;
 }
-
 
 .gallery__item:nth-child(n + 11) {
   transform: translateY(50px);
@@ -1238,7 +1246,7 @@ input[type=range] {
 }
 
 .booking-info__title {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-family: "Forum";
   font-weight: 400;
   font-size: 50px;
@@ -1608,7 +1616,7 @@ input[type=range] {
 .booking-card {
   position: relative;
   height: 100%;
-  margin-bottom: 26px;
+  margin-bottom: 36px;
 }
 
 .card {
