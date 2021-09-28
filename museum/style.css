@@ -1124,6 +1124,7 @@ input[type=range] {
 .booking.open {
   left: 50%;
   z-index: 6;
+  transition: all 0.5s ease-in-out;
 }
 
 .booking__container {
@@ -1135,6 +1136,7 @@ input[type=range] {
   margin: 0 auto;
   padding: 30px 30px 90px;
   background-color: var(--white);
+  transition: all 0.5s ease-in-out;
 }
 
 .booking__btn-close {
