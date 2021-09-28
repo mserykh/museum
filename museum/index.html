@@ -346,15 +346,15 @@
                 </legend>
                 <div class="order-form__ticket-wrapper"></div>
                 <label class="order-form__ticket-type radio">
-                  <input class="radio__btn" type="radio" checked="checked" name="ticket_type" value="permanent_exhibition" id="permanent_exhibition">
+                  <input class="radio__btn" type="radio" checked="checked" id="permanent_exhibition">
                   <span class="radio__label">Permanent exhibition</span>
                 </label>
                 <label class="order-form__ticket-type radio">
-                  <input class="radio__btn" type="radio" name="ticket_type" value="temporary_exhibition" id="temporary_exhibition">
+                  <input class="radio__btn" type="radio" id="temporary_exhibition">
                   <span class="radio__label">Temporary exhibition</span>
                 </label>
                 <label class="order-form__ticket-type radio">
-                  <input class="radio__btn" type="radio" name="ticket_type" value="combined_admission" id="combined_admission">
+                  <input class="radio__btn" type="radio" id="combined_admission">
                   <span class="radio__label">Combined Admission</span>
                 </label>
               </fieldset>
@@ -403,7 +403,7 @@
             <span class="order-form__total">
               Total €220 
             </span>
-            <button class="order-form__btn-buy" type="submit">
+            <button class="order-form__btn-buy">
               Buy Now
             </button>
           </form>
@@ -611,7 +611,7 @@
                     <button type="button" class="ticket-qty__btn" aria-label="remove one ticket" onclick="this.nextElementSibling.stepDown(1)">
                       –
                     </button>
-                    <input type="number" class="ticket-qty__qty" min="0" max="20" value="1" name="ticket_18_amount" id="ticket_18_amount">
+                    <input type="number" class="ticket-qty__qty" min="0" max="20" value="1" name="ticket_18_amount" id="ticket_18_amount" readonly="readonly">
                     <button type="button" class="ticket-qty__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
                       +
                     </button>
@@ -625,7 +625,7 @@
                     <button type="button" class="ticket-qty__btn" aria-label="remove one ticket" onclick="this.nextElementSibling.stepDown(1)">
                       –
                     </button>
-                    <input type="number" class="ticket-qty__qty" min="0" max="20" value="1" name="ticket_65_amount" id="ticket_65_amount">
+                    <input type="number" class="ticket-qty__qty" min="0" max="20" value="1" name="ticket_65_amount" id="ticket_65_amount" readonly="readonly">
                     <button type="button" class="ticket-qty__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
                       +
                     </button>
