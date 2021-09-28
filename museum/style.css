@@ -421,8 +421,45 @@ fieldset {
   width: 720px;
 }
 
-.explore__image {
+.explore__slider {
+  position: relative;
   margin-top: 15px;
+}
+
+.explore__image-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 440px;
+  overflow: hidden;
+}
+
+.explore__image--after {
+  max-width: 720px;
+}
+
+.explore__slide-bar {
+  position: absolute;
+  top: 0;
+  left: 440px;
+  bottom: 0;
+  width: 38px;
+  height: 100%;
+}
+
+.slider-bar__bar {
+  width: 5px;
+  height: calc((100% - 38px) / 2);
+  background-color: var(--white);
+  transform: translateX(-50%);
+}
+
+.slider-bar__thumb {
+  width: 38px;
+  height: 38px;
+  border: 5px solid var(--white);
+  border-radius: 50%;
+  transform: translateX(-50%);
 }
 
 .section__text {
