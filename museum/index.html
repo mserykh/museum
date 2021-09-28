@@ -272,13 +272,13 @@
           </div>
           <div class="video__list">
             <div class="video__item">
-              <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI" width="452" height="254" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI" width="452" height="254" title="YouTube video player"></iframe>
             </div>
             <div class="video__item">
-              <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo" width="452" height="254" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo" width="452" height="254" title="YouTube video player"></iframe>
             </div>
             <div class="video__item">
-              <iframe src="https://www.youtube.com/embed/NOhDysLnTvY" width="452" height="254" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/NOhDysLnTvY" width="452" height="254" title="YouTube video player"></iframe>
             </div>
           </div>
           <div class="video__pagination">
@@ -363,7 +363,7 @@
                   Amount
                 </legend>
                 <fieldset class="order-form__ticket-category">
-                  <label for="ticket_18_amount" class="order-form__label">
+                  <label class="order-form__label">
                     Basic 18+
                   </label>
                   <div class="order-form__amount-wrapper">
@@ -372,7 +372,7 @@
                         <path d="M15.6875 2.82812H0.03125V0.46875H15.6875V2.82812Z" fill="white"/>
                         </svg>
                     </button>
-                    <input type="number" class="order-form__qty" min="0" max="10" value="1" name="ticket_18_amount" id="ticket_18_amount">
+                    <input type="number" class="order-form__qty" min="0" max="10" value="1" id="preview-ticket_18_amount">
                     <button type="button" class="order-form__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.89062 6.79688H16.2344V9.53125H9.89062V16.7188H6.98438V9.53125H0.640625V6.79688H6.98438V0.15625H9.89062V6.79688Z" fill="white"/>
@@ -381,7 +381,7 @@
                   </div>
                 </fieldset>
                 <fieldset class="order-form__ticket-category">
-                  <label for="ticket_65_amount" class="order-form__label">
+                  <label class="order-form__label">
                     Senior 65+
                   </label>
                   <div class="order-form__amount-wrapper">
@@ -390,7 +390,7 @@
                         <path d="M15.6875 2.82812H0.03125V0.46875H15.6875V2.82812Z" fill="white"/>
                         </svg>
                     </button>
-                    <input type="number" class="order-form__qty" min="0" max="10" value="1" name="ticket_65_amount" id="ticket_65_amount">
+                    <input type="number" class="order-form__qty" min="0" max="10" value="1" id="preview-ticket_65_amount">
                     <button type="button" class="order-form__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.89062 6.79688H16.2344V9.53125H9.89062V16.7188H6.98438V9.53125H0.640625V6.79688H6.98438V0.15625H9.89062V6.79688Z" fill="white"/>
@@ -604,14 +604,14 @@
               <div class="ticket-qty">
                 <h4 class="ticket-qty__title">Entry ticket</h4>
                 <div class="ticket-qty__wrapper">
-                  <label for="ticket_18_amount" class="ticket-qty__label">
+                  <label class="ticket-qty__label">
                     Basic 18+ (20 €)
                   </label>
                   <div class="ticket-qty__amount-wrapper">
                     <button type="button" class="ticket-qty__btn" aria-label="remove one ticket" onclick="this.nextElementSibling.stepDown(1)">
                       –
                     </button>
-                    <input type="number" class="ticket-qty__qty" min="0" max="20" value="1" name="ticket_18_amount" id="ticket_18_amount" readonly="readonly">
+                    <input type="number" class="ticket-qty__qty" min="0" max="20" value="1" id="ticket_18_amount" readonly="readonly">
                     <button type="button" class="ticket-qty__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
                       +
                     </button>
@@ -625,7 +625,7 @@
                     <button type="button" class="ticket-qty__btn" aria-label="remove one ticket" onclick="this.nextElementSibling.stepDown(1)">
                       –
                     </button>
-                    <input type="number" class="ticket-qty__qty" min="0" max="20" value="1" name="ticket_65_amount" id="ticket_65_amount" readonly="readonly">
+                    <input type="number" class="ticket-qty__qty" min="0" max="20" value="1" id="ticket_65_amount" readonly="readonly">
                     <button type="button" class="ticket-qty__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
                       +
                     </button>
@@ -682,8 +682,8 @@
               <div class="card__field">
                 <label for="expdate">Expiration date</label>
                   <div class="exp-wrapper">
-                    <input class="input-exp input-exp--month" type="number" id="expmonth" aria-labelledby='expdate' name="expmonth" placeholder="03" maxlength="2" title="Card expiration month">
-                    <input class="input-exp input-exp--year" type="number" id="expyear" aria-labelledby='expdate' name="expmonth" placeholder="2024" maxlength="4" title="Card expiration year">
+                    <input class="input-exp input-exp--month" type="number" id="expmonth" name="expmonth" placeholder="03" title="Card expiration month">
+                    <input class="input-exp input-exp--year" type="number" id="expyear" name="expmonth" placeholder="2024" title="Card expiration year">
                 </div>
               </div>
               <div class="card__field">
