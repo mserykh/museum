@@ -682,8 +682,32 @@
               <div class="card__field">
                 <label>Expiration date</label>
                   <div class="exp-wrapper">
-                    <input class="input-exp input-exp--month" type="number" id="expmonth" name="expmonth" placeholder="03" title="Card expiration month">
-                    <input class="input-exp input-exp--year" type="number" id="expyear" name="expmonth" placeholder="2024" title="Card expiration year">
+                    <div class="ext-wrapper--month">
+                      <input class="input-exp input-exp--month" type="number" id="expmonth" name="expmonth" min="1" max="12" value="03" title="Card expiration month" readonly="readonly">
+                      <button type="button" class="exp--month__btn btn--up">
+                        <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.00343 0L0.00390625 4H6.00391L3.00343 0Z" fill="#A4A4A3"/>
+                        </svg>
+                      </button>
+                      <button type="button" class="exp--month__btn btn--down">
+                        <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.00182 4.00049L6 0.000488281H0L3.00182 4.00049Z" fill="#A4A4A3"/>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="ext-wrapper--year">
+                      <input class="input-exp input-exp--year" type="number" id="expyear" name="expyear" min="2021" max="2036" value="2024"  title="Card expiration year" readonly="readonly">
+                      <button type="button" class="exp--year__btn btn--up">
+                        <svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.00343 0L0.00390625 4H6.00391L3.00343 0Z" fill="#A4A4A3"/>
+                        </svg>
+                      </button>
+                      <button type="button" class="exp--year__btn btn--down">
+                        <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.00182 4.00049L6 0.000488281H0L3.00182 4.00049Z" fill="#A4A4A3"/>
+                        </svg>
+                      </button>
+                    </div>
                 </div>
               </div>
               <div class="card__field">
