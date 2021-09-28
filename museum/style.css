@@ -1268,6 +1268,81 @@ input[type=range] {
   width: 190px;
 }
 
+.input--date {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #030303;
+}
+
+.input--date::-webkit-calendar-picker-indicator {
+  color: none;
+  background: none;
+  z-index: 1;
+}
+
+.input--date::before {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 18px;
+  height: 18px;
+  content: "";
+  background-image: url("../assets/svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  transform: translate(0, -50%);
+}
+
+.input--date::after {
+  position: absolute;
+  width: 100%;
+  content: attr(data-placeholder);
+  transform: translateX(0);
+}
+
+.input--date:focus::after,
+.input--date:valid::after { 
+  display: none
+}
+
+.input--time {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #030303;
+}
+
+.input--time::-webkit-calendar-picker-indicator {
+  color: none;
+  background: none;
+  z-index: 1;
+}
+
+.input--time::before {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 18px;
+  height: 18px;
+  content: "";
+  background-image: url("../assets/svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  transform: translate(0, -50%);
+}
+
+.input--time::after {
+
+}
+
+.input--time:focus::after,
+.input--time:valid::after { 
+  display: none
+}
+
 .ticket-qty {
   display: flex;
   flex-direction: column;
@@ -1375,11 +1450,13 @@ input[type=range] {
 .overview__time,
 .overview__ticket-type {
   position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
   padding-left: 30px;
   font-size: 18px;
   font-weight: 300;
   line-height: 21px;
-  margin-bottom: 5px;
 }
 
 .overview__icon {
