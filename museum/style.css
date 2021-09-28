@@ -486,9 +486,14 @@ fieldset {
   flex-wrap: nowrap;
 }
 
+.video .section__title {
+  margin-bottom: 0;
+}
+
 .video__text-wrapper {
   display: flex;
   gap: 60px;
+  margin-bottom: 75px;
 }
 
 .section__text--dark {
