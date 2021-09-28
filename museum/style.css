@@ -1680,6 +1680,10 @@ input[type=range] {
 
 .card__field input{
   height: 35px;
+  padding: 10px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 12px;
   background: #FFFFFF;
   border: 0.5px solid #A4A4A3;
 }
@@ -1693,8 +1697,74 @@ input[type=range] {
   gap: 15px;
 }
 
-.input-exp {
+.exp-wrapper .input-exp {
   width: 100px;
+  padding-right: 40px;
+}
+
+.ext-wrapper--month, .ext-wrapper--year {
+  position: relative;
+}
+
+.ext-wrapper--month::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 28px;
+  width: 1px;
+  height: 34px;
+  background-color: #A4A4A3;
+  z-index: 3;
+}
+
+.ext-wrapper--year::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 28px;
+  width: 1px;
+  height: 34px;
+  background-color: #A4A4A3;
+  z-index: 3;
+}
+
+.input-exp::-webkit-outer-spin-button,
+.input-exp::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+
+.exp--month__btn {
+  position: absolute;
+  width: 28px;
+  height: 17px;
+}
+
+.exp--month__btn.btn--up {
+  top: 3px;
+  right: 0;
+}
+
+.exp--month__btn.btn--down {
+  bottom: 7px;
+  right: 1px;
+}
+
+.exp--year__btn {
+  position: absolute;
+  width: 28px;
+  height: 17px;
+}
+
+.exp--year__btn.btn--up {
+  top: 3px;
+  right: 0;
+}
+
+.exp--year__btn.btn--down {
+  bottom: 7px;
+  right: 1px;
 }
 
 .input-cardholder {
