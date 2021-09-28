@@ -1109,8 +1109,20 @@ input[type=range] {
 }
 
 .booking {
-  z-index: 6;
+  position: fixed;
+  width: 1440px;
+  max-width: 100%;
+  top: 50%;
+  left: -100%;
   line-height: initial;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  z-index: 1;
+}
+
+.booking.open {
+  left: 50%;
+  z-index: 6;
 }
 
 .booking__container {
@@ -1254,6 +1266,11 @@ input[type=range] {
   background-image: url("./assets/svg/exhibition.svg");
 }
 
+.field__icon--type {
+  height: 15px;
+  background-image: url("./assets/svg/type.svg");
+}
+
 .field input {
   width: 100%;
   height: 45px;
@@ -1274,6 +1291,7 @@ input[type=range] {
   font-size: 18px;
   font-weight: 400;
   color: #030303;
+  background-color: transparent;
 }
 
 .input--date::-webkit-calendar-picker-indicator {
@@ -1282,7 +1300,7 @@ input[type=range] {
   z-index: 1;
 }
 
-.input--date::before {
+.input--date::after {
   position: absolute;
   top: 50%;
   right: 15px;
@@ -1295,16 +1313,14 @@ input[type=range] {
   transform: translate(0, -50%);
 }
 
-.input--date::after {
-  position: absolute;
-  width: 100%;
+.input--time:not(.has-value)::before {
   content: attr(data-placeholder);
-  transform: translateX(0);
-}
-
-.input--date:focus::after,
-.input--date:valid::after { 
-  display: none
+  display: block;
+  position: relative;
+  width: 38px;
+  height: 21px;
+  top: 2px;
+  transform: translateX(30px);
 }
 
 .input--time {
@@ -1313,15 +1329,30 @@ input[type=range] {
   font-size: 18px;
   font-weight: 400;
   color: #030303;
+  background-color: transparent;
+}
+
+.input--time:not(.has-value)::before {
+  content: attr(data-placeholder);
+  display: block;
+  position: relative;
+  width: 38px;
+  height: 21px;
+  transform: translateX(30px);
+}
+
+.field--time:focus::before,
+.field--time:valid::before { 
+  display: none
 }
 
 .input--time::-webkit-calendar-picker-indicator {
   color: none;
   background: none;
-  z-index: 1;
+  z-index: 2;
 }
 
-.input--time::before {
+.input--time::after {
   position: absolute;
   top: 50%;
   right: 15px;
@@ -1334,13 +1365,13 @@ input[type=range] {
   transform: translate(0, -50%);
 }
 
-.input--time::after {
-
-}
-
-.input--time:focus::after,
-.input--time:valid::after { 
-  display: none
+.field input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding-left: 30px;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--bg-dark);
 }
 
 .ticket-qty {
@@ -1440,7 +1471,7 @@ input[type=range] {
 
 .overview__subtitle {
   padding-bottom: 11px;
-  font-style: 18px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 26px;
   color: var(--dark-red);
@@ -1476,6 +1507,10 @@ input[type=range] {
 .booking-overview__tickets-item {
   display: flex;
   align-items: center;
+}
+
+.booking-overview__tickets-item:not(:last-child) {
+  margin-bottom: 5px;
 }
 
 .tickets__qty {
@@ -1636,14 +1671,16 @@ input[type=range] {
   position: fixed;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, .75);
   opacity: 0;
-  z-index: 1;
+  z-index: -1;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .overlay.open {
-  top: 0;
-  left: 0;
   opacity: 1;
   z-index: 5;
+  transition: opacity 0.4s ease-in-out;
 }
