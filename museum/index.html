@@ -338,7 +338,7 @@
             -->
             <img src="assets/img/tickets-img.jpg" width="720" height="550" alt="" class="tickets__img">
           </div>
-          <form class="tickets__order-form order-form wrapper--thin">
+          <div class="tickets__order-form order-form wrapper--thin">
             <div class="fieldset-wrapper">
               <fieldset class="order-form__ticket-types">
                 <legend class="order-form___legend order-form___legend--ticket-type">
@@ -406,7 +406,7 @@
             <button class="order-form__btn-buy">
               Buy Now
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </section>
@@ -565,7 +565,7 @@
             <p class="booking-info__subtitle">Tour to Louvre</p>
           </div>
           <div class="booking-info__form-wrapper">
-            <form action="#" method="POST" class="booking-info__form">
+            <form class="booking-info__form">
               <div class="field field--date field--short">
                 <div class="field__icon field__icon--date">
                 </div>
@@ -594,7 +594,7 @@
               <div class="field field--exhibition">
                 <div class="field__icon field__icon--exhibition">
                 </div>
-                <select name="" id="ticket-type">
+                <select id="ticket-type">
                   <option value="" selected>Ticket type</option>
                   <option value="permanent">Permanent exhibition</option>
                   <option value="temporary">Temporary exhibition</option>
@@ -687,14 +687,14 @@
                 </div>
               </div>
               <div class="card__field">
-                <label for="cardholder">Cardholder name</label>
+                <label>Cardholder name</label>
                 <input class="input-cardholder" type="text" id="cardholder" name="cardholder" placeholder="" pattern="\d*" title="Cardholder name">
               </div>
             </div>
             <div class="card card--back">
               <div class="card__field card__field--cvc">
                 <label for="cardcvc">CVC/CVV</label>
-                <input class="input-cvc" type="text" id="cardcvc" name="cardcvc" placeholder="" pattern="\d*" inputmode="numeric" title="CVC/CVV">
+                <input class="input-cvc" type="text" id="cardcvc" name="cardcvc" placeholder="" pattern="\d*" title="CVC/CVV">
               </div>
               <span class="card__text">The last 3&nbsp;or&nbsp;4 digits on back of&nbsp;the card</span>
             </div>
