@@ -1346,10 +1346,31 @@ input[type=range] {
   background-color: transparent;
 }
 
-.input--date::-webkit-calendar-picker-indicator {
-  color: none;
-  background: none;
-  z-index: 1;
+input[type=date]::-webkit-datetime-edit-month-field{
+  -webkit-appearance: none;
+  display: none;
+}
+input[type=date]::-webkit-datetime-edit-day-field {
+  -webkit-appearance: none;
+  display: none;
+}
+input[type=date]::-webkit-datetime-edit-year-field {
+  -webkit-appearance: none;
+  display: none;
+}
+
+input[type="time"]::-webkit-clear-button {
+  display: none;
+}
+
+.input--date:not(.has-value)::before {
+  content: attr(data-placeholder);
+  display: block;
+  position: relative;
+  width: 38px;
+  height: 21px;
+  top: 2px;
+  transform: translateX(30px);
 }
 
 .input--date::after {
@@ -1393,9 +1414,20 @@ input[type=range] {
   transform: translateX(30px);
 }
 
+.field--date:focus::before,
+.field--date:valid::before { 
+  display: none
+}
+
 .field--time:focus::before,
 .field--time:valid::before { 
   display: none
+}
+
+.input--date::-webkit-calendar-picker-indicator {
+  color: none;
+  background: none;
+  z-index: 2;
 }
 
 .input--time::-webkit-calendar-picker-indicator {
@@ -1429,7 +1461,7 @@ input[type=range] {
 .ticket-qty {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
   width: 100%;
   padding: 15px;
   border: 1px solid var(--bg-dark);
@@ -1578,6 +1610,38 @@ input[type=range] {
 
 .tickets__type {
   margin-right: auto;
+}
+
+.field__ticket-type {
+  width: 100%;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--bg-dark);
+  padding: 10px 10px;
+  padding-left: 45px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("./assets/svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 5% bottom 50%;
+  background-size: auto;
+  border: none;
+  outline: none;
+}
+
+.field__ticket-type option {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  padding: 20px;
+}
+select option:checked {
+  background-color: #E7E7E7;
 }
 
 .booking-overview__total {
@@ -1733,7 +1797,6 @@ input[type=range] {
   margin: 0;
   -webkit-appearance: none;
 }
-
 
 .exp--month__btn {
   position: absolute;
