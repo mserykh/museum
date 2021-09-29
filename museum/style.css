@@ -1668,7 +1668,7 @@ select option:checked {
   line-height: 45px;
   color: var(--white);
   background-color: var(--dark-red);
-  transition: background 1s ease-in-out;
+  transition: background 0.4s ease-in-out;
   overflow: hidden;
 }
 
@@ -1677,7 +1677,7 @@ select option:checked {
   border-radius: 50%;
   transform: scale(0);
   background-color: rgba(255, 255, 255, 0.5);
-  animation: ripple 0.4s ease-in-out; 
+  animation: ripple 0.4s ease-in-out;
 }
 
 @keyframes ripple {
