@@ -36,12 +36,13 @@ const paymentBtn = document.querySelector('.booking-payment__btn');
 
 function addRipple(event) {
   const circle = document.createElement('div');
-  const circleDiameter = Math.max(event.target.clientWidth, event.target.clientHeight);
+  const circleDiameter = Math.max(paymentBtn.clientWidth, paymentBtn.clientHeight);
+  const crcl = paymentBtn.getBoundingClientRect();
   const circleRadius = circleDiameter / 2;
   circle.style.width = `${circleDiameter}px`;
   circle.style.height = `${circleDiameter}px`;
-  circle.style.left = `${event.clientX - (paymentBtn.offsetTop + circleRadius) - 220}px`;
-  circle.style.top = `${event.clientY - (paymentBtn.offsetLeft + circleRadius) + 200}px`;
+  circle.style.top = `${event.clientY - crcl.top - circleRadius}px`;
+  circle.style.left = `${event.clientX - crcl.left - circleRadius}px`;
   circle.classList.add('ripple');
   const ripple = paymentBtn.getElementsByClassName('ripple')[0];
 
@@ -50,7 +51,6 @@ function addRipple(event) {
   }
 
   paymentBtn.appendChild(circle);
-  console.log(paymentBtn.offsetTop, paymentBtn.offsetLeft);
 }
 
 paymentBtn.addEventListener('click', addRipple);
