@@ -1529,8 +1529,6 @@ input[type="time"]::-webkit-clear-button {
 }
 
 .booking-payment {
-  display: flex;
-  flex-direction: column;
   max-width: 530px;
   width: 100%;
   padding: 25px 30px 26px;
@@ -1662,14 +1660,31 @@ select option:checked {
 }
 
 .booking-payment__btn {
-  align-self: end;
+  position: relative;
+  margin-left: 248px;
   width: 220px;
   height: 45px;
   font-size: 22px;
   line-height: 45px;
   color: var(--white);
   background-color: var(--dark-red);
-  transition: background 0.4s ease-in-out;
+  transition: background 1s ease-in-out;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: ripple 0.4s ease-in-out; 
+}
+
+@keyframes ripple {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 .booking-payment__btn:hover {
@@ -1679,7 +1694,7 @@ select option:checked {
 
 .booking-card {
   position: relative;
-  height: 100%;
+  height: 231px;
   margin-bottom: 36px;
 }
 
@@ -1868,4 +1883,10 @@ select option:checked {
   opacity: 1;
   z-index: 5;
   transition: opacity 0.4s ease-in-out;
+}
+
+.ripple {
+  position: absolute;
+
+
 }
