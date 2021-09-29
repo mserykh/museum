@@ -29,3 +29,28 @@ function closeBookingForm() {
 
 bookBtn.addEventListener('click', showBookingForm);
 closeBookingBtn.addEventListener('click', closeBookingForm);
+
+
+const paymentBtn = document.querySelector('.booking-payment__btn');
+
+
+function addRipple(event) {
+  const circle = document.createElement('div');
+  const circleDiameter = Math.max(event.target.clientWidth, event.target.clientHeight);
+  const circleRadius = circleDiameter / 2;
+  circle.style.width = `${circleDiameter}px`;
+  circle.style.height = `${circleDiameter}px`;
+  circle.style.left = `${event.clientX - (paymentBtn.offsetTop + circleRadius) - 220}px`;
+  circle.style.top = `${event.clientY - (paymentBtn.offsetLeft + circleRadius) + 200}px`;
+  circle.classList.add('ripple');
+  const ripple = paymentBtn.getElementsByClassName('ripple')[0];
+
+  if (ripple) {
+    ripple.remove();
+  }
+
+  paymentBtn.appendChild(circle);
+  console.log(paymentBtn.offsetTop, paymentBtn.offsetLeft);
+}
+
+paymentBtn.addEventListener('click', addRipple);
