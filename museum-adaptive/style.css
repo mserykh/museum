@@ -1,16 +1,49 @@
 :root {
-  --bg-dark: #030303;
-  --black: #000000;
-  --dark-red: #710707;
-  --text-highlight: #caaa7d;
-  --font-gold: #9d8665;
-  --slider-accent: #D2B183;
-  --white: #ffffff;
-  --headeing1: 80px;
-  --heading2: 32px;
-  --font3: 28px;
-  --font4: 18px;
-  --margin-b: 75px;
+  --color-primary: #030303;
+  --color-primary-light: #FFFFFF;
+  --color-accent: #9d8665;
+  --color-accent2: #710707;
+  --color-active: #7e6c51;
+  --color-highlight: #caaa7d;
+  --color-highlight2: #d2b183;
+  --color-player: #b3b3b3;
+  --color-player2: #c4c4c4;
+  --color-player3: #999999;
+  --color-player4: #333333;
+  --color-player5: #989898;
+  --color-footer: #666666;
+  --color-modal: #E7E7E7;
+  --color-modal2: #A4A4A3;
+
+  --content-width: 1440px;
+  --desctop-small-width: 1024px;
+  --tablet-width: 768px;
+  --mobile-big-width: 420px;
+  --mobile-small-width: 320px;
+}
+
+h2 {
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: auto;
+  letter-spacing: 5px;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
 }
 
 * {
@@ -27,7 +60,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   line-height: 1.7;
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .visually-hidden {
@@ -85,7 +118,7 @@ fieldset {
 
 .container {
   max-width: calc(100% - 40px);
-  width: 1440px;
+  width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -94,11 +127,11 @@ fieldset {
 }
 
 .section--dark {
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
 }
 
 .header {
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
 }
 
 .header__container {
@@ -123,20 +156,20 @@ fieldset {
 }
 
 .logo:hover path{
-  fill: var(--font-gold);
+  fill: var(--color-accent);
   transition: fill 0.4s ease-in-out;
 }
 
 .logo:hover .logo__text {
-  color: var(--font-gold);
+  color: var(--color-accent);
   transition: color 0.4s ease-in-out;
 }
 
 .logo__text {
   font-family: "Forum", cursive;
-  font-size: var(--font3);
+  font-size: 28px;
   line-height: 1.1;
-  color: var(--white);
+  color: var(--color-primary-light);
   text-transform: uppercase;
   letter-spacing: 5px;
   transition: color 0.4s ease-in-out;
@@ -160,19 +193,19 @@ fieldset {
   /*padding: 13px 0;*/
   font-weight: 100;
   line-height: 1.1;
-  color: var(--white);
+  color: var(--color-primary-light);
   letter-spacing: 2px;
   transition: color 0.4s ease-in-out;
 }
 
 .navigation__link:hover,
 .navigation__link:active {
-  color: var(--font-gold);
+  color: var(--color-accent);
   transition: color 0.4s ease-in-out;
 }
 
 .welcome {
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
 }
 
 .welcome__container {
@@ -220,14 +253,14 @@ fieldset {
   height: 120px;
   margin-top: -60px;
   padding: 0 75px;
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
   z-index: 2;
 }
 
 .slider__slides-counter {
   font-size: 22px;
   line-height: 40px;
-  color: var(--white);
+  color: var(--color-primary-light);
 }
 
 .slider__current-slide {
@@ -246,17 +279,17 @@ fieldset {
 .slider__dot {
   width: 16px;
   height: 16px;
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   transition: background 0.4s ease-in-out;
 }
 
 .slider__dot:hover {
-  background-color: var(--font-gold);
+  background-color: var(--color-accent);
   transition: background 0.4s ease-in-out;
 }
 
 .slider__dot--active {
-  background-color: var(--slider-accent);
+  background-color: var(--color-highlight2);
 }
 
 .slider__arrows {
@@ -269,22 +302,16 @@ fieldset {
 }
 
 .slider__arrow:hover path {
-  fill: var(--font-gold);
+  fill: var(--color-accent);
   transition: fill 0.4s ease-in-out;
 }
 
 .section__title {
-  margin-bottom: var(--margin-b);
-  font-family: "Forum", cursive;
-  font-size: var(--headeing1);
-  font-weight: 400;
-  line-height: 90px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
+  margin-bottom: 75px;
 }
 
 .section__title--light {
-  color: var(--white);
+  color: var(--color-primary-light);
 }
 
 .welcome__title {
@@ -292,12 +319,12 @@ fieldset {
 }
 
 .welcome__text {
-  margin-bottom: var(--margin-b);
-  font-size: var(--font3);
+  margin-bottom: 75px;
+  font-size: 28px;
   font-weight: 300;
   line-height: 33px;
   letter-spacing: 2px;
-  color: var(--white);
+  color: var(--color-primary-light);
 }
 
 .welcome__btn {
@@ -308,25 +335,25 @@ fieldset {
   line-height: 75px;
   letter-spacing: 2px;
   text-align: center;
-  color: var(--white);
-  background-color: var(--dark-red);
+  color: var(--color-primary-light);
+  background-color: var(--color-accent2);
   border-radius: 10px;
   transition: background-color ease-in-out 0.4s;
 }
 
 .welcome__btn:hover,
 .welcome__btn:active {
-  background-color: var(--font-gold);
+  background-color: var(--color-accent);
   transition: background-color ease-in-out 0.4s;
 }
 
 .section__title--darker {
-  color: var(--font-gold);
+  color: var(--color-accent);
 }
 
 .title--underline {
   position: relative;
-  margin-bottom: var(--margin-b);
+  margin-bottom: 75px;
   padding-bottom: 28px;
 }
 
@@ -338,7 +365,7 @@ fieldset {
   width: 100%;
   height: 3px;
   bottom: 0;
-  background-color: var(--dark-red);
+  background-color: var(--color-accent2);
 }
 
 .visiting__list {
@@ -374,12 +401,9 @@ fieldset {
 .visiting__item-title {
   position: relative;
   font-family: "Forum", cursive;
-  font-size: var(--heading2);
-  font-weight: 400;
-  line-height: 1.1;
-  color: var(--black);
+  color: var(--color-primary);
   text-transform: uppercase;
-  letter-spacing: 5px;
+
   margin-bottom: 21px;
 }
 
@@ -390,7 +414,7 @@ fieldset {
   left: 0;
   right: 31.6%;
   height: 2px;
-  background-color: var(--dark-red);
+  background-color: var(--color-accent2);
   transition: right 0.4s ease-in-out;
 }
 
@@ -401,16 +425,17 @@ fieldset {
 
 .visiting__item-subtitle {
   margin-bottom: 11px;
+  font-size: 22px;
   font-weight: 100;
   line-height: 1.15;
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .visiting__item-type {
-  font-size: var(--font4);
+  font-size: 18px;
   font-weight: 100;
   line-height: 1.15;
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .explore__container {
@@ -456,14 +481,14 @@ fieldset {
 .slider-bar__bar {
   width: 5px;
   height: calc((100% - 38px) / 2);
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   transform: translateX(-50%);
 }
 
 .slider-bar__thumb {
   width: 38px;
   height: 38px;
-  border: 5px solid var(--white);
+  border: 5px solid var(--color-primary-light);
   border-radius: 50%;
   transform: translateX(-50%);
 }
@@ -471,7 +496,7 @@ fieldset {
 .section__text {
   font-weight: 300;
   line-height: 39px;
-  color: var(--white);
+  color: var(--color-primary-light);
 }
 
 .section__text:not(:last-of-type) {
@@ -479,7 +504,7 @@ fieldset {
 }
 
 .text-highlighter {
-  color: var(--text-highlight);
+  color: var(--color-highlight);
 }
 
 .video {
@@ -503,7 +528,7 @@ fieldset {
 }
 
 .section__text--dark {
-  color: var(--black)
+  color: var(--color-primary)
 }
 
 .video__inner-container {
@@ -521,7 +546,7 @@ fieldset {
 .player__preview {
   position: relative;
   min-height: 650px;
-  background-color: var(--black);
+  background-color: var(--color-primary);
   background-image: url("assets/img/video.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -537,7 +562,7 @@ fieldset {
   min-height: 85px;
   padding: 25px 31px;
   row-gap: 25px;
-  background-color: var(--black);
+  background-color: var(--color-primary);
 }
 
 .player__btn {
@@ -659,7 +684,7 @@ input[type=range]::-ms-track {
 input[type=range]::-webkit-slider-thumb {
   width: 15px;
   height: 15px;
-  background: var(--white);
+  background: var(--color-primary-light);
   border-radius: 50%;
   -webkit-appearance: none;
   cursor: pointer;
@@ -668,7 +693,7 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-moz-range-thumb {
   width: 15px;
   height: 15px;
-  background: var(--white);
+  background: var(--color-primary-light);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -676,21 +701,21 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-ms-thumb {
   width: 15px;
   height: 15px;
-  background: var(--white);
+  background: var(--color-primary-light);
   border-radius: 50%;
   cursor: pointer;
 }
 
 input[type=range] {
   height: 8px;
-  background: linear-gradient(to right, var(--dark-red) 0%, var(--dark-red) 40%, #C4C4C4 40%, #C4C4C4 100%);
+  background: linear-gradient(to right, var(--color-accent2) 0%, var(--color-accent2) 40%, var(--color-player2) 40%, var(--color-player2) 100%);
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
 }
 
 .controls__progress-bar[type=range] {
-  background: linear-gradient(to right, var(--dark-red) 0%, var(--dark-red) 47%, #C4C4C4 47%, #C4C4C4 100%);
+  background: linear-gradient(to right, var(--color-accent2) 0%, var(--color-accent2) 47%, var(--color-player2) 47%, var(--color-player2) 100%);
 }
 
 .video__list{
@@ -730,7 +755,7 @@ input[type=range] {
 }
 
 .pagination__arrow:hover path {
-  fill: var(--dark-red);
+  fill: var(--color-accent2);
   transition: fill 0.3s ease-in-out;
 }
 
@@ -738,17 +763,17 @@ input[type=range] {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #999999;
+  background-color: var(--color-player3);
   transition: background 0.3s ease-in-out;
 }
 
 .pagination__page--active {
-  background-color: #333333;
+  background-color: var(--color-player4);
   transition: background 0.3s ease-in-out;
 }
 
 .pagination__page:hover {
-  background-color: var(--dark-red);
+  background-color: var(--color-accent2);
   transition: background 0.3s ease-in-out;
 }
 
@@ -768,7 +793,7 @@ input[type=range] {
   flex-wrap: wrap;
   flex-direction: column;
   column-gap: 30px;
-  max-width: 1440px;
+  max-width: var(--content-width);
   width: 100%;
 }
 
@@ -822,10 +847,10 @@ input[type=range] {
 
 .order-form___legend {
   margin-bottom: 10px;
-  font-size: var(--font3);
+  font-size: 28px;
   line-height: 1.5;
   font-weight: 700;
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .order-form___legend--ticket-type {
@@ -848,24 +873,24 @@ input[type=range] {
 }
 
 .order-form__ticket-type:hover .radio__btn::before {
-  border: 2px solid var(--font-gold);
+  border: 2px solid var(--color-accent);
   transition: border 0.4s ease-in-out;
 }
 
 .order-form__ticket-type:hover .radio__btn:checked:after {
-  background-color: var(--font-gold);
+  background-color: var(--color-accent);
   transition: background 0.4s ease-in-out;
 }
 
 .order-form__ticket-type:hover .radio__label {
-  color: var(--font-gold);
+  color: var(--color-accent);
   transition: color 0.4s ease-in-out;
 }
 
 .radio__label {
   font-weight: 300;
   line-height: 1.1;
-  color: var(--black);
+  color: var(--color-primary);
   transition: color 0.4s ease-in-out;
 }
 
@@ -884,9 +909,9 @@ input[type=range] {
   left: 0;
   width: 17px;
   height: 17px;
-  border: 2px solid var(--black);
+  border: 2px solid var(--color-primary);
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   transition: border 0.4s ease-in-out;
 }
 
@@ -902,7 +927,7 @@ input[type=range] {
 }
 
 .radio__btn:checked::after {
-  background-color: var(--black);
+  background-color: var(--color-primary);
 }
 
 .order-form__ticket-category:not(:last-of-type) {
@@ -918,7 +943,7 @@ input[type=range] {
 
 .order-form__amount-wrapper {
   display: flex;
-  border: 3px solid var(--black);
+  border: 3px solid var(--color-primary);
 }
 
 .order-form__amount {
@@ -934,13 +959,13 @@ input[type=range] {
 }
 
 .order-form__btn path {
-  fill: var(--black);
+  fill: var(--color-primary);
   transition: fill 0.4s ease-in-out;
 }
 
 .order-form__btn:hover path, 
 .order-form__btn:active path {
-  fill: var(--font-gold);
+  fill: var(--color-accent);
   transition: fill 0.4s ease-in-out;
 }
 
@@ -950,9 +975,9 @@ input[type=range] {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.2;
-  color: var(--black);
+  color: var(--color-primary);
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   border: none;
 }
 
@@ -969,11 +994,11 @@ input[type=range] {
 
 .order-form__total {
   margin-bottom: 65px;
-  font-size: var(--font3);
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 1.5px;
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .order-form__btn-buy {
@@ -983,8 +1008,8 @@ input[type=range] {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.2;;
-  color: var(--white);
-  background-color: var(--black);
+  color: var(--color-primary-light);
+  background-color: var(--color-primary);
   border: none;
   border-radius: 2px;
   transition: background-color 0.4s ease-in-out;
@@ -993,7 +1018,7 @@ input[type=range] {
 
 .order-form__btn-buy:hover,
 .order-form__btn-buy:active {
-  background-color: var(--font-gold);
+  background-color: var(--color-accent);
   transition: background-color 0.4s ease-in-out;
 }
 
@@ -1038,7 +1063,7 @@ input[type=range] {
 
 .contacts__item--title {
   margin-bottom: 16px;
-  font-size: var(--font3);
+  font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -1049,12 +1074,12 @@ input[type=range] {
 }
 
 .contacts__item:hover .contacts__link {
-  color: var(--font-gold);
+  color: var(--color-accent);
   transition: color 0.4s ease-in-out;
 }
 
 .footer {
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
   padding: 75px 0 50px;
 }
 
@@ -1063,7 +1088,7 @@ input[type=range] {
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: calc(100% - 40px);
-  width: 1440px;
+  width: var(--content-width);
   margin: 0 auto;
   padding-bottom: 40px;
 }
@@ -1071,7 +1096,7 @@ input[type=range] {
 .footer__divider {
   width: 100%;
   height: 3px;
-  background-color: #666666;
+  background-color: var( --color-footer);
 }
 
 .footer__logo {
@@ -1112,7 +1137,7 @@ input[type=range] {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 1px solid var(--white);
+  border: 1px solid var(--color-primary-light);
   transition: border-color 0.4s ease-in-out;
   cursor: pointer;
 }
@@ -1128,17 +1153,17 @@ input[type=range] {
 }
 
 .socail-list__link path {
-  fill: var(--white);
+  fill: var(--color-primary-light);
   transition: fill 0.4s ease-in-out;
 }
 
 .social-list__item:hover {
-  border-color: var(--font-gold);
+  border-color: var(--color-accent);
   transition: border-color 0.4s ease-in-out;
 }
 
 .social-list__item:hover path {
-  fill: var(--font-gold);
+  fill: var(--color-accent);
   transition: fill 0.4s ease-in-out;
 }
 
@@ -1147,20 +1172,20 @@ input[type=range] {
   justify-content: space-between;
   padding-top: 50px;
   max-width: calc(100% - 40px);
-  width: 1440px;
+  width: var(--content-width);
   margin: 0 auto;
 }
 
 .footer__copyright {
   font-weight: 100;
   line-height: 1.1;
-  color: var(--white);
+  color: var(--color-primary-light);
   letter-spacing: 2px;
 }
 
 .booking {
   position: fixed;
-  width: 1440px;
+  width: var(--content-width);
   max-width: 100%;
   top: 50%;
   left: -100%;
@@ -1181,10 +1206,10 @@ input[type=range] {
   flex-direction: column;
   align-items: center;
   gap: 36px;
-  max-width: 1440px;
+  max-width: var(--content-width);
   margin: 0 auto;
   padding: 30px 30px 90px;
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   transition: all 0.5s ease-in-out;
 }
 
@@ -1205,7 +1230,7 @@ input[type=range] {
   width: 30px;
   height: 1px;
   transform: rotate(45deg);
-  background-color: #030303;
+  background-color: var(--color-primary);
   transition: background 0.4s ease-in-out;
 }
 
@@ -1218,13 +1243,13 @@ input[type=range] {
   width: 30px;
   height: 1px;
   transform: rotate(135deg);
-  background-color: #030303;
+  background-color: var(--color-primary);
   transition: background 0.4s ease-in-out;
 }
 
 .booking__btn-close:hover::before,
 .booking__btn-close:hover::after {
-  background-color: var(--font-gold);
+  background-color: var(--color-accent);
   transition: background 0.4s ease-in-out;
 }
 
@@ -1251,17 +1276,17 @@ input[type=range] {
   font-weight: 400;
   font-size: 50px;
   line-height: 53px;
-  color: var(--font-gold);
+  color: var(--color-accent);
   text-transform: uppercase;
 }
 
 .booking-info__subtitle {
   margin: 0;
   padding-bottom: 10px;
-  font-size: var(--font4);
+  font-size: 18px;
   line-height: 21px;
-  color: var(--dark-red);
-  border-bottom: 3px solid var(--dark-red);
+  color: var(--color-accent2);
+  border-bottom: 3px solid var(--color-accent2);
 }
 
 .booking-info__form {
@@ -1277,7 +1302,7 @@ input[type=range] {
   position: relative;
   width: 100%;
   align-items: center;
-  border: 1px solid var(--bg-dark);
+  border: 1px solid var(--color-primary);
 }
 
 .field__icon {
@@ -1328,7 +1353,7 @@ input[type=range] {
   height: 45px;
   padding-left: 15px;
   font-size: 18px;
-  color: var(--bg-dark);
+  color: var(--color-primary);
   border: none;
   outline: none;
 }
@@ -1342,7 +1367,7 @@ input[type=range] {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: #030303;
+  color: var(--color-primary);
   background-color: transparent;
 }
 
@@ -1401,7 +1426,7 @@ input[type="time"]::-webkit-clear-button {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: #030303;
+  color: var(--color-primary);
   background-color: transparent;
 }
 
@@ -1455,7 +1480,7 @@ input[type="time"]::-webkit-clear-button {
   padding-left: 30px;
   font-size: 18px;
   line-height: 20px;
-  color: var(--bg-dark);
+  color: var(--color-primary);
 }
 
 .ticket-qty {
@@ -1464,7 +1489,7 @@ input[type="time"]::-webkit-clear-button {
   gap: 18px;
   width: 100%;
   padding: 15px;
-  border: 1px solid var(--bg-dark);
+  border: 1px solid var(--color-primary);
 }
 
 .ticket-qty__title {
@@ -1473,8 +1498,8 @@ input[type="time"]::-webkit-clear-button {
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;
-  color: var(--font-gold);
-  border-bottom: 2px solid var(--dark-red);
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent2);
 }
 
 .ticket-qty__wrapper {
@@ -1491,22 +1516,22 @@ input[type="time"]::-webkit-clear-button {
 
 .ticket-qty__amount-wrapper {
   display: flex;
-  border: 1px solid var(--black);
+  border: 1px solid var(--color-primary);
 } 
 
 .ticket-qty__btn {
   width: 35px;
   height: 100%;
   font-size: 18px;
-  color: var(--white);
-  background-color: var(--bg-dark);
+  color: var(--color-primary-light);
+  background-color: var(--color-primary);
   border: none;
   cursor: pointer;
   transition: color 0.4s ease-in-out;
 }
 
 .ticket-qty__btn:hover {
-  color: var(--font-gold);
+  color: var(--color-accent);
   transition: color 0.4s ease-in-out;
 }
 
@@ -1516,9 +1541,9 @@ input[type="time"]::-webkit-clear-button {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
-  color: var(--black);
+  color: var(--color-primary);
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   border: none;
 }
 
@@ -1532,7 +1557,7 @@ input[type="time"]::-webkit-clear-button {
   max-width: 530px;
   width: 100%;
   padding: 25px 30px 26px;
-  border: 1px solid var(--bg-dark);
+  border: 1px solid var(--color-primary);
 }
 
 .booking-overview {
@@ -1556,7 +1581,7 @@ input[type="time"]::-webkit-clear-button {
   font-size: 22px;
   font-weight: 500;
   line-height: 26px;
-  color: var(--dark-red);
+  color: var(--color-accent2);
 }
 
 .overview__date,
@@ -1583,7 +1608,7 @@ input[type="time"]::-webkit-clear-button {
 .booking-overview__tickets-list{
   padding-bottom: 9px;
   margin-bottom: 10px;
-  border-bottom: 2px solid var(--dark-red); ;
+  border-bottom: 2px solid var(--color-accent2); ;
 }
 
 .booking-overview__tickets-item {
@@ -1601,8 +1626,8 @@ input[type="time"]::-webkit-clear-button {
   text-align: center;
   font-size: 18px;
   line-height: 19px;
-  color: #A4A4A3;
-  background-color: var(--bg-dark);
+  color: var(--color-modal2);
+  background-color: var(--color-primary);
   border-radius: 5px;
 }
 
@@ -1617,7 +1642,7 @@ input[type="time"]::-webkit-clear-button {
   font-weight: 500;
   font-size: 18px;
   line-height: 20px;
-  color: var(--bg-dark);
+  color: var(--color-primary);
   padding: 10px 10px;
   padding-left: 45px;
   -moz-appearance: none;
@@ -1639,7 +1664,7 @@ input[type="time"]::-webkit-clear-button {
   padding: 20px;
 }
 select option:checked {
-  background-color: #E7E7E7;
+  background-color: var(--color-modal);
 }
 
 .booking-overview__total {
@@ -1666,8 +1691,8 @@ select option:checked {
   height: 45px;
   font-size: 22px;
   line-height: 45px;
-  color: var(--white);
-  background-color: var(--dark-red);
+  color: var(--color-primary-light);
+  background-color: var(--color-accent2);
   transition: background 0.4s ease-in-out;
   overflow: hidden;
 }
@@ -1688,7 +1713,7 @@ select option:checked {
 }
 
 .booking-payment__btn:hover {
-  background-color: var(--font-gold);
+  background-color: var(--color-accent);
   transition: background 0.4s ease-in-out;
 }
 
@@ -1763,8 +1788,8 @@ select option:checked {
   font-family: "Roboto";
   font-weight: 400;
   font-size: 12px;
-  background: #FFFFFF;
-  border: 0.5px solid #A4A4A3;
+  background: var(--color-primary-light);
+  border: 0.5px solid var(--color-modal2);
 }
 
 .input-card-number {
@@ -1792,7 +1817,7 @@ select option:checked {
   right: 28px;
   width: 1px;
   height: 34px;
-  background-color: #A4A4A3;
+  background-color: var(--color-modal2);
   z-index: 3;
 }
 
@@ -1803,7 +1828,7 @@ select option:checked {
   right: 28px;
   width: 1px;
   height: 34px;
-  background-color: #A4A4A3;
+  background-color: var(--color-modal2);
   z-index: 3;
 }
 
