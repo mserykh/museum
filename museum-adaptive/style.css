@@ -175,6 +175,44 @@ fieldset {
   transition: color 0.4s ease-in-out;
 }
 
+.menu-toggle {
+  width: 32px;
+  height: 18px;
+}
+
+.menu-toggle__icon {
+  display: block;
+  position: relative;
+  top: calc(-1 * (50% - 1px));
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-primary-light);
+}
+
+.menu-toggle__icon::before,
+.menu-toggle__icon::after {
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-primary-light);
+  content: "";
+}
+
+.menu-toggle__icon::before {
+  top: 8px;
+  left: 0;
+}
+
+.menu-toggle__icon::after {
+  top: 16px;
+  left: 0;
+}
+
+.header__navigation {
+  display: none;
+}
+
 .navigation__list {
   display: flex;
   width: 775px;
