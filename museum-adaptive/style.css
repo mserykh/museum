@@ -25,8 +25,8 @@
 h2 {
   font-family: "Forum";
   font-weight: 400;
-  font-size: 80px;
-  line-height: 90px;
+  font-size: 28px;
+  line-height: 40px;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
@@ -58,7 +58,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 1.7;
   color: var(--color-primary);
 }
@@ -118,7 +118,6 @@ fieldset {
 
 .container {
   max-width: calc(100% - 40px);
-  width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -139,16 +138,20 @@ fieldset {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding: 55px 0 60px;
+  padding: 35px 0 35px;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 
 .logo > svg {
   display: inline-block;
-  margin-right: 16px;
+  margin-right: 25px;
+  width: 29px;
+  height: 16px;
 }
 
 .logo path {
@@ -166,8 +169,8 @@ fieldset {
 }
 
 .logo__text {
-  font-family: "Forum", cursive;
-  font-size: 28px;
+  font-family: "Forum";
+  font-size: 16px;
   line-height: 1.1;
   color: var(--color-primary-light);
   text-transform: uppercase;
@@ -250,75 +253,59 @@ fieldset {
   display: grid;
 }
 
-.welcome__content-wrapper {
-  position: relative;
-  max-width: 600px;
-  padding-top: 148px;
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-
 .welcome__slider {
   display: flex;
   flex-direction: column;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  align-items: flex-end;
+  grid-row: 2/3;
   width: 100%;
+}
+
+.welcome__content-wrapper {
+  position: relative;
+  grid-row: 1/2;
+  text-align: center;
 }
 
 .welcome__slide {
   position: relative;
 }
 
-.welcome__slide::after {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
-}
 
 .slider__navigation {
   display: flex;
   justify-content: space-between;
+  align-self: center;
   align-items: center;
-  max-width: 600px;
+  padding: 40px 0;
+  max-width: 230px;
   width: 100%;
-  height: 120px;
-  margin-top: -60px;
-  padding: 0 75px;
+  height: 40px;
   background-color: var(--color-primary);
-  z-index: 2;
 }
 
 .slider__slides-counter {
-  font-size: 22px;
+  font-size: 16px;
   line-height: 40px;
   color: var(--color-primary-light);
 }
 
 .slider__current-slide {
-  margin-right: 7px;
+  margin-right: 5px;
 }
 
 .slider__number-divider {
-  margin-right: 7px;
+  margin-right: 4px;
 }
 
 .slider__dots {
   display: flex;
-  gap: 24px;
+  gap: 10px;
 }
 
 .slider__dot {
-  width: 16px;
-  height: 16px;
+  width: 7px;
+  height: 7px;
   background-color: var(--color-primary-light);
-  transition: background 0.4s ease-in-out;
 }
 
 .slider__dot:hover {
@@ -332,7 +319,11 @@ fieldset {
 
 .slider__arrows {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+}
+
+.slider__arrow svg {
+  width: 20px;
 }
 
 .slider__arrow path {
@@ -353,30 +344,20 @@ fieldset {
 }
 
 .welcome__title {
-  margin-bottom: 26px;
+  margin-bottom: 25px;
 }
 
 .welcome__text {
-  margin-bottom: 75px;
-  font-size: 28px;
+  margin-bottom: 50px;
+  font-size: 16px;
   font-weight: 300;
-  line-height: 33px;
+  line-height: 19px;
   letter-spacing: 2px;
   color: var(--color-primary-light);
 }
 
 .welcome__btn {
-  display: block;
-  width: 360px;
-  height: 75px;
-  font-weight: 100;
-  line-height: 75px;
-  letter-spacing: 2px;
-  text-align: center;
-  color: var(--color-primary-light);
-  background-color: var(--color-accent2);
-  border-radius: 10px;
-  transition: background-color ease-in-out 0.4s;
+  display: none;
 }
 
 .welcome__btn:hover,
