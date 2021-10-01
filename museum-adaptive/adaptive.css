@@ -93,6 +93,9 @@
     object-position: top right;
   }
 
+  .footer__rsschool {
+    display: initial;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -440,6 +443,10 @@
   .contacts__item--title {
     margin-bottom: 25px;
     font-size: 28px;
+  }
+
+  .footer {
+    padding: 75px 0 50px;
   }
 }
 
