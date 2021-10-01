@@ -1240,7 +1240,7 @@ input[type=range] {
 .footer__bottom {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 40px;
   max-width: calc(100% - 40px);
   margin: 0 auto;
 }
