@@ -252,6 +252,7 @@
           <div class="video__player player">
             <span class="visually-hidden">Watch videos</span>
             <div class="player__preview">
+              <img src="./assets/img/video.jpg" alt="" class="player__poster">
                 <button class="player__btn player__btn--preview" type="button" title="Play">
                 <span class="visually-hidden">Play video</span>
               </button>
@@ -262,28 +263,28 @@
                   <span class="visually-hidden video-onpause">play</span>
                 </button>
               <input type="range" value="47" min="0" max="100" step="1" class="controls__progress-bar">
-              <div class="controls__volume">
-                <button class="player__btn--volume loud player__btn" type="button">
-                  <span class="visually-hidden loud">mute</span>
-                  <span class="visually-hidden muted">unmute</span>
-                </button>
-                <input type="range" value="40" min="0" max="100" step="1" class="controls__volume-slider">
-              </div>
+              <button class="player__btn--volume loud player__btn" type="button">
+                <span class="visually-hidden loud">mute</span>
+                <span class="visually-hidden muted">unmute</span>
+              </button>
+              <input type="range" value="40" min="0" max="100" step="1" class="controls__volume-slider">
               <button class="player__btn--fullscreen player__btn">
                 <span class="visually-hidden">open the video in fullscreen</span>
               </button>
             </div>
           </div>
           <div class="video__list">
-            <div class="video__item">
-              <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI" width="452" height="254" title="YouTube video player"></iframe>
-            </div>
-            <div class="video__item">
-              <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo" width="452" height="254" title="YouTube video player"></iframe>
-            </div>
-            <div class="video__item">
-              <iframe src="https://www.youtube.com/embed/NOhDysLnTvY" width="452" height="254" title="YouTube video player"></iframe>
-            </div>
+            <div class="video__list-inner">
+              <div class="video__item">
+                <iframe class="video__media" width="560" height="315" src="https://www.youtube.com/embed/aWmJ5DgyWPI"></iframe>
+              </div>
+                <div class="video__item">
+                  <iframe class="video__media" width="560" height="315" src="https://www.youtube.com/embed/Vi5D6FKhRmo"></iframe>
+                </div>
+                <div class="video__item">
+                  <iframe class="video__media" width="560" height="315" src="https://www.youtube.com/embed/NOhDysLnTvY"></iframe>
+                </div>
+              </div>
           </div>
           <div class="video__pagination">
             <button class="pagination__arrow">
