@@ -449,62 +449,63 @@ fieldset {
   color: var(--color-primary);
 }
 
-.explore__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-}
-
 .wrapper--thin {
-  width: 659px;
+  width: 100%;
 }
 
 .wrapper--wide {
-  width: 720px;
+  max-width: 728px;
+  margin: 0 auto;
 }
 
 .explore__slider {
   position: relative;
-  margin-top: 15px;
 }
 
 .explore__image-container {
   position: absolute;
+  margin: 0 auto;
   top: 0;
   bottom: 0;
-  width: 440px;
+  width: calc(100% - 150px);
   overflow: hidden;
 }
 
 .explore__image--after {
-  max-width: 720px;
+  max-width: 100%;
+  height: 100%;
+}
+
+.explore__image--before {
+  width: 100%;
 }
 
 .explore__slide-bar {
   position: absolute;
   top: 0;
-  left: 440px;
+  left: calc(100% - 150px);
   bottom: 0;
   width: 38px;
   height: 100%;
 }
 
 .slider-bar__bar {
-  width: 5px;
-  height: calc((100% - 38px) / 2);
+  width: 2px;
+  height: calc((100% - 20px) / 2);
   background-color: var(--color-primary-light);
   transform: translateX(-50%);
 }
 
 .slider-bar__thumb {
-  width: 38px;
-  height: 38px;
-  border: 5px solid var(--color-primary-light);
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--color-primary-light);
   border-radius: 50%;
   transform: translateX(-50%);
 }
 
 .section__text {
+  display: none;
   font-weight: 300;
   line-height: 39px;
   color: var(--color-primary-light);
