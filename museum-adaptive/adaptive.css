@@ -82,6 +82,17 @@
   .gallery__inner-container {
     height: calc(440px * 5 + 24px * 4);
   }
+
+  .ontacts__item--title {
+    font-size: 20px;
+  }
+
+  .contacts__map {
+    height: 62vw;
+    object-fit: none;
+    object-position: top right;
+  }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -420,6 +431,15 @@
 
   .paralax {
     height: 400px;
+  }
+
+  .contacts__container {
+    gap: 60px;
+  }
+
+  .contacts__item--title {
+    margin-bottom: 25px;
+    font-size: 28px;
   }
 }
 

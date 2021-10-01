@@ -1082,20 +1082,18 @@ input[type=range] {
 .contacts__container {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 40px;
 }
 
 .contacts__list {
-  margin-top: 0px;
-  min-width: calc(100% - 960px - 60px);
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  margin-right: auto;
 }
 
 .contacts__item-wrapper {
   display: flex;
-}
-
-.contacts__item-wrapper:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .contacts__item-wrapper dt{
@@ -1110,8 +1108,8 @@ input[type=range] {
 }
 
 .contacts__item--title {
-  margin-bottom: 16px;
-  font-size: 28px;
+  margin-bottom: 15px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -1124,6 +1122,11 @@ input[type=range] {
 .contacts__item:hover .contacts__link {
   color: var(--color-accent);
   transition: color 0.4s ease-in-out;
+}
+
+.contacts__map {
+  height: 59vw;
+  object-fit: none;
 }
 
 .footer {
