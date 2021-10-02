@@ -458,6 +458,35 @@
   .header__navigation {
     display: block;
   }
+
+  .navigation__list {
+    display: flex;
+    width: 775px;
+    max-width: 100%;
+  }
+  
+  .navigation__item {
+    margin-right: auto;
+  }
+  
+  .navigation__item:last-child {
+    margin-right: 0;
+  }
+  
+  .navigation__link {
+    font-weight: 100;
+    line-height: 1.1;
+    color: var(--color-primary-light);
+    letter-spacing: 2px;
+    transition: color 0.4s ease-in-out;
+  }
+  
+  .navigation__link:hover,
+  .navigation__link:active {
+    color: var(--color-accent);
+    transition: color 0.4s ease-in-out;
+  }
+
 }
 
 @media screen and (min-width: 1440px) {
