@@ -1595,27 +1595,6 @@ input[type=date]::-webkit-datetime-edit {
   z-index: 2;
 }
 
-
-input[type=date]:focus::-webkit-datetime-edit {
-  
-}
-
-input[type=date]::-webkit-datetime-edit-month-field{
-
-}
-input[type=date]::-webkit-datetime-edit-day-field {
-
-}
-input[type=date]::-webkit-datetime-edit-year-field {
-}
-
-input[type="date"]::-webkit-clear-button {
-
-}
-
-
-
-
 .input--date::after {
   position: absolute;
   top: 50%;
