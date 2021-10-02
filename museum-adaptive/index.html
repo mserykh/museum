@@ -734,6 +734,7 @@
             </div>
           <div class="booking-card">
             <div class="card card--front">
+              <div class="card__brand"></div>
               <div class="card__field">
                 <label for="cardnumber">Card number</label>
                 <input class="input-card-number" type="text" id="cardnumber" name="cardnumber" placeholder="" pattern="\d*" title="Card number">
@@ -775,11 +776,14 @@
               </div>
             </div>
             <div class="card card--back">
-              <div class="card__field card__field--cvc">
-                <label for="cardcvc">CVC/CVV</label>
-                <input class="input-cvc" type="text" id="cardcvc" name="cardcvc" placeholder="" pattern="\d*" title="CVC/CVV">
+              <div class="card__magnetic-stripe"></div>
+              <div class="card__cvc">
+                <div class="card__field card__field--cvc">
+                  <label for="cardcvc">CVC/CVV</label>
+                  <input class="input-cvc" type="text" id="cardcvc" name="cardcvc" placeholder="" pattern="\d*" title="CVC/CVV">
+                </div>
+                <span class="card__text">The last 3&nbsp;or&nbsp;4 digits on back of&nbsp;the card</span>
               </div>
-              <span class="card__text">The last 3&nbsp;or&nbsp;4 digits on back of&nbsp;the card</span>
             </div>
           </div>
           <button class="booking-payment__btn" type="submit">

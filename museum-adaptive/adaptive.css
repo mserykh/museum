@@ -1,4 +1,8 @@
 @media screen and (min-width: 420px) {
+  .header__navigation {
+    padding: 35px 35px 0;
+  }
+  
   .visiting__list {
     column-gap: 56px;
     row-gap: 60px;
@@ -14,6 +18,41 @@
 
   .gallery__inner-container {
     height: calc(55vw * 5 + 24px * 4);
+  }
+
+  .ticket-qty__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .booking-overview__image {
+    display: block;
+    max-width: 120px;
+  }
+
+  .input-card-number {
+    width: 215px;
+  }
+
+  .exp-wrapper .input-exp {
+    width: 100px;
+  }
+
+  .card__brand {
+    position: absolute;
+    display: block;
+    top: 31px;
+    right: 20px;
+    width: 56px;
+    height: 65px;
+    background-image: url("./assets/svg/visa.svg"),
+                      url("./assets/svg/mastercard.svg");
+    background-position-x: calc(0), calc(50%);
+    background-position-y: calc(0%), calc(52%);
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
 
@@ -95,6 +134,14 @@
 
   .footer__rsschool {
     display: initial;
+  }
+
+  .field--short {
+    width: 50%;
+  }
+
+  .booking-payment {
+    padding: 25px 30px 26px;
   }
 }
 
@@ -448,6 +495,18 @@
   .footer {
     padding: 75px 0 50px;
   }
+
+  .booking-info__title {
+    margin-bottom: 10px;
+    font-size: 50px;
+    line-height: 53px;
+  }
+
+  
+  .booking-info__form-wrapper {
+    padding-top: 60px;
+  }
+
 }
 
 @media screen and (min-width: 1440px) {

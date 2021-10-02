@@ -268,7 +268,7 @@ fieldset {
   position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 35px 35px 0;
+  padding: 0px 20px 0;
   top: 100%;
   left: -100%;
   width: 100%;
@@ -306,7 +306,7 @@ fieldset {
   transition: color 0.4s ease-in-out;
 }
 
-.navigation__link::after {
+.navigation__link--header::after {
   display: block;
   position: absolute;
   top: 0;
@@ -1369,18 +1369,18 @@ input[type=range] {
 }
 
 .booking {
-  position: fixed;
+  position: absolute;
   width: 100%;
-  top: 50%;
-  left: -100%;
+  /*top: 50%;*/
+  /*left: -100%;*/
   line-height: initial;
-  transform: translate(-50%, -50%);
+  /*transform: translate(-50%, -50%);*/
   overflow: auto;
   z-index: 1;
 }
 
 .booking.open {
-  left: 50%;
+  /*left: 50%;*/
   z-index: 6;
   transition: all 0.5s ease-in-out;
 }
@@ -1389,10 +1389,11 @@ input[type=range] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 36px;
+  gap: 25px;
+  /*gap: 36px;*/
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 30px 30px 90px;
+  padding: 30px 30px 50px;
   background-color: var(--color-primary-light);
   transition: all 0.5s ease-in-out;
 }
@@ -1439,6 +1440,7 @@ input[type=range] {
 
 .booking__content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 40px;
   width: 100%;
@@ -1450,12 +1452,18 @@ input[type=range] {
   width: 100%;
 }
 
+.booking-info__logo {
+  display: block;
+  height: 41px;
+}
+
 .booking-info__title {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: "Forum";
   font-weight: 400;
-  font-size: 50px;
-  line-height: 53px;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: normal;
   color: var(--color-accent);
   text-transform: uppercase;
 }
@@ -1469,12 +1477,15 @@ input[type=range] {
   border-bottom: 3px solid var(--color-accent2);
 }
 
+.booking-info__form-wrapper {
+  padding-top: 40px;
+}
+
 .booking-info__form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
-  margin-top: 60px;
 }
 
 .field {
@@ -1561,7 +1572,7 @@ input[type=range] {
   display: none;
 }
 
-input[type=date]:focus::-webkit-datetime-edit {
+input[type="date"]:focus::-webkit-datetime-edit {
   transform: translateX(25px);
   color: var(--color-primary);
 }
@@ -1683,12 +1694,15 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
   font-weight: 400;
   line-height: 20px;
   color: var(--color-accent);
-  border-bottom: 2px solid var(--color-accent2);
+  border-bottom: 2px solid rgba(113, 7, 7, 0.9);
 }
 
 .ticket-qty__wrapper {
   display: flex;
-  justify-content: space-between;
+  row-gap: 5px;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 .ticket-qty__label {
@@ -1700,18 +1714,20 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
 
 .ticket-qty__amount-wrapper {
   display: flex;
+  height: 25px;
   border: 1px solid var(--color-primary);
 } 
 
 .ticket-qty__btn {
   width: 35px;
-  height: 100%;
+  height: 25px;
   font-size: 18px;
+  line-height: 21px;
   color: var(--color-primary-light);
   background-color: var(--color-primary);
-  border: none;
   cursor: pointer;
-  transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;  
+  border: none;
 }
 
 .ticket-qty__btn:hover {
@@ -1721,10 +1737,11 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
 
 .ticket-qty__qty {
   width: 35px;
+  height: 24px;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 21px;
   color: var(--color-primary);
   text-align: center;
   background-color: var(--color-primary-light);
@@ -1740,7 +1757,7 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
 .booking-payment {
   max-width: 530px;
   width: 100%;
-  padding: 25px 30px 26px;
+  padding: 25px 15px 26px;
   border: 1px solid var(--color-primary);
 }
 
@@ -1750,18 +1767,20 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
 }
 
 .booking-overview__overview {
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 }
 
 .overview__title {
-  padding-bottom: 3px;
+  padding-bottom: 2px;
+  font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: 500;
   line-height: 38px;
+  letter-spacing: normal;
 }
 
 .overview__subtitle {
-  padding-bottom: 11px;
+  padding-bottom: 10px;
   font-size: 22px;
   font-weight: 500;
   line-height: 26px;
@@ -1785,14 +1804,18 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
   left: 0;
 }
 
+.booking-overview__image {
+  display: none;
+}
+
 .overview__ticket-type {
   margin-bottom: 0;
 }
 
-.booking-overview__tickets-list{
-  padding-bottom: 9px;
+.booking-overview__tickets-list {
+  padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: 2px solid var(--color-accent2); ;
+  border-bottom: 2px solid rgba(113, 7, 7, 0.9);
 }
 
 .booking-overview__tickets-item {
@@ -1809,21 +1832,28 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
   padding: 0 11px;
   text-align: center;
   font-size: 18px;
-  line-height: 19px;
+  line-height: 21px;
   color: var(--color-modal2);
   background-color: var(--color-primary);
   border-radius: 5px;
 }
 
 .tickets__type {
+  font-size: 22px;
+  line-height: 26px;
   margin-right: auto;
+}
+
+.tickets__amount {
+  font-size: 22px;
+  line-height: 26px;
 }
 
 .field__ticket-type {
   width: 100%;
   height: 45px;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 20px;
   color: var(--color-primary);
@@ -1854,7 +1884,7 @@ select option:checked {
 .booking-overview__total {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .booking-overview__total-heading {
@@ -1870,15 +1900,15 @@ select option:checked {
 
 .booking-payment__btn {
   position: relative;
-  margin-left: 248px;
+  margin-left: auto;
   width: 220px;
   height: 45px;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 45px;
   color: var(--color-primary-light);
-  background-color: var(--color-accent2);
+  background-color: rgba(113, 7, 7, 0.9);
+  opacity: 0.9;
   transition: background 0.4s ease-in-out;
-  overflow: hidden;
 }
 
 .ripple {
@@ -1903,14 +1933,18 @@ select option:checked {
 
 .booking-card {
   position: relative;
-  height: 231px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  max-width: 100%;
   margin-bottom: 36px;
 }
 
 .card {
-  position: absolute;
-  width: 360px;
-  height: 211px;
+  position: relative;
+  display: flex;
+  max-width: 360px;
+  height: 209px;
   padding: 17px 20px 13px;
   border-radius: 3px;
 }
@@ -1919,37 +1953,40 @@ select option:checked {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  top: 0;
-  left: 0;
   background-color: #BCBCBC;
-  background-image: url("./assets/svg/visa.svg"),
-                    url("./assets/svg/mastercard.svg");
-  background-position-x: calc(100% - 20px), calc(100% - 20px);
-  background-position-y: calc(0% + 36px), calc(0% + 67px);
-  background-repeat: no-repeat;
+
   z-index: 2;
 }
 
 .card--back {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: end;
+  background-color: #939393;
+  z-index: 1;
+  padding-bottom: 20px;
+}
+
+.card__brand {
+  display: none;
+}
+
+.card__magnetic-stripe {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #161615;
+}
+
+.card__cvc {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  top: 30px;
-  left: 108px;
-  padding-left: 265px;
-  background-color: #939393;
-  z-index: 1;
-}
-
-.card--back::before {
-  position: absolute;
-  width: 100%;
-  height: 45px;
-  top: 25px;
-  left: 0;
-  content: "";
-  background-color: #161615;
+  width: 75px;
 }
 
 .card__field {
@@ -1960,34 +1997,36 @@ select option:checked {
   display: block;
   margin-bottom: 5px;
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 13px;
   font-weight: 400;
   line-height: 14px;
   color: #161615;
 }
 
-.card__field input{
+.card__field input {
   height: 35px;
   padding: 10px;
   font-family: "Roboto";
   font-weight: 400;
-  font-size: 12px;
+  font-size: 13px;
+  line-height: 15px;
   background: var(--color-primary-light);
   border: 0.5px solid var(--color-modal2);
 }
 
 .input-card-number {
-  width: 215px;
+  width: 100%;
 }
 
 .exp-wrapper {
   display: flex;
   gap: 15px;
+  max-width: 100%;
 }
 
 .exp-wrapper .input-exp {
-  width: 100px;
-  padding-right: 40px;
+  width: 80px;
 }
 
 .ext-wrapper--month, .ext-wrapper--year {
@@ -2065,14 +2104,20 @@ select option:checked {
   width: 75px;
 }
 
+.card__field--cvc  label {
+  font-size: 13px;
+  line-height: 15px;
+}
+
 .input-cvc {
   width: 100%;
   margin-bottom: 6px;
 }
 
 .card__text {
-  padding: 0 10px;
-  font-size: 10px;
+  padding: 0 13px;
+  font-size: 9px;
+  line-height: 11px;
   color: #161615;
 }
 
