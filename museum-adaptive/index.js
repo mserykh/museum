@@ -54,3 +54,11 @@ function addRipple(event) {
 }
 
 paymentBtn.addEventListener('click', addRipple);
+
+const toggleBtn = document.querySelector('.menu-toggle');
+
+function toggleMenu() {
+  toggleBtn.classList.toggle('is-active');
+}
+
+toggleBtn.addEventListener('click', toggleMenu);
