@@ -43,10 +43,12 @@ paymentBtn.addEventListener('click', addRipple);
 
 
 const inputDate = document.querySelector('.input--date');
+const inputTime = document.querySelector('.input--time');
 
 function getValue() {
-  let value = inputDate.value;
-  inputDate.setAttribute('data-placeholder', value)
+  let value = this.value;
+  this.setAttribute('data-placeholder', value)
 }
 
 inputDate.addEventListener('input', getValue);
+inputTime.addEventListener('input', getValue);

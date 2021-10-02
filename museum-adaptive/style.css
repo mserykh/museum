@@ -1607,36 +1607,42 @@ input[type=date]::-webkit-datetime-edit {
   background-size: auto;
   transform: translate(0, -50%);
 }
+ 
+/* time input */
 
-.input--time {
-  position: relative;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--color-primary);
-  background-color: transparent;
-}
-
-.input--time:not(.has-value)::before {
+.input--time:not(:focus)::before {
   content: attr(data-placeholder);
   display: block;
   position: relative;
-  width: 38px;
-  height: 21px;
   transform: translateX(30px);
 }
 
-.field--date:focus::before,
-.field--date:valid::before { 
-  display: none
+input[type="time"]:focus::before{
+  display: none;
 }
 
-.field--time:focus::before,
-.field--time:valid::before { 
-  display: none
+input[type="time"]:focus::-webkit-datetime-edit {
+  color: transparent;
 }
 
+input[type="time"]:focus::-webkit-datetime-edit-fields-wrapper {
+  transform: translateX(25px);
+  color: var(--color-primary);
+}
 
+input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+  transform: translateX(25px);
+  color: transparent;
+}
+
+.input[type="time"]:valid::-webkit-datetime-edit {
+  transform: translateX(25px);
+  color: var(--color-primary);
+}
+
+.input[type="time"]:valid::before{
+  display: none;
+}
 
 .input--time::after {
   position: absolute;
