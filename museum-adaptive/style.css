@@ -1551,32 +1551,70 @@ input[type=range] {
   background-color: transparent;
 }
 
-input[type=date]::-webkit-datetime-edit-month-field{
-  -webkit-appearance: none;
-  display: none;
-}
-input[type=date]::-webkit-datetime-edit-day-field {
-  -webkit-appearance: none;
-  display: none;
-}
-input[type=date]::-webkit-datetime-edit-year-field {
-  -webkit-appearance: none;
-  display: none;
-}
-
-input[type="time"]::-webkit-clear-button {
-  display: none;
-}
-
-.input--date:not(.has-value)::before {
+.input--date:not(:focus)::before {
   content: attr(data-placeholder);
   display: block;
   position: relative;
-  width: 38px;
-  height: 21px;
-  top: 2px;
   transform: translateX(30px);
 }
+
+.input[type="date"]:focus::before{
+  display: none;
+}
+
+input[type=date]:focus::-webkit-datetime-edit {
+  transform: translateX(25px);
+  color: var(--color-primary);
+}
+
+input[type=date]::-webkit-datetime-edit {
+  color: transparent;
+}
+
+.input[type="date"]:valid::-webkit-datetime-edit {
+  transform: translateX(25px);
+  color: var(--color-primary);
+}
+
+.input[type="date"]:valid::before{
+  display: none;
+}
+
+.input--date::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 15px;
+  color: none;
+  appearance: none;
+  background:none;
+  z-index: 2;
+}
+
+.input--time::-webkit-calendar-picker-indicator {
+  color: none;
+  background: none;
+  z-index: 2;
+}
+
+
+input[type=date]:focus::-webkit-datetime-edit {
+  
+}
+
+input[type=date]::-webkit-datetime-edit-month-field{
+
+}
+input[type=date]::-webkit-datetime-edit-day-field {
+
+}
+input[type=date]::-webkit-datetime-edit-year-field {
+}
+
+input[type="date"]::-webkit-clear-button {
+
+}
+
+
+
 
 .input--date::after {
   position: absolute;
@@ -1589,16 +1627,6 @@ input[type="time"]::-webkit-clear-button {
   background-repeat: no-repeat;
   background-size: auto;
   transform: translate(0, -50%);
-}
-
-.input--time:not(.has-value)::before {
-  content: attr(data-placeholder);
-  display: block;
-  position: relative;
-  width: 38px;
-  height: 21px;
-  top: 2px;
-  transform: translateX(30px);
 }
 
 .input--time {
@@ -1629,17 +1657,7 @@ input[type="time"]::-webkit-clear-button {
   display: none
 }
 
-.input--date::-webkit-calendar-picker-indicator {
-  color: none;
-  background: none;
-  z-index: 2;
-}
 
-.input--time::-webkit-calendar-picker-indicator {
-  color: none;
-  background: none;
-  z-index: 2;
-}
 
 .input--time::after {
   position: absolute;

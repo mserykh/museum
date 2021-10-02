@@ -40,3 +40,13 @@ function addRipple(event) {
 }
 
 paymentBtn.addEventListener('click', addRipple);
+
+
+const inputDate = document.querySelector('.input--date');
+
+function getValue() {
+  let value = inputDate.value;
+  inputDate.setAttribute('data-placeholder', value)
+}
+
+inputDate.addEventListener('input', getValue);
