@@ -1506,16 +1506,19 @@ input[type=range] {
 .field__icon--email {
   height: 15px;
   background-image: url("./assets/svg/email.svg");
+  z-index: 2;
 }
 
 .field__icon--name {
   height: 23px;
   background-image: url("./assets/svg/name.svg");
+  z-index: 2;
 }
 
 .field__icon--phone {
   height: 23px;
   background-image: url("./assets/svg/phone.svg");
+  z-index: 2;
 }
 
 .field__icon--exhibition {
@@ -1529,27 +1532,23 @@ input[type=range] {
 }
 
 .field input {
+  position: relative;
   width: 100%;
   height: 45px;
   padding-left: 15px;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: var(--color-primary);
+  background-color: transparent;
   border: none;
   outline: none;
 }
 
 .field--short {
-  width: 190px;
+  width: 100%;
 }
 
-.input--date {
-  position: relative;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--color-primary);
-  background-color: transparent;
-}
+/* date input */
 
 .input--date:not(:focus)::before {
   content: attr(data-placeholder);
@@ -1658,12 +1657,14 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
 }
 
 .field input::placeholder {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  padding-left: 30px;
-  font-size: 18px;
-  line-height: 20px;
+  padding-left: 0;
   color: var(--color-primary);
+}
+
+.field .input--name,
+.field .input--email,
+.field .input--tel  {
+  padding-left: 50px;
 }
 
 .ticket-qty {
