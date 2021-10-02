@@ -351,7 +351,6 @@ fieldset {
   content: "";
 }
 
-
 .social-list--header {
   align-self: center;
   padding: 24px 0;
@@ -363,6 +362,7 @@ fieldset {
 
 .welcome__container {
   display: grid;
+  align-items: center;
 }
 
 .welcome__slider {
@@ -375,6 +375,7 @@ fieldset {
 .welcome__content-wrapper {
   position: relative;
   grid-row: 1/2;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -510,6 +511,7 @@ fieldset {
   display: block;
   position: relative;
   /*flex-basis: calc((100% - 60px * 2) / 3);*/
+  width: 60vw;
   max-width: 280px;
 }
 
