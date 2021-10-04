@@ -874,15 +874,16 @@ input[type=range] {
 .video__list-inner {
   display: flex;
   column-gap: 20px;
-  width: calc(100% + (100% / 2));
+  width: calc(100% + 20px + ((100% +20px) / 2));
 }
 
 
 .video__item {
   position: relative;
-  width: calc((100% - 40px) / 3);
+  width: 100%;
+  max-width: 180px;
+  padding-bottom: 16.835%;
   height: 0;
-  padding-bottom: 17.72%;
 }
 
 .video__media {
