@@ -362,6 +362,13 @@
     grid-column: 1/2;
     grid-row: 1/2;
     text-align: initial;
+    opacity: 1;
+    transition: opacity ease-in-out 0.4s 0.4s;
+  }
+
+  .is-hidden {
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s 0.2s;
   }
 
   .welcome__btn {

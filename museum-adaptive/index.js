@@ -14,10 +14,18 @@ volumeChange.addEventListener('input', function() {
 
 const toggleBtn = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-navigation');
+const welcomeContent = document.querySelector('.welcome__content-wrapper');
+
 
 function toggleMenu() {
   toggleBtn.classList.toggle('is-active');
   mobileMenu.classList.toggle('is-active');
+  
+  hideContent();
+}
+
+function hideContent() {
+  welcomeContent.classList.toggle('is-hidden');
 }
 
 toggleBtn.addEventListener('click', toggleMenu);
