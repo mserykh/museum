@@ -118,6 +118,60 @@
   }
 }
 
+@media screen and (min-width: 720px) {
+
+  .tickets__container {
+    flex-wrap: nowrap;
+    column-gap: 60px;
+  }
+
+  .tickets__container .wrapper--wide {
+    margin: 0;;
+  }
+
+  .tickets__img {
+    max-height: 43vw;
+  }
+
+  .tickets__order-form {
+    max-width: 175px;
+  }
+
+  .order-form___legend {
+    margin-bottom: 25px;
+    font-size: 28px;
+    line-height: 33px;
+    align-self: flex-start;
+  }
+
+  .order-form__label {
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .order-form__ticket-category:not(:last-of-type) {
+    margin-bottom: 25px;
+}
+
+  .order-form__total {
+    margin-bottom: 70px;
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 1.65px;
+  }
+
+  .order-form__btn-buy {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 26px;
+  }
+
+  .order-form__total {
+    align-self: flex-start;
+  }
+}
+
 @media screen and (min-width: 769px) {
 
   body {
@@ -608,9 +662,48 @@
     gap: 60px;
   }
 
+
+  .paralax {
+    height: 400px;
+  }
+
+  .contacts__container {
+    gap: 60px;
+  }
+
+  .contacts__item--title {
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+
+  .footer {
+    padding: 75px 0 50px;
+  }
+
+  .booking-info__title {
+    margin-bottom: 10px;
+    font-size: 50px;
+    line-height: 53px;
+  }
+  
+  .booking-info__form-wrapper {
+    padding-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+
+  .tickets__container {
+    flex-wrap: nowrap;
+  }
+
   .fieldset-wrapper {
     justify-content: space-between;
     margin-bottom: 45px;
+  }
+
+  .order-form  {
+    max-width: 650px;
   }
 
   .order-form___legend {
@@ -638,7 +731,7 @@
   .order-form__amount {
     width: 150px;
   }
-  
+
   .order-form__ticket-types {
     display: initial;
   }
@@ -658,35 +751,6 @@
     font-size: 22px;
     letter-spacing: 0;
   }
-
-  .paralax {
-    height: 400px;
-  }
-
-  .contacts__container {
-    gap: 60px;
-  }
-
-  .contacts__item--title {
-    margin-bottom: 25px;
-    font-size: 28px;
-  }
-
-  .footer {
-    padding: 75px 0 50px;
-  }
-
-  .booking-info__title {
-    margin-bottom: 10px;
-    font-size: 50px;
-    line-height: 53px;
-  }
-
-  
-  .booking-info__form-wrapper {
-    padding-top: 60px;
-  }
-
 }
 
 @media screen and (min-width: 1440px) {
