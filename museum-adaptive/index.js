@@ -25,7 +25,8 @@ function toggleMenu() {
   hideContent();
 }
 
-function hideContent() {
+function hideContent(event) {
+  console.log(event);
   welcomeContent.classList.toggle('is-hidden');
 }
 

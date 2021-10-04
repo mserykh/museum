@@ -467,10 +467,10 @@
         </h2>
         <div class="tickets__container">
           <div class="wrapper--wide">
-            <!--
-              Я не добавила здесь alt так как эта картинка декоративная / I did not fill in alt here as this is adecorative image 
-            -->
-            <img src="assets/img/tickets-img.jpg" width="720" height="550" alt="" class="tickets__img">
+            <picture>
+              <source srcset="./assets/img/tickets-img@1x.webp" type="image/webp">
+              <img src="assets/img/tickets-img@1x.jpg" width="720" height="550" alt="Venus Presenting Aeneas with Armour Forged by Vulcan, 1748" class="tickets__img">
+            </picture>
           </div>
           <div class="tickets__order-form order-form wrapper--thin">
             <div class="fieldset-wrapper">
@@ -535,7 +535,7 @@
               </fieldset>
             </div>
             <span class="order-form__total">
-              Total €220 
+              Total € 220 
             </span>
             <button class="order-form__btn-buy">
               Buy Now
@@ -555,7 +555,7 @@
           <dl class="contacts__list">
             <div class="contacts__item-wrapper">
               <dt class="visually-hidden">Museum</dt>
-              <dd class="contacts__item contacts__item--title">
+              <dd class="contacts__item--title">
                 Palais Royal<br>
                 Musee du Louvre
               </dd>
