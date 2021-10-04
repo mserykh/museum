@@ -625,4 +625,17 @@
     display: none;
   }
 
+  .player__btn--play {
+    max-height: 31px;
+  }
+
+  .player__btn--volume {
+    max-width: 38px;
+    max-height: 31px;
+  }
+
+  .player__btn--fullscreen {
+    max-width: 35px;
+    max-height: 35px;
+  }
 }
