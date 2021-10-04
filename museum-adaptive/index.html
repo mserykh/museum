@@ -107,16 +107,22 @@
         </nav>
         <div class="mobile-navigation__images">
           <picture class="mobile-navigation__image">
-            <source src="./assets/img/side-menu/side-menu__img1--big.webp" type="image/webp">
-            <img src="./assets/img/side-menu/side-menu__img1--big.jpg" alt="">
+            <source srcset="./assets/img/side-menu/menu-img1--big@1x.webp 1x, ./assets/img/side-menu/menu-img1--big@2x.webp 2x" type="image/webp" media="(min-width: 421px)">
+            <source srcset="./assets/img/side-menu/menu-img1--big@1x.jpg 1x, ./assets/img/side-menu/menu-img1--big@2x.jpg 2x" media="(min-width: 421px)">
+            <source srcset="./assets/img/side-menu/menu-img1@1x.webp 1x, ./assets/img/side-menu/menu-img1@2x.webp 2x" type="image/webp">
+            <img src="./assets/img/side-menu/menu-img1@1x.jpg" srcset="./assets/img/side-menu1@2x.jpg 2x" alt="Mollien stairs inside the Louvre.">
           </picture>
           <picture class="mobile-navigation__image">
-            <source src="./assets/img/side-menu/side-menu__img2--big.webp" type="image/webp">
-            <img src="./assets/img/side-menu/side-menu__img2--big.jpg" alt="">
+            <source srcset="./assets/img/side-menu/menu-img2--big@1x.webp 1x, ./assets/img/side-menu/menu-img2--big@2x.webp 2x" type="image/webp" media="(min-width: 421px)">
+            <source srcset="./assets/img/side-menu/menu-img2--big@1x.jpg 1x, ./assets/img/side-menu/menu-img2--big@2x.jpg 2x" media="(min-width: 421px)">
+            <source srcset="./assets/img/side-menu/menu-img2@1x.webp 1x, ./assets/img/side-menu/menu-img2@2x.webp 2x" type="image/webp">
+            <img src="./assets/img/side-menu/menu-img2@1x.jpg" srcset="./assets/img/side-menu2@2x.jpg 2x" alt="The view to the Louvere building behind the pyramid.">
           </picture>
           <picture class="mobile-navigation__image">
-            <source src="./assets/img/side-menu/side-menu__img3--big.webp" type="image/webp">
-            <img src="./assets/img/side-menu/side-menu__img3--big.jpg" alt="">
+            <source srcset="./assets/img/side-menu/menu-img3--big@1x.webp 1x, ./assets/img/side-menu/menu-img3--big@2x.webp 2x" type="image/webp" media="(min-width: 421px)">
+            <source srcset="./assets/img/side-menu/menu-img3--big@1x.jpg 1x, ./assets/img/side-menu/menu-img3--big@2x.jpg 2x" media="(min-width: 421px)">
+            <source srcset="./assets/img/side-menu/menu-img3@1x.webp 1x, ./assets/img/side-menu/menu-img3@2x.webp 2x" type="image/webp">
+            <img src="./assets/img/side-menu/menu-img3@1x.jpg" srcset="./assets/img/side-menu3@2x.jpg 2x" alt="The view from above to the square in from of the Louvre.">
           </picture>
         </div>
         <ul class="mobile-navigation__social-list social-list social-list--header">
@@ -165,48 +171,39 @@
       <div class="container welcome__container">
         <div class="welcome__slider slider">
           <div class="welcome__slide slide">
-            <img class="welcome__img" src="./assets/img/welcome/monalisa.jpg" alt="Mona Lisa by Leonardo Da Vinci">
+            <picture class="mobile-navigation__image">
+              <source srcset="./assets/img/welcome/monalisa@1x-mob.webp" type="image/webp" media="(max-width: 500px)">
+              <source srcset="./assets/img/welcome/monalisa@1x-mob.jpg" media="(max-width: 500px)">
+              <source srcset="./assets/img/welcome/monalisa@1x.webp" type="image/webp">
+              <img class="welcome__img" src="./assets/img/welcome/monalisa@1x.jpg" alt="Mona Lisa by Leonardo Da Vinci">
+            </picture>
           </div>
-          <!--
-          <div class="welcome__slide slide">
-            <img class="welcome__img" src="./assets/img/welcome/liberty.jpg" alt="Liberty Leading the People by  Eugene Delacroix">
-          </div>
-          <div class="welcome__slide slide">
-            <img class="welcome__img" src="./assets/img/welcome/labelle.jpg" alt="Portrait of an Unknown Woman by Leonardo Da Vinci">
-          </div>
-          <div class="welcome__slide slide">
-            <img class="welcome__img" src="./assets/img/welcome/medusa.jpg" alt="The Raft of the Medusa by Théodore Géricault">
-          </div>
-          <div class="welcome__slide slide">
-            <img class="welcome__img" src="./assets/img/welcome/astronoom.jpg" alt="The Astronomer by Johannes Vermeer">
-          </div>
-            -->
-            <div class="slider__navigation">
-              <div class="slider__slides-counter">
-                <span class="slider__current-slide">01</span>
-                <span class="slider__number-divider">|</span>
-                <span class="slider__last-slide">05</span>
-              </div>
-              <div class="slider__dots">
-                <button class="slider__dot slider__dot--active active"></button>
-                <button class="slider__dot"></button>
-                <button class="slider__dot"></button>
-                <button class="slider__dot"></button>
-                <button class="slider__dot"></button>
-              </div>
-              <div class="slider__arrows">
-                <button class="slider__arrow slider__arrow--back">
-                  <svg width="28" height="8" viewBox="0 0 28 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.34104 8C3.64162 6.31339 1.86127 5.08262 0 4.30769V3.69231C1.86127 2.89459 3.64162 1.66382 5.34104 0H6.75723C5.94798 1.4359 5.1657 2.52991 4.4104 3.28205H28V4.71795H4.4104C5.1657 5.47009 5.94798 6.5641 6.75723 8H5.34104Z" fill="white"/>
-                  </svg>
-                </button>
-                <button class="slider__arrow slider__arrow--forward">
-                  <svg width="28" height="8" viewBox="0 0 28 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.659 -4.15048e-07C24.3584 1.68661 26.1387 2.91738 28 3.69231L28 4.30769C26.1387 5.10541 24.3584 6.33618 22.659 8L21.2428 8C22.052 6.5641 22.8343 5.47009 23.5896 4.71795L3.22792e-07 4.71795L4.64013e-07 3.28205L23.5896 3.28205C22.8343 2.52991 22.052 1.4359 21.2428 -5.25098e-07L22.659 -4.15048e-07Z" fill="white"/>
-                  </svg>
-                </button>
-              </div>
+          <div class="slider__navigation">
+            <div class="slider__slides-counter">
+              <span class="slider__current-slide">01</span>
+              <span class="slider__number-divider">|</span>
+              <span class="slider__last-slide">05</span>
             </div>
+            <div class="slider__dots">
+              <button class="slider__dot slider__dot--active active"></button>
+              <button class="slider__dot"></button>
+              <button class="slider__dot"></button>
+              <button class="slider__dot"></button>
+              <button class="slider__dot"></button>
+            </div>
+            <div class="slider__arrows">
+              <button class="slider__arrow slider__arrow--back">
+                <svg width="28" height="8" viewBox="0 0 28 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.34104 8C3.64162 6.31339 1.86127 5.08262 0 4.30769V3.69231C1.86127 2.89459 3.64162 1.66382 5.34104 0H6.75723C5.94798 1.4359 5.1657 2.52991 4.4104 3.28205H28V4.71795H4.4104C5.1657 5.47009 5.94798 6.5641 6.75723 8H5.34104Z" fill="white"/>
+                </svg>
+              </button>
+              <button class="slider__arrow slider__arrow--forward">
+                <svg width="28" height="8" viewBox="0 0 28 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.659 -4.15048e-07C24.3584 1.68661 26.1387 2.91738 28 3.69231L28 4.30769C26.1387 5.10541 24.3584 6.33618 22.659 8L21.2428 8C22.052 6.5641 22.8343 5.47009 23.5896 4.71795L3.22792e-07 4.71795L4.64013e-07 3.28205L23.5896 3.28205C22.8343 2.52991 22.052 1.4359 21.2428 -5.25098e-07L22.659 -4.15048e-07Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="welcome__content-wrapper">
           <h2 class="section__title section__title--light welcome__title">
@@ -374,16 +371,49 @@
           </div>
           <div class="video__list">
             <div class="video__list-inner">
-              <div class="video__item">
-                <iframe class="video__media" width="560" height="315" src="https://www.youtube.com/embed/aWmJ5DgyWPI"></iframe>
+              <div class="video__item video__item--enabled">
+                <a class="video__link" href="https://www.youtu.be/aWmJ5DgyWPI">
+                  <picture>
+                    <source srcset="https://i.ytimg.com/vi_webp/aWmJ5DgyWPI/maxresdefault.webp" type="image/wepb">
+                    <img class="video__media" src="https://i.ytimg.com/vi/aWmJ5DgyWPI/mqdefault.jpg" alt="Exposition - Le Corps et l'Âme. De Donatello à Michel-Ange. Sculptures italiennes de la Renaissance">
+                  </picture>
+                </a>
+                <button class="video__button" aria-label="Play video">
+                  <svg version="1.1" viewBox="0 0 68 48" >
+                    <path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill-opacity="0.8"></path>
+                    <path class="video__button-icon" d="M 45,24 27,14 27,34" fill="#fff"></path>
+                  </svg>
+                </button>
               </div>
-                <div class="video__item">
-                  <iframe class="video__media" width="560" height="315" src="https://www.youtube.com/embed/Vi5D6FKhRmo"></iframe>
-                </div>
-                <div class="video__item">
-                  <iframe class="video__media" width="560" height="315" src="https://www.youtube.com/embed/NOhDysLnTvY"></iframe>
-                </div>
+              <div class="video__item video__item--enabled">
+                  <a class="video__link" href="https://www.youtu.be/Vi5D6FKhRmo">
+                    <picture>
+                      <source srcset="https://i.ytimg.com/vi_webp/Vi5D6FKhRmo/maxresdefault.webp" type="image/wepb">
+                      <img class="video__media" src="https://i.ytimg.com/vi/Vi5D6FKhRmo/mqdefault.jpg" alt="Au Louvre ! La Vénus de Milo">
+                    </picture>
+                  </a>
+                  <button class="video__button" aria-label="Play video">
+                    <svg version="1.1" viewBox="0 0 68 48" >
+                      <path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill-opacity="0.8"></path>
+                      <path class="video__button-icon" d="M 45,24 27,14 27,34" fill="#fff"></path>
+                    </svg>
+                  </button>
               </div>
+              <div class="video__item video__item--enabled">
+                  <a class="video__link" href="https://www.youtu.be/NOhDysLnTvY">
+                    <picture>
+                      <source srcset="https://i.ytimg.com/vi_webp/NOhDysLnTvY/maxresdefault.webp" type="image/wepb">
+                      <img class="video__media" src="https://i.ytimg.com/vi/NOhDysLnTvY/mqdefault.jpg" alt="Promenade dans les collections mésopotamiennes avec Ariane Thomas">
+                    </picture>
+                  </a>
+                  <button class="video__button" aria-label="Play video">
+                    <svg version="1.1" viewBox="0 0 68 48" >
+                      <path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill-opacity="0.8"></path>
+                      <path class="video__button-icon" d="M 45,24 27,14 27,34" fill="#fff"></path>
+                    </svg>
+                  </button>
+              </div>
+            </div>
           </div>
           <div class="video__pagination">
             <button class="pagination__arrow">
@@ -402,7 +432,7 @@
               </svg>
             </button>
           </div>
-      </div>
+        </div>
       </div>
     </section>
     <section id="gallery" class="gallery section section--dark">
@@ -843,5 +873,6 @@
   <script src="selfEval.js"></script>
   <script src="gallery.js"></script>
   <script src="form.js"></script>
+  <script src="video.js"></script>
 </body>
 </html>
