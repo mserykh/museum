@@ -441,13 +441,13 @@
   }
 
   h2 {
-    font-size: 80px;
-    line-height: 90px;
+    font-size: 50px;
+    line-height: 55px;
   }
 
   h3 {
-    font-size: 32px;
-    line-height: 35px;
+    font-size: 28px;
+    line-height: 34px;
   }
 
   .container {
@@ -460,7 +460,7 @@
   }
 
   .section__title {
-    margin-bottom: 75px;
+    margin-bottom: 60px;
   }
 
   .wrapper--wide {
@@ -468,16 +468,16 @@
   }
 
   .title--underline {
-    margin-bottom: 75px;
+    margin-bottom: 60px;
     padding-bottom: 28px;
   }
 
   .header__container {
-    padding: 49px 0 48px;
+    padding: 41px 0 40px;
   }
   
   .logo > svg {
-    margin-right: 16px;
+    margin-right: 24px;
     width: 49px;
     height: 26px;
   }
@@ -503,7 +503,18 @@
 
   .welcome__title {
     font-size: 50px;
+    line-height: 90px;
     margin-bottom: 25px;
+  }
+
+  .welcome__text {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 45px;
+  }
+
+  .welcome__btn {
+    font-size: 20px;
   }
 
   .welcome__slider {
@@ -514,12 +525,6 @@
     width: 100%;
     justify-self: end;
     max-width: 700px;
-  }
-
-  .welcome__text {
-    font-size: 24px;
-    line-height: 28px;
-    margin-bottom: 50px;
   }
 
   .welcome__slide::after {
@@ -547,7 +552,7 @@
   }
 
   .slider__slides-counter {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 40px;
   }
   
@@ -565,8 +570,8 @@
   }
 
   .slider__dot {
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     transition: background 0.4s ease-in-out;
   }
 
@@ -613,15 +618,11 @@
     transition: background-color ease-in-out 0.4s;
   }
 
-  .welcome__text {
-    margin-bottom: 50px;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 300;
-    line-height: 33px;
+  .visiting {
+    padding-bottom: 63px;
   }
 
-  .visiting__list {
+ .visiting__list {
     column-gap: 108px;
     row-gap: 60px;
   }
@@ -635,14 +636,18 @@
     content: "";
     bottom: 0;
     left: 0;
-    right: 31.6%;
+    right: 54%;
     height: 2px;
     background-color: var(--color-accent2);
     transition: right 0.4s ease-in-out;
   }
 
+  .visiting__item-subtitle {
+    font-size: 20px;
+  }
+
   .visiting__item-type {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .explore__container {
@@ -651,35 +656,73 @@
     gap: 60px;
   }
 
+  .section__text {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 36px;
+  }
+
+  .section__text:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
   .wrapper--thin .section__text:nth-of-type(1), 
   .wrapper--thin .section__text:nth-of-type(2)  {
   display: block;
 }
 
+  .explore {
+    padding-bottom: 63px;
+  }
+
   .explore__slider {
-    margin-top: 15px;
+    margin-top: 0;
   }
 
   .video {
-    padding: 60px 0 60px;
+    padding: 70px 0 60px;
   }
 
   .video__text-wrapper {
     gap: 60px;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
+  }
+
+  .player__preview {
+    padding-bottom: 45%;
   }
 
   .player__controls {
     width: 100%;
-    min-height: 85px;
-    padding: 25px 31px;
+    padding: 15px 40px;
     row-gap: 25px;
   }
 
-  .controls__progress-bar {
+  .player__poster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .player__btn--preview {
+    width: 152px;
+    height: 152px;
+  }
+
+  input[type=range].controls__progress-bar  {
     position: initial;
     width: 939px;
     max-width: 100%;
+    height: 5px;
+  }
+
+  input[type=range].controls__volume-slider {
+    height: 5px;
+  }
+
+  .player__btn--volume {
+    width: 36px;
+    height: 20px;
   }
 
   .controls__volume-slider {
@@ -731,7 +774,7 @@
   }
   
   .gallery__container {
-    height: 1265px;
+    height: 1275px;
   }
 
   .gallery__inner-container {
@@ -755,14 +798,41 @@
     position: relative;
   }
 
-  .tickets__container {
-    flex-wrap: wrap;
-    gap: 60px;
+  .tickets {
+    padding-bottom: 60px;
   }
 
+  .tickets__container {
+    flex-wrap: wrap;
+    gap: 80px;
+  }
+
+  .tickets__img {
+    height: 45vw;
+  }
+
+  .tickets__container .wrapper--wide {
+    max-width: 700px;
+  }
+
+  .order-form___legend {
+    text-align: left;
+  }
+
+  .fieldset-wrapper {
+    margin-bottom: 25px;
+  }
+
+  .order-form__total {
+    margin-bottom: 65px;
+  }
 
   .paralax {
     height: 400px;
+  }
+
+  .contacts {
+    padding-bottom: 68px;
   }
 
   .contacts__container {
@@ -771,37 +841,34 @@
   }
 
   .contacts__list {
-    row-gap: 15px;
-  }
-
-  .contacts__item--title {
-    margin-bottom: 20px;
-  }
-
-  .contacts__item {
-    font-size: 20px;
-    line-height: 23px;
-  }
-
-
-  .contacts__map {
-    max-width: calc(100% - 16px - 274px);
-    height: auto;
-
+    row-gap: 10px;
   }
 
   .contacts__item--title {
     margin-bottom: 25px;
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .contacts__item-wrapper .contacts__item {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .contacts__map {
+    max-width: calc(100% - 16px - 274px);
+    height: auto;
   }
 
   .footer {
-    padding: 75px 0 50px;
-  }
+    padding: 45px 0 50px;
+}
 
   .footer__container {
-    grid-template-columns: auto 8vw auto 1fr auto;
+    grid-template-columns: auto 50px auto 1fr auto;
+    grid-template-rows: 172px;
     column-gap: 0;
+    padding-bottom: 25px;
   }
 
   .footer__navigation {
@@ -810,12 +877,26 @@
 
   .navigation__list--footer {
     column-gap: 50px;
+    row-gap: 12px;
+    padding-top: 20px;
   }
 
   .footer__container  .social-list {
     grid-column: 5 / 6;
     justify-self: end;
     align-self: end;
+  }
+
+  .navigation__link.navigation__link--footer {
+    font-size: 22px;
+  }
+
+  .footer .social-list {
+    padding-bottom: 25px;
+  }
+
+  .footer__divider {
+    margin-bottom: 10px;
   }
 
   .booking-info__title {
@@ -892,6 +973,17 @@
 }
 
 @media screen and (min-width: 1440px) {
+
+  h2 {
+    font-size: 80px;
+    line-height: 90px;
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
   .wrapper--thin {
     width: 659px;
   }
@@ -979,6 +1071,40 @@
     max-width: 600px;
     padding: 0 75px;
   }
+
+  
+  .slider__slides-counter {
+    font-size: 22px;
+    line-height: 40px;
+  }
+  
+  .slider__current-slide {
+    margin-right: 7px;
+  }
+
+  .slider__number-divider {
+    margin-right: 7px;
+  }
+
+  .slider__dots {
+    display: flex;
+    gap: 24px;
+  }
+
+  .slider__dot {
+    width: 16px;
+    height: 16px;
+    transition: background 0.4s ease-in-out;
+  }
+
+  .slider__arrows {
+    gap: 20px;
+  }
+
+  .slider__arrow svg {
+    width: 28px;
+  }
+
 
   .social-list--header {
     display: none;
