@@ -282,8 +282,13 @@
     height: 100px;
     margin-top: 0;
     justify-content: center;
+    gap: 0;
     padding: 0;
 }
+
+  .slider__dots {
+    margin: 0 6.5%;
+  }
 
   .welcome__content-wrapper {
     max-width: 332px;
