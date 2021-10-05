@@ -325,6 +325,26 @@
     font-size: 16px;
     line-height: 19px;
   }
+
+  .explore {
+    padding: 40px 0;
+  }
+
+  .explore__container {
+    gap: 0;
+  }
+
+  .explore .section__text {
+    display: none;
+  }
+
+  .explore__image-container {
+    width: 35%;
+  }
+
+  .explore__slide-bar {
+    left: 35%;
+  }
 }
 
 @media screen and (max-width: 420px) {
