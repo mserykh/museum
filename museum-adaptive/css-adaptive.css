@@ -200,6 +200,31 @@
     font-size: 16px;
     line-height: 19px;
   }
+
+  .explore__container {
+    flex-direction: column;
+  }
+
+  .explore .wrapper--thin {
+    width: 100%;
+  }
+
+  .section__text:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
+  .explore .wrapper--thin .section__text:last-child {
+    display: none;
+  }
+
+  .explore__slider {
+    margin-top: 0;
+  }
+
+  .explore .wrapper--wide {
+    margin: 0 auto;
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
