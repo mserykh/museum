@@ -332,6 +332,35 @@
     width: 175px;
     height: 50px;
   }
+
+  
+  .contacts__container {
+    gap: 16px;
+  }
+
+  .contacts__list {
+    width: 274px;
+  }
+
+  .contacts__item-wrapper:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .footer {
+    padding: 65px 0 50px;
+  }
+
+  .footer__container {
+    padding-bottom: 50px;
+  }
+
+  .footer__logo {
+    margin-right: 45px;
+  }
+
+  .navigation__list--footer {
+    column-gap: 100px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -563,6 +592,53 @@
     height: 300px;
     background-image: url("./assets/img/parallax/parallax@1x-mob.jpg");
   }
+
+  .footer {
+    padding: 40px 0 40px;
+  }
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 42px;
+    padding-bottom: 50px;
+  }
+
+  .footer__logo {
+    display: flex;
+    flex-wrap: nowrap;
+    grid-column: 1/2;
+    grid-row: 1 / 3;
+    margin-right: 10vw;
+  }
+
+  .navigation__list--footer {
+    justify-self: start;
+    column-gap: 184px;
+  }
+
+  .footer__bottom {
+    padding-top: 40px;
+  }
+
+  .footer__container .social-list {
+    justify-self: start;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .footer .social-list {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -774,4 +850,56 @@
     align-self: center;
   }
 
+  .footer__rsschool {
+    display: none;
+  }
+
+  .footer__logo {
+    align-self: flex-start;
+  }
+
+  .footer__navigation {
+    width: 100%;
+  }
+
+  .navigation__list--footer {
+    grid-template-columns: auto 1fr auto 1fr auto;
+    grid-template-rows: auto auto;
+    column-gap: 0;
+    row-gap: 15px;
+   }
+  
+  .navigation__item--footer:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .navigation__item--footer:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .navigation__item--footer:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .navigation__item--footer:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+
+  .navigation__item--footer:nth-child(5) {
+    grid-column:6  / 7;
+    grid-row: 1 / 2;
+  }
+
+  .navigation__item--footer:nth-child(6) {
+    grid-column: 6 / 7;
+    grid-row: 3 / 4;
+  }
+
+  .footer .social-list {
+    gap: 5px;
+  }
 }

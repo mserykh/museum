@@ -1075,13 +1075,16 @@ input[type=range] {
 
 .contacts__container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
+  justify-content: space-between;
 }
 
 .contacts__list {
+  width: 282px;
   margin-top: 0px;
-  min-width: calc(100% - 960px - 60px);
+}
+
+.contacts__map {
+  max-width: calc(100% - 282px);
 }
 
 .contacts__item-wrapper {
@@ -1127,12 +1130,30 @@ input[type=range] {
 
 .footer__container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   max-width: calc(100% - 40px);
-  width: 1440px;
+  width: var(--content-width);
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 55px;
+}
+
+.footer__logo {
+  margin-right: 145px;
+}
+
+.footer__container .social-list {
+  margin-left: auto;
+  justify-self: end;
+  align-self: end;
+}
+
+.navigation__list--footer {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  grid-template-rows: auto auto auto;
+  column-gap: 150px;
+  row-gap: 25px;
+  width: 100%;
 }
 
 .footer__divider {
@@ -1141,35 +1162,12 @@ input[type=range] {
   background-color: #666666;
 }
 
-.footer__logo {
-  margin-right: 145px;
-  padding: 10px 0;
-}
-
-.navigation__list--footer {
-  display: block;
-  max-width: 366px;
-  margin-right: auto;
-  column-count: 2;
-  column-gap: 156px;
-}
-
-.navigation__item--footer {
-  margin-right: 0;
-}
-
-.navigation__link--footer {
-  margin-right: auto;
-  padding: 12px 0 12px;
-  line-height: 1.2;
-}
-
 .social-list {
   display: flex;
   align-self: flex-end;
   flex-wrap: wrap;
+  column-gap: 24px;
   margin-left: auto;
-  padding: 12px 0;
 }
 
 .social-list__item {
@@ -1182,10 +1180,6 @@ input[type=range] {
   border: 1px solid var(--color-primary-light);
   transition: border-color 0.4s ease-in-out;
   cursor: pointer;
-}
-
-.social-list__item:not(:last-child) {
-  margin-right: 24px;
 }
 
 .socail-list__link {
@@ -1220,7 +1214,7 @@ input[type=range] {
 
 .footer__copyright {
   font-weight: 100;
-  line-height: 1.1;
+  line-height: 26px;
   color: var(--color-primary-light);
   letter-spacing: 2px;
 }
