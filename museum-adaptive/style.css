@@ -1853,7 +1853,7 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
 }
 
 .booking-overview__image {
-  display: none;
+  display: block;
 }
 
 .overview__ticket-type {
@@ -2018,7 +2018,18 @@ select option:checked {
 }
 
 .card__brand {
-  display: none;
+  position: absolute;
+  display: block;
+  top: 31px;
+  right: 20px;
+  width: 56px;
+  height: 65px;
+  background-image: url("./assets/svg/visa.svg"),
+                    url("./assets/svg/mastercard.svg");
+  background-position-x: calc(0), calc(50%);
+  background-position-y: calc(0%), calc(52%);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .card__magnetic-stripe {
@@ -2064,7 +2075,7 @@ select option:checked {
 }
 
 .input-card-number {
-  width: 100%;
+  width: 215px;;
 }
 
 .exp-wrapper {
@@ -2074,7 +2085,7 @@ select option:checked {
 }
 
 .exp-wrapper .input-exp {
-  width: 80px;
+  width: 100px;
 }
 
 .ext-wrapper--month, .ext-wrapper--year {

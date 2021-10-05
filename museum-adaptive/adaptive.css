@@ -111,9 +111,21 @@
     left: 50%;
   }
 
+  .booking-info {
+    max-width: 100%;
+  }
+
   .booking-overview__image {
     display: block;
     max-width: 120px;
+  }
+  
+  .booking-card {
+   align-items: center;
+  }
+
+  .card--back {
+    width: 100%;
   }
 
   .input-card-number {
@@ -124,20 +136,10 @@
     width: 100px;
   }
 
-  .card__brand {
-    position: absolute;
-    display: block;
-    top: 31px;
-    right: 20px;
-    width: 56px;
-    height: 65px;
-    background-image: url("./assets/svg/visa.svg"),
-                      url("./assets/svg/mastercard.svg");
-    background-position-x: calc(0), calc(50%);
-    background-position-y: calc(0%), calc(52%);
-    background-size: 100%;
-    background-repeat: no-repeat;
+  .field--short {
+    max-width: calc(50% - 20px);
   }
+
 }
 
 @media screen and (min-width: 720px) {
@@ -260,6 +262,16 @@
 .navigation__item--footer:nth-child(6) {
   grid-column: 3 / 4;
   grid-row: 5 / 6;
+}
+
+.booking-card {
+  align-items: flex-start;
+  max-height: 216px;
+}
+
+.card--back {
+  min-height: 204px;
+  transform: translate(114px, -204px);
 }
 
 }
@@ -915,6 +927,19 @@
     margin-bottom: 10px;
   }
 
+  .booking {
+    max-width: 1024px;
+  }
+
+  .booking__content {
+    flex-direction: row;
+  }
+
+
+  .booking-info {
+    max-width: 400px;
+  }
+
   .booking-info__title {
     margin-bottom: 10px;
     font-size: 50px;
@@ -1158,5 +1183,9 @@
     grid-template-rows: auto auto auto;
     column-gap: 75px;
     width: 100%;
+  }
+
+  .booking {
+    max-width: 1440px;
   }
 }
