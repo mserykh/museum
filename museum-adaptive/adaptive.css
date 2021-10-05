@@ -99,6 +99,18 @@
     align-items: stretch;
   }
 
+  .booking {
+    max-width: 590px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: -100%;
+  }
+
+  .booking.open {
+    top: 50%;
+    left: 50%;
+  }
+
   .booking-overview__image {
     display: block;
     max-width: 120px;
