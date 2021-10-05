@@ -99,6 +99,18 @@
     align-items: stretch;
   }
 
+  .booking {
+    max-width: 590px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: -100%;
+  }
+
+  .booking.open {
+    top: 50%;
+    left: 50%;
+  }
+
   .booking-overview__image {
     display: block;
     max-width: 120px;
@@ -129,7 +141,9 @@
 }
 
 @media screen and (min-width: 720px) {
-
+  .mobile-navigation__images {
+    gap: 20px;
+  }
   .tickets__container {
     flex-wrap: nowrap;
     column-gap: 60px;
@@ -284,6 +298,7 @@
   .mobile-navigation__images {
     margin-bottom: 34px;
     gap: 20px;
+    max-width: 660px;
   }
 
   .slider__navigation {
