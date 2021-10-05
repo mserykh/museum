@@ -213,7 +213,7 @@
     line-height: 60px;
   }
 
-  .h3 {
+  h3 {
     font-size: 22px;
     line-height: 24px;
   }
@@ -308,11 +308,25 @@
     line-height: 19px;
   }
 
-  .container {
-    width: var(--mobile-big-width);
+  
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .section {
+    padding: 40px 0;
   }
 
 
+  .container {
+    width: var(--mobile-big-width);
+  }
 
   .header__container {
     padding: 35px 0;
@@ -361,6 +375,34 @@
   }
 
   .welcome__text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .visiting__list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+  }
+
+  .visiting__item {
+    max-width: 280px;
+  }
+
+  .visiting__item-title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .visiting__item-title::before {
+    right: 47%;
+  }
+  .visiting__item-subtitle {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .visiting__item-type {
     font-size: 16px;
     line-height: 19px;
   }
