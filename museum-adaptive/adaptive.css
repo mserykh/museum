@@ -141,7 +141,9 @@
 }
 
 @media screen and (min-width: 720px) {
-
+  .mobile-navigation__images {
+    gap: 20px;
+  }
   .tickets__container {
     flex-wrap: nowrap;
     column-gap: 60px;
@@ -296,6 +298,7 @@
   .mobile-navigation__images {
     margin-bottom: 34px;
     gap: 20px;
+    max-width: 660px;
   }
 
   .slider__navigation {
