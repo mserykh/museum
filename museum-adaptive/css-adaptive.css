@@ -282,6 +282,9 @@
     height: 66px;
   }
 
+  .gallery__container {
+    height: 1265px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -302,6 +305,10 @@
 
   .section {
     padding: 40px 0 80px;
+  }
+
+  .section__title {
+    margin-bottom: 40px;
   }
 
   .container {
@@ -472,6 +479,20 @@
   .pagination__page {
     width: 10px;
     height: 10px;
+  }
+
+  .gallery-container {
+    height: 1080px;
+    width: 100%;
+  }
+
+  .gallery__inner-container {
+    column-gap: 12px;
+  }
+
+  .gallery__item {
+    width: calc((100% - 24px) / 2);
+    max-width: 100%;
   }
 
 }
@@ -646,6 +667,14 @@
   .pagination__page {
     width: 8px;
     height: 8px;
+  }
+
+  .gallery__inner-container {
+    height: 1200px;
+  }
+
+  .gallery__container {
+    height: 637px;
   }
 
 }
