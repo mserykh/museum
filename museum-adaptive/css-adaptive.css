@@ -1,0 +1,92 @@
+@media screen and (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+    width: 32px;
+    height: 18px;
+  }
+
+  .menu-toggle__icon {
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 18px;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .toggle-icon__element {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    left: 0;
+    background-color: var(--color-primary-light);
+    transform: rotate(0deg);
+    opacity: 1;
+    transition: 0.25s ease-in-out;
+  }
+
+  .toggle-icon__element:nth-child(even) {
+    left: 50%;
+  }
+
+  .toggle-icon__element:nth-child(odd) {
+    left: 0;
+  }
+
+  .toggle-icon__element--top {
+    top: 0;
+  }
+
+  .toggle-icon__element--middle {
+    top: calc(50% - 1px);
+  }
+
+  .toggle-icon__element--bottom {
+    top: calc(100% - 2px); 
+  }
+
+  .menu-toggle.is-active .toggle-icon__element:nth-child(1),
+  .menu-toggle.is-active .toggle-icon__element:nth-child(6) {
+    transform: rotate(45deg);
+  }
+
+  .menu-toggle.is-active .toggle-icon__element:nth-child(2),
+  .menu-toggle.is-active .toggle-icon__element:nth-child(5) {
+    transform: rotate(-45deg);
+  }
+
+  .menu-toggle.is-active .toggle-icon__element:nth-child(1) {
+    left: 1px;
+    top: 2px;
+  }
+
+  .menu-toggle.is-active .toggle-icon__element:nth-child(2) {
+    left: calc(50% - 4px);
+    top: 2px;
+  }
+
+  .menu-toggle.is-active .toggle-icon__element:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+  }
+
+  .menu-toggle.is-active .toggle-icon__element:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+  }
+
+  .menu-toggle.is-active .toggle-icon__element:nth-child(5) {
+    left: 1px;
+    top: 13px;
+  }
+
+  .menu-toggle.is-active .toggle-icon__element:nth-child(6) {
+    left: calc(50% - 4px);
+    top: 13px;
+  }
+
+  .header__navigation {
+    display: none;
+  }
+
+}
