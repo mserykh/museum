@@ -1066,7 +1066,7 @@ input[type=range] {
 
 .paralax {
   height: 400px;
-  background-image: url("./assets/img/paralax.jpg");
+  background-image: url("./assets/img/parallax/parallax@1x.jpg");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
