@@ -36,7 +36,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   line-height: 1.7;
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .visually-hidden {
@@ -104,7 +104,7 @@ fieldset {
 
 .container {
   max-width: calc(100% - 40px);
-  width: 1440px;
+  width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -142,12 +142,12 @@ fieldset {
 }
 
 .logo:hover path{
-  fill: var(--font-gold);
+  fill: var(--color-highlight2);
   transition: fill 0.4s ease-in-out;
 }
 
 .logo:hover .logo__text {
-  color: var(--font-gold);
+  color: var(--color-highlight2);
   transition: color 0.4s ease-in-out;
 }
 
@@ -185,8 +185,12 @@ fieldset {
 
 .navigation__link:hover,
 .navigation__link:active {
-  color: var(--font-gold);
+  color: var(--color-highlight2);
   transition: color 0.4s ease-in-out;
+}
+
+.mobile-navigation {
+  display: none;
 }
 
 .welcome {
@@ -269,7 +273,7 @@ fieldset {
 }
 
 .slider__dot:hover {
-  background-color: var(--font-gold);
+  background-color: var(--color-highlight2);
   transition: background 0.4s ease-in-out;
 }
 
@@ -287,7 +291,7 @@ fieldset {
 }
 
 .slider__arrow:hover path {
-  fill: var(--font-gold);
+  fill: var(--color-highlight2);
   transition: fill 0.4s ease-in-out;
 }
 
@@ -332,17 +336,17 @@ fieldset {
 
 .welcome__btn:hover,
 .welcome__btn:active {
-  background-color: var(--font-gold);
+  background-color: var(--color-highlight2);
   transition: background-color ease-in-out 0.4s;
 }
 
 .section__title--darker {
-  color: var(--font-gold);
+  color: var(--color-highlight2);
 }
 
 .title--underline {
   position: relative;
-  margin-bottom: var(--margin-b);
+  margin-bottom: 75px;
   padding-bottom: 28px;
 }
 
@@ -393,7 +397,7 @@ fieldset {
   font-size: var(--heading2);
   font-weight: 400;
   line-height: 1.1;
-  color: var(--black);
+  color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 5px;
   margin-bottom: 21px;
@@ -419,14 +423,14 @@ fieldset {
   margin-bottom: 11px;
   font-weight: 100;
   line-height: 1.15;
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .visiting__item-type {
   font-size: var(--font4);
   font-weight: 100;
   line-height: 1.15;
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .explore__container {
@@ -519,7 +523,7 @@ fieldset {
 }
 
 .section__text--dark {
-  color: var(--black)
+  color: var(--color-primary)
 }
 
 .video__inner-container {
@@ -537,7 +541,7 @@ fieldset {
 .player__preview {
   position: relative;
   min-height: 650px;
-  background-color: var(--black);
+  background-color: var(--color-primary);
   background-image: url("assets/img/video.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -553,7 +557,7 @@ fieldset {
   min-height: 85px;
   padding: 25px 31px;
   row-gap: 25px;
-  background-color: var(--black);
+  background-color: var(--color-primary);
 }
 
 .player__btn {
@@ -841,7 +845,7 @@ input[type=range] {
   font-size: var(--font3);
   line-height: 1.5;
   font-weight: 700;
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .order-form___legend--ticket-type {
@@ -864,24 +868,24 @@ input[type=range] {
 }
 
 .order-form__ticket-type:hover .radio__btn::before {
-  border: 2px solid var(--font-gold);
+  border: 2px solid var(--color-highlight2);
   transition: border 0.4s ease-in-out;
 }
 
 .order-form__ticket-type:hover .radio__btn:checked:after {
-  background-color: var(--font-gold);
+  background-color: var(--color-highlight2);
   transition: background 0.4s ease-in-out;
 }
 
 .order-form__ticket-type:hover .radio__label {
-  color: var(--font-gold);
+  color: var(--color-highlight2);
   transition: color 0.4s ease-in-out;
 }
 
 .radio__label {
   font-weight: 300;
   line-height: 1.1;
-  color: var(--black);
+  color: var(--color-primary);
   transition: color 0.4s ease-in-out;
 }
 
@@ -900,7 +904,7 @@ input[type=range] {
   left: 0;
   width: 17px;
   height: 17px;
-  border: 2px solid var(--black);
+  border: 2px solid var(--color-primary);
   border-radius: 50%;
   background-color: var(--color-primary-light);
   transition: border 0.4s ease-in-out;
@@ -918,7 +922,7 @@ input[type=range] {
 }
 
 .radio__btn:checked::after {
-  background-color: var(--black);
+  background-color: var(--color-primary);
 }
 
 .order-form__ticket-category:not(:last-of-type) {
@@ -934,7 +938,7 @@ input[type=range] {
 
 .order-form__amount-wrapper {
   display: flex;
-  border: 3px solid var(--black);
+  border: 3px solid var(--color-primary);
 }
 
 .order-form__amount {
@@ -950,13 +954,13 @@ input[type=range] {
 }
 
 .order-form__btn path {
-  fill: var(--black);
+  fill: var(--color-primary);
   transition: fill 0.4s ease-in-out;
 }
 
 .order-form__btn:hover path, 
 .order-form__btn:active path {
-  fill: var(--font-gold);
+  fill: var(--color-highlight2);
   transition: fill 0.4s ease-in-out;
 }
 
@@ -966,7 +970,7 @@ input[type=range] {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.2;
-  color: var(--black);
+  color: var(--color-primary);
   text-align: center;
   background-color: var(--color-primary-light);
   border: none;
@@ -989,7 +993,7 @@ input[type=range] {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 1.5px;
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .order-form__btn-buy {
@@ -1000,7 +1004,7 @@ input[type=range] {
   font-weight: 300;
   line-height: 1.2;;
   color: var(--color-primary-light);
-  background-color: var(--black);
+  background-color: var(--color-primary);
   border: none;
   border-radius: 2px;
   transition: background-color 0.4s ease-in-out;
@@ -1009,7 +1013,7 @@ input[type=range] {
 
 .order-form__btn-buy:hover,
 .order-form__btn-buy:active {
-  background-color: var(--font-gold);
+  background-color: var(--color-highlight2);
   transition: background-color 0.4s ease-in-out;
 }
 
@@ -1065,7 +1069,7 @@ input[type=range] {
 }
 
 .contacts__item:hover .contacts__link {
-  color: var(--font-gold);
+  color: var(--color-highlight2);
   transition: color 0.4s ease-in-out;
 }
 
@@ -1149,12 +1153,12 @@ input[type=range] {
 }
 
 .social-list__item:hover {
-  border-color: var(--font-gold);
+  border-color: var(--color-highlight2);
   transition: border-color 0.4s ease-in-out;
 }
 
 .social-list__item:hover path {
-  fill: var(--font-gold);
+  fill: var(--color-highlight2);
   transition: fill 0.4s ease-in-out;
 }
 
@@ -1240,7 +1244,7 @@ input[type=range] {
 
 .booking__btn-close:hover::before,
 .booking__btn-close:hover::after {
-  background-color: var(--font-gold);
+  background-color: var(--color-highlight2);
   transition: background 0.4s ease-in-out;
 }
 
@@ -1267,7 +1271,7 @@ input[type=range] {
   font-weight: 400;
   font-size: 50px;
   line-height: 53px;
-  color: var(--font-gold);
+  color: var(--color-highlight2);
   text-transform: uppercase;
 }
 
@@ -1489,7 +1493,7 @@ input[type="time"]::-webkit-clear-button {
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;
-  color: var(--font-gold);
+  color: var(--color-highlight2);
   border-bottom: 2px solid var(--color-accent2);
 }
 
@@ -1507,7 +1511,7 @@ input[type="time"]::-webkit-clear-button {
 
 .ticket-qty__amount-wrapper {
   display: flex;
-  border: 1px solid var(--black);
+  border: 1px solid var(--color-primary);
 } 
 
 .ticket-qty__btn {
@@ -1522,7 +1526,7 @@ input[type="time"]::-webkit-clear-button {
 }
 
 .ticket-qty__btn:hover {
-  color: var(--font-gold);
+  color: var(--color-highlight2);
   transition: color 0.4s ease-in-out;
 }
 
@@ -1532,7 +1536,7 @@ input[type="time"]::-webkit-clear-button {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
-  color: var(--black);
+  color: var(--color-primary);
   text-align: center;
   background-color: var(--color-primary-light);
   border: none;
@@ -1704,7 +1708,7 @@ select option:checked {
 }
 
 .booking-payment__btn:hover {
-  background-color: var(--font-gold);
+  background-color: var(--color-highlight2);
   transition: background 0.4s ease-in-out;
 }
 
