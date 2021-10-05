@@ -49,6 +49,16 @@ body {
   overflow: hidden;
 }
 
+h2 {
+  font-size: 80px;
+  line-height: 90px;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 35px;
+}
+
 a {
   display: block;
   text-decoration: none;
@@ -103,11 +113,11 @@ fieldset {
 }
 
 .section--dark {
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
 }
 
 .header {
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
 }
 
 .header__container {
@@ -142,10 +152,10 @@ fieldset {
 }
 
 .logo__text {
-  font-family: "Forum", cursive;
-  font-size: var(--font3);
-  line-height: 1.1;
-  color: var(--white);
+  font-family: "Forum";
+  font-size: 28px;
+  line-height: 31px;
+  color: var(--color-primary-light);
   text-transform: uppercase;
   letter-spacing: 5px;
   transition: color 0.4s ease-in-out;
@@ -166,10 +176,9 @@ fieldset {
 }
 
 .navigation__link {
-  /*padding: 13px 0;*/
   font-weight: 100;
-  line-height: 1.1;
-  color: var(--white);
+  line-height: 26px;
+  color: var(--color-primary-light);
   letter-spacing: 2px;
   transition: color 0.4s ease-in-out;
 }
@@ -181,7 +190,7 @@ fieldset {
 }
 
 .welcome {
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
 }
 
 .welcome__container {
@@ -229,14 +238,14 @@ fieldset {
   height: 120px;
   margin-top: -60px;
   padding: 0 75px;
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
   z-index: 2;
 }
 
 .slider__slides-counter {
   font-size: 22px;
   line-height: 40px;
-  color: var(--white);
+  color: var(--color-primary-light);
 }
 
 .slider__current-slide {
@@ -255,7 +264,7 @@ fieldset {
 .slider__dot {
   width: 16px;
   height: 16px;
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   transition: background 0.4s ease-in-out;
 }
 
@@ -283,17 +292,15 @@ fieldset {
 }
 
 .section__title {
-  margin-bottom: var(--margin-b);
-  font-family: "Forum", cursive;
-  font-size: var(--headeing1);
+  margin-bottom: 75px;
+  font-family: "Forum";
   font-weight: 400;
-  line-height: 90px;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
 
 .section__title--light {
-  color: var(--white);
+  color: var(--color-primary-light);
 }
 
 .welcome__title {
@@ -301,12 +308,12 @@ fieldset {
 }
 
 .welcome__text {
-  margin-bottom: var(--margin-b);
-  font-size: var(--font3);
+  margin-bottom: 75px;
+  font-size: 28px;
   font-weight: 300;
   line-height: 33px;
   letter-spacing: 2px;
-  color: var(--white);
+  color: var(--color-primary-light);
 }
 
 .welcome__btn {
@@ -317,8 +324,8 @@ fieldset {
   line-height: 75px;
   letter-spacing: 2px;
   text-align: center;
-  color: var(--white);
-  background-color: var(--dark-red);
+  color: var(--color-primary-light);
+  background-color: var(--color-accent2);
   border-radius: 10px;
   transition: background-color ease-in-out 0.4s;
 }
@@ -347,7 +354,7 @@ fieldset {
   width: 100%;
   height: 3px;
   bottom: 0;
-  background-color: var(--dark-red);
+  background-color: var(--color-accent2);
 }
 
 .visiting__list {
@@ -399,7 +406,7 @@ fieldset {
   left: 0;
   right: 31.6%;
   height: 2px;
-  background-color: var(--dark-red);
+  background-color: var(--color-accent2);
   transition: right 0.4s ease-in-out;
 }
 
@@ -465,14 +472,14 @@ fieldset {
 .slider-bar__bar {
   width: 5px;
   height: calc((100% - 38px) / 2);
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   transform: translateX(-50%);
 }
 
 .slider-bar__thumb {
   width: 38px;
   height: 38px;
-  border: 5px solid var(--white);
+  border: 5px solid var(--color-primary-light);
   border-radius: 50%;
   transform: translateX(-50%);
 }
@@ -480,7 +487,7 @@ fieldset {
 .section__text {
   font-weight: 300;
   line-height: 39px;
-  color: var(--white);
+  color: var(--color-primary-light);
 }
 
 .section__text:not(:last-of-type) {
@@ -668,7 +675,7 @@ input[type=range]::-ms-track {
 input[type=range]::-webkit-slider-thumb {
   width: 15px;
   height: 15px;
-  background: var(--white);
+  background: var(--color-primary-light);
   border-radius: 50%;
   -webkit-appearance: none;
   cursor: pointer;
@@ -677,7 +684,7 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-moz-range-thumb {
   width: 15px;
   height: 15px;
-  background: var(--white);
+  background: var(--color-primary-light);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -685,21 +692,21 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-ms-thumb {
   width: 15px;
   height: 15px;
-  background: var(--white);
+  background: var(--color-primary-light);
   border-radius: 50%;
   cursor: pointer;
 }
 
 input[type=range] {
   height: 8px;
-  background: linear-gradient(to right, var(--dark-red) 0%, var(--dark-red) 40%, #C4C4C4 40%, #C4C4C4 100%);
+  background: linear-gradient(to right, var(--color-accent2) 0%, var(--color-accent2) 40%, #C4C4C4 40%, #C4C4C4 100%);
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
 }
 
 .controls__progress-bar[type=range] {
-  background: linear-gradient(to right, var(--dark-red) 0%, var(--dark-red) 47%, #C4C4C4 47%, #C4C4C4 100%);
+  background: linear-gradient(to right, var(--color-accent2) 0%, var(--color-accent2) 47%, #C4C4C4 47%, #C4C4C4 100%);
 }
 
 .video__list{
@@ -739,7 +746,7 @@ input[type=range] {
 }
 
 .pagination__arrow:hover path {
-  fill: var(--dark-red);
+  fill: var(--color-accent2);
   transition: fill 0.3s ease-in-out;
 }
 
@@ -757,7 +764,7 @@ input[type=range] {
 }
 
 .pagination__page:hover {
-  background-color: var(--dark-red);
+  background-color: var(--color-accent2);
   transition: background 0.3s ease-in-out;
 }
 
@@ -895,7 +902,7 @@ input[type=range] {
   height: 17px;
   border: 2px solid var(--black);
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   transition: border 0.4s ease-in-out;
 }
 
@@ -961,7 +968,7 @@ input[type=range] {
   line-height: 1.2;
   color: var(--black);
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   border: none;
 }
 
@@ -992,7 +999,7 @@ input[type=range] {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.2;;
-  color: var(--white);
+  color: var(--color-primary-light);
   background-color: var(--black);
   border: none;
   border-radius: 2px;
@@ -1063,7 +1070,7 @@ input[type=range] {
 }
 
 .footer {
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
   padding: 75px 0 50px;
 }
 
@@ -1121,7 +1128,7 @@ input[type=range] {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 1px solid var(--white);
+  border: 1px solid var(--color-primary-light);
   transition: border-color 0.4s ease-in-out;
   cursor: pointer;
 }
@@ -1137,7 +1144,7 @@ input[type=range] {
 }
 
 .socail-list__link path {
-  fill: var(--white);
+  fill: var(--color-primary-light);
   transition: fill 0.4s ease-in-out;
 }
 
@@ -1163,7 +1170,7 @@ input[type=range] {
 .footer__copyright {
   font-weight: 100;
   line-height: 1.1;
-  color: var(--white);
+  color: var(--color-primary-light);
   letter-spacing: 2px;
 }
 
@@ -1193,7 +1200,7 @@ input[type=range] {
   max-width: 1440px;
   margin: 0 auto;
   padding: 30px 30px 90px;
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   transition: all 0.5s ease-in-out;
 }
 
@@ -1269,8 +1276,8 @@ input[type=range] {
   padding-bottom: 10px;
   font-size: var(--font4);
   line-height: 21px;
-  color: var(--dark-red);
-  border-bottom: 3px solid var(--dark-red);
+  color: var(--color-accent2);
+  border-bottom: 3px solid var(--color-accent2);
 }
 
 .booking-info__form {
@@ -1286,7 +1293,7 @@ input[type=range] {
   position: relative;
   width: 100%;
   align-items: center;
-  border: 1px solid var(--bg-dark);
+  border: 1px solid var(--color-primary);
 }
 
 .field__icon {
@@ -1337,7 +1344,7 @@ input[type=range] {
   height: 45px;
   padding-left: 15px;
   font-size: 18px;
-  color: var(--bg-dark);
+  color: var(--color-primary);
   border: none;
   outline: none;
 }
@@ -1464,7 +1471,7 @@ input[type="time"]::-webkit-clear-button {
   padding-left: 30px;
   font-size: 18px;
   line-height: 20px;
-  color: var(--bg-dark);
+  color: var(--color-primary);
 }
 
 .ticket-qty {
@@ -1473,7 +1480,7 @@ input[type="time"]::-webkit-clear-button {
   gap: 18px;
   width: 100%;
   padding: 15px;
-  border: 1px solid var(--bg-dark);
+  border: 1px solid var(--color-primary);
 }
 
 .ticket-qty__title {
@@ -1483,7 +1490,7 @@ input[type="time"]::-webkit-clear-button {
   font-weight: 400;
   line-height: 20px;
   color: var(--font-gold);
-  border-bottom: 2px solid var(--dark-red);
+  border-bottom: 2px solid var(--color-accent2);
 }
 
 .ticket-qty__wrapper {
@@ -1507,8 +1514,8 @@ input[type="time"]::-webkit-clear-button {
   width: 35px;
   height: 100%;
   font-size: 18px;
-  color: var(--white);
-  background-color: var(--bg-dark);
+  color: var(--color-primary-light);
+  background-color: var(--color-primary);
   border: none;
   cursor: pointer;
   transition: color 0.4s ease-in-out;
@@ -1527,7 +1534,7 @@ input[type="time"]::-webkit-clear-button {
   line-height: 1.2;
   color: var(--black);
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--color-primary-light);
   border: none;
 }
 
@@ -1541,7 +1548,7 @@ input[type="time"]::-webkit-clear-button {
   max-width: 530px;
   width: 100%;
   padding: 25px 30px 26px;
-  border: 1px solid var(--bg-dark);
+  border: 1px solid var(--color-primary);
 }
 
 .booking-overview {
@@ -1565,7 +1572,7 @@ input[type="time"]::-webkit-clear-button {
   font-size: 22px;
   font-weight: 500;
   line-height: 26px;
-  color: var(--dark-red);
+  color: var(--color-accent2);
 }
 
 .overview__date,
@@ -1592,7 +1599,7 @@ input[type="time"]::-webkit-clear-button {
 .booking-overview__tickets-list{
   padding-bottom: 9px;
   margin-bottom: 10px;
-  border-bottom: 2px solid var(--dark-red); ;
+  border-bottom: 2px solid var(--color-accent2); ;
 }
 
 .booking-overview__tickets-item {
@@ -1611,7 +1618,7 @@ input[type="time"]::-webkit-clear-button {
   font-size: 18px;
   line-height: 19px;
   color: #A4A4A3;
-  background-color: var(--bg-dark);
+  background-color: var(--color-primary);
   border-radius: 5px;
 }
 
@@ -1626,7 +1633,7 @@ input[type="time"]::-webkit-clear-button {
   font-weight: 500;
   font-size: 18px;
   line-height: 20px;
-  color: var(--bg-dark);
+  color: var(--color-primary);
   padding: 10px 10px;
   padding-left: 45px;
   -moz-appearance: none;
@@ -1675,8 +1682,8 @@ select option:checked {
   height: 45px;
   font-size: 22px;
   line-height: 45px;
-  color: var(--white);
-  background-color: var(--dark-red);
+  color: var(--color-primary-light);
+  background-color: var(--color-accent2);
   transition: background 0.4s ease-in-out;
   overflow: hidden;
 }
