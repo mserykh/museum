@@ -844,6 +844,7 @@
 
   .paralax {
     height: 400px;
+    background-image: url("./assets/img/parallax/parallax@1x.jpg");
   }
 
   .contacts {
