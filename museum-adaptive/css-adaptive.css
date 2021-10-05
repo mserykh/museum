@@ -1,12 +1,30 @@
 @media screen and (max-width: 1024px) {
-
   body {
     font-size: 20px;
     line-height: 23px;
   }
 
+  h2 {
+    font-size: 50px;
+    line-height: 75px;
+  }
+
+  h3 {
+    font-size: 28px;
+    line-height: 31px;
+  }
+
   .container {
     width: var(--desctop-small-width);
+  }
+
+  .section {
+    padding: 60px 0;
+}
+
+  .title--underline {
+    margin-bottom: 60px;
+    padding-bottom: 20px;
   }
 
   .header__container {
@@ -157,5 +175,144 @@
     width: 330px;
     height: 60px;
     line-height: 60px;
+  }
+
+  .visiting__list {
+    justify-content: center;
+    column-gap: 108px;
+    row-gap: 60px;
+  }
+
+  .visiting__item {
+    max-width: 330px;
+  }
+
+  .visiting__item-titlE {
+    font-size: 28px;
+    line-height: 31px;
+  }
+
+  .visiting__item-title::before {
+    right: 50%;
+  }
+
+  .visiting__item-type {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .container {
+    width: var(--tablet-width);
+  }
+
+  .header__container {
+    padding: 35px 0 34px;
+  }
+
+  .welcome__container {
+    align-items: center;
+  }
+
+  .welcome__slider {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2/3;
+    width: 100%;
+  }
+
+  .slider__navigation {
+    height: 100px;
+    margin-top: 0;
+    justify-content: center;
+}
+
+  .welcome__content-wrapper {
+    max-width: 332px;
+    margin: 0 auto;
+    padding-top: 0;
+    text-align: center;
+}
+
+  .welcome__title {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .welcome__text {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .welcome__btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .container {
+    width: var(--mobile-big-width);
+  }
+
+  .header__container {
+    padding: 35px 0;
+  }
+
+  .logo > svg {
+    width: 29px;
+    height: 16px;
+  }
+
+  .logo__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .slider__navigation {
+    height: 80px;
+    gap: 25px;
+    padding: 0;
+  }
+
+  .slider__slides-counter {
+    font-size: 16px;
+  }
+
+  .slider__dots {
+    gap: 10px;
+  }
+
+  .slider__dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .slider__arrows {
+    gap: 15px;
+  }
+
+  .slider__arrow svg {
+    width: 20px;
+  }
+
+  .welcome__title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .welcome__text {
+    font-size: 16px;
+    line-height: 19px;
   }
 }
