@@ -586,7 +586,10 @@
                 </a></dd>
             </div>
           </dl>
-          <img class="contacts__map" src="assets/img/map.png" alt="Map" width="960" height="620">
+          <picture class="contacts__map" >
+            <source srcset="./assets/img/map.png" media="(min-width: 720px)">
+            <img src="./assets/img/map@1x.png" alt="Map">
+          </picture>
         </div>
       </div>
     </section>

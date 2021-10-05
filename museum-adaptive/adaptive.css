@@ -1,4 +1,9 @@
 @media screen and (min-width: 421px) {
+
+  h2 {
+    font-size: 40px;
+    line-height: 60px;
+  }
   .logo__text {
     font-size: 28px;
     line-height: 50px;
@@ -7,6 +12,10 @@
   .logo svg {
    width: 49px;
    height: 26px; 
+  }
+
+  .header__container {
+    padding-bottom: 20px;
   }
 
   .mobile-navigation__images {
@@ -1025,8 +1034,16 @@
     line-height: 35px;
   }
 
+  .explore__container {
+    gap: 40px;
+  }
+
   .wrapper--thin {
-    width: 659px;
+    max-width: 659px;
+  }
+  
+  .wrapper--wide {
+    max-width: 700px;
   }
 
   .header__container {
@@ -1149,6 +1166,10 @@
 
   .social-list--header {
     display: none;
+  }
+
+  .explore__slider {
+    margin-top: 15px;
   }
   
   .video {
