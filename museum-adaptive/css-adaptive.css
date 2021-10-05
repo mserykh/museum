@@ -89,4 +89,11 @@
     display: none;
   }
 
+  .mobile-navigation {
+    display: none;
+  }
+
+  .mobile-navigation.is-active {
+    display: block;
+  }
 }
