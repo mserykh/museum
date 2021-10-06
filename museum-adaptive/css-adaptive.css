@@ -808,7 +808,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 38px;
   }
 
   .footer .social-list {
@@ -850,9 +850,12 @@
   }
 
   .section {
-    padding: 40px 0;
+    padding: 39px 0;
   }
 
+  .title--underline {
+    padding-bottom: 24px;
+  }
 
   .container {
     width: var(--mobile-big-width);
@@ -865,6 +868,7 @@
   .logo > svg {
     width: 29px;
     height: 16px;
+    margin-right: 20px;
   }
 
   .logo__text {
@@ -872,17 +876,32 @@
     line-height: 18px;
   }
 
+  .welcome__content-wrapper {
+    padding-top: 5px;
+  }
+
   .slider__navigation {
     height: 80px;
-    gap: 25px;
+    gap: 10px;
     padding: 0;
   }
 
   .slider__slides-counter {
-    font-size: 16px;
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .slider__current-slide {
+    margin: 0;
+  }
+
+  .slider__number-divider {
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .slider__dots {
+    margin: 0 4%;
     gap: 10px;
   }
 
@@ -912,7 +931,7 @@
   .visiting__list {
     flex-direction: column;
     align-items: center;
-    row-gap: 40px;
+    row-gap: 39px;
   }
 
   .visiting__item {
@@ -922,6 +941,7 @@
   .visiting__item-title {
     font-size: 18px;
     line-height: 20px;
+    letter-spacing: 5px;
   }
 
   .visiting__item-title::before {
@@ -986,7 +1006,7 @@
   }
   
   .video__pagination {
-    width: 174x;
+    width: 174px;
     gap: 20px;
   }
 
@@ -1024,6 +1044,10 @@
     height: 160px;
   }
 
+  .order-form__ticket-category:not(:last-of-type) {
+    margin-bottom: 31px;
+  }
+
   .order-form___legend--right {
     margin-bottom: 20px;
     font-size: 16px;
@@ -1038,9 +1062,19 @@
 
   .order-form__total {
     margin-bottom: 40px;
+    align-self: center;
     font-size: 16px;
     line-height: 19px;
-    align-self: center;
+    letter-spacing: 0px;
+  }
+
+  .contacts__container {
+    gap: 20px;
+  }
+
+  .contacts__item--title {
+    font-size: 16px;
+    line-height: 19px;
   }
 
   .footer__rsschool {
@@ -1059,7 +1093,7 @@
     grid-template-columns: auto 1fr auto 1fr auto;
     grid-template-rows: auto auto;
     column-gap: 0;
-    row-gap: 15px;
+    row-gap: 12px;
    }
   
   .navigation__item--footer:nth-child(1) {
