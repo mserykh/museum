@@ -335,7 +335,7 @@ fieldset {
   color: var(--color-primary-light);
 }
 
-.welcome__title {
+.welcome .welcome__title {
   margin-bottom: 26px;
 }
 
