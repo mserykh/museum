@@ -171,7 +171,12 @@
       <div class="container welcome__container">
         <div class="welcome__slider slider">
           <div class="welcome__slide slide">
-            <img class="welcome__img" src="./assets/img/welcome/monalisa.jpg" alt="Mona Lisa by Leonardo Da Vinci">
+            <picture>
+              <source srcset="./assets/img/welcome/monalisa@1x-mob.jpg" media="(max-width: 500px)">
+              <source srcset="./assets/img/welcome/monalisa@1x-mob.webp" media="(max-width: 500px)" type="image/webp">
+              <source srcset="./assets/img/welcome/monalisa@1x.webp" type="image/webp">
+              <img class="welcome__img" src="./assets/img/welcome/monalisa@1x.jpg" alt="Mona Lisa by Leonardo Da Vinci">
+            </picture>
           </div>
             <div class="slider__navigation">
               <div class="slider__slides-counter">
@@ -461,7 +466,7 @@
         <div class="tickets__container">
           <div class="wrapper--wide">
             <picture>
-              <source srcset="./assets/img/tickets/tickets-img@1x.webp" media="image/webp">
+              <source srcset="./assets/img/tickets/tickets-img@1x.webp" type="image/webp">
               <img class="tickets__img" src="./assets/img/tickets/tickets-img@1x.jpg" width="720" height="550" alt="Venus Presenting Aeneas with Armour Forged by Vulcan, 1748">
             </picture>
           </div>
