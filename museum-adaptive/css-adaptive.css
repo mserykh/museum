@@ -635,6 +635,18 @@
     background-image: url("./assets/img/parallax/parallax@1x-mob.jpg");
   }
 
+  .contacts__container {
+    flex-direction: column;
+  }
+
+  .contacts__map {
+    max-width: 100%;
+  }
+
+  .contacts__map {
+      
+  }
+
   .footer {
     padding: 40px 0 40px;
   }
@@ -940,6 +952,7 @@
     max-width: 100%;
     height: 160px;
   }
+
   .order-form___legend--right {
     margin-bottom: 20px;
     font-size: 16px;
