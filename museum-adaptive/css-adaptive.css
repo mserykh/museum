@@ -361,6 +361,48 @@
   .navigation__list--footer {
     column-gap: 100px;
   }
+ 
+  .booking {
+    max-width: var(--desctop-small-width);
+  }
+
+  .booking-payment {
+    padding: 25px 30px 26px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+
+  .booking {
+    max-width: 590px;
+    height: 100%;
+    top: 0;
+    transform: translate(-50%, 0);
+    overflow: auto;
+  }
+
+  .booking__container {
+    padding-bottom: 40px;
+  }
+
+  .booking__content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .booking-info {
+    max-width: 100%;
+  }
+
+  .booking-overview__image {
+    display: block;
+    max-width: 120px;
+  }
+
+  .booking-card {
+    align-items: flex-start;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -626,6 +668,56 @@
     justify-self: start;
     margin: 0;
   }
+  
+  .booking {
+    max-width: 590px;
+    height: 100%;
+    top: 0;
+    transform: translate(-50%, 0);
+    overflow: auto;
+  }
+
+  .booking__container {
+    padding-bottom: 40px;
+  }
+
+  .booking__content {
+    flex-direction: column;
+  }
+
+  .booking-info {
+    max-width: 100%;
+  }
+
+  .booking-overview__image {
+    display: block;
+    max-width: 120px;
+  }
+
+  .booking-card {
+    align-items: flex-start;
+  }
+  
+  .card--back {
+    min-height: 204px;
+    transform: translate(104px, -204px);
+  }
+
+  .card--back {
+    width: 100%;
+  }
+
+  .input-card-number {
+    width: 215px;
+  }
+
+  .exp-wrapper .input-exp {
+    width: 100px;
+  }
+
+  .field--short {
+    max-width: calc(50% - 20px);
+  }
 }
 
 @media screen and (max-width: 645px) {
@@ -639,6 +731,23 @@
   .footer .social-list {
     margin: 0 auto;
   }
+}
+
+@media screen and (max-width: 590px) {
+  .booking-payment {
+    padding: 25px 15px;
+  }
+  
+  .booking-card {
+    align-items: center;
+    max-height: initial;
+    margin-bottom: 36px;
+   }
+
+  .card--back {
+    transform: translate(0, 0);
+  }
+
 }
 
 @media screen and (max-width: 420px) {
@@ -902,4 +1011,9 @@
   .footer .social-list {
     gap: 5px;
   }
+
+  .field--short {
+    width: 100%;
+  }
+  
 }
