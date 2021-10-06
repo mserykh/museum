@@ -876,6 +876,24 @@
     line-height: 18px;
   }
 
+  
+.mobile-navigation__images {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: auto;
+  grid-gap: 12px;
+  padding-bottom: 24px;
+  margin-bottom: 19px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+}
+
+.mobile-navigation__image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
   .welcome__content-wrapper {
     padding-top: 5px;
   }
