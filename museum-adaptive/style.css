@@ -393,14 +393,14 @@ fieldset {
   line-height: 1.1;
   color: var(--color-primary);
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   margin-bottom: 21px;
 }
 
 .visiting__item-title::before {
   position: absolute;
   content: "";
-  bottom: -11px;
+  bottom: -12px;
   left: 0;
   right: 31.6%;
   height: 2px;
@@ -1084,7 +1084,7 @@ input[type=range] {
 }
 
 .contacts__map {
-  max-width: calc(100% - 282px);
+  max-width: calc(100% - 290px);
 }
 
 .contacts__item-wrapper {

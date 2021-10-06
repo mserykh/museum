@@ -22,9 +22,13 @@
     padding: 60px 0;
 }
 
+  .section__title {
+    margin-bottom: 60px;
+  }
+
   .title--underline {
     margin-bottom: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 23px;
   }
 
   .header__container {
@@ -180,11 +184,12 @@
   .visiting__list {
     justify-content: center;
     column-gap: 108px;
-    row-gap: 60px;
+    row-gap: 62px;
   }
 
   .visiting__item {
     max-width: 330px;
+    flex-basis: calc((100% - 108px) / 2);;
   }
 
   .visiting__item-title {
@@ -193,7 +198,7 @@
   }
 
   .visiting__item-title::before {
-    right: 50%;
+    right: 55%;
   }
 
   .visiting__item-type {
@@ -218,7 +223,7 @@
   }
 
   .explore__slider {
-    margin-top: 0;
+    margin-top: -5px;
   }
 
   .explore .wrapper--wide {
@@ -228,7 +233,7 @@
 
   .video__text-wrapper {
     gap: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
   .video .wrapper--wide {
@@ -307,8 +312,16 @@
     width: 175px;
   }
 
+  .fieldset-wrapper {
+    margin-bottom: 25px;
+  }
+
   .order-form__amount{
     width: 175px;
+  }
+
+  .order-form__ticket-category:not(:last-of-type) {
+    margin-bottom: 31px;
   }
 
   .order-form___legend {
@@ -328,18 +341,28 @@
     text-align: left;
   }
 
+  .order-form__total {
+    margin-bottom: 70px;
+  }
+
   .order-form__btn-buy {
     width: 175px;
     height: 50px;
   }
 
-  
-  .contacts__container {
+  .contacts {
+    padding-bottom: 65px;
+  }
+    .contacts__container {
     gap: 16px;
   }
 
   .contacts__list {
     width: 274px;
+  }
+
+  .contacts__item--title {
+    font-size: 24px;
   }
 
   .contacts__item-wrapper:not(:last-child) {
