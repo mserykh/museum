@@ -14,10 +14,6 @@
     line-height: 31px;
   }
 
-  .container {
-    width: var(--desctop-small-width);
-  }
-
   .section {
     padding: 60px 0;
 }
@@ -504,10 +500,6 @@
     margin-bottom: 40px;
   }
 
-  .container {
-    width: var(--tablet-width);
-  }
-
   .title--underline {
     margin-bottom: 40px;
   }
@@ -896,7 +888,7 @@
   }
 }
 
-@media screen and (max-width: 645px) {
+@media screen and (max-width: 670px) {
   .footer__container {
     display: flex;
     flex-direction: column;
@@ -948,10 +940,6 @@
 
   .title--underline {
     padding-bottom: 24px;
-  }
-
-  .container {
-    width: var(--mobile-big-width);
   }
 
   .header__container {
