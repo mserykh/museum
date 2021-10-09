@@ -1389,6 +1389,15 @@ input[type=range] {
   border: 1px solid var(--color-primary);
 }
 
+input:autofill ,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: all 5000s ease-in-out 0s;
+    transition-property: background-color, color;
+}
+
 .field__icon {
   position: absolute;
   left: 15px;
@@ -1700,8 +1709,30 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
   line-height: 21px;
 }
 
-.overview__icon {
+.overview__date::before,
+.overview__time::before,
+.overview__ticket-type::before {
+  position: absolute;
+  display: block;
   left: 0;
+  width: 15px;
+  height: 15px;
+  transform: translateY(2px);
+  background-position: center;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.overview__date::before {
+  background-image: url("./assets/svg/date.svg");
+}
+
+.overview__time::before {
+  background-image: url("./assets/svg/time.svg");
+}
+
+.overview__ticket-type::before {
+  background-image: url("./assets/svg/type.svg");
 }
 
 .overview__ticket-type {
