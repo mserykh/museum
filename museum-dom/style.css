@@ -1555,7 +1555,7 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
 
 .field .input--name,
 .field .input--email,
-.field .input--tel  {
+.field .input--phone  {
   padding-left: 50px;
 }
 
@@ -1594,7 +1594,6 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
 
 .ticket-qty__amount-wrapper {
   display: flex;
-  height: 25px;
   border: 1px solid var(--color-primary);
 }
 
@@ -1648,6 +1647,8 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
 
 .booking-overview__overview {
   margin-bottom: 25px;
+  max-width: 220px;
+  width: 100%;
 }
 
 .overview__title {
@@ -1671,8 +1672,6 @@ input[type="time"]::-webkit-datetime-edit-fields-wrapper {
 .overview__time,
 .overview__ticket-type {
   position: relative;
-  display: flex;
-  align-items: center;
   margin-bottom: 5px;
   padding-left: 30px;
   font-size: 18px;
