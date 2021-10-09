@@ -1265,6 +1265,27 @@ input[type=range] {
   transition: all 0.5s ease-in-out;
 }
 
+.field.error {
+  background-color: rgba(113, 7, 7, 0.25);
+  border-color: var(--color-accent2);
+  border-top-width: 2px;
+}
+
+.field.valid {
+  border-color: #017e35;
+  border-top-width: 2px;
+}
+
+.field__error {
+  display: block;
+  position: absolute;
+  top: 100%;
+  padding: 4px;
+  font-size: 11px;
+  line-height: 11px;
+  color: var(--color-accent2);
+}
+
 .booking__container {
   display: flex;
   flex-direction: column;
