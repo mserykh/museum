@@ -687,7 +687,7 @@
       <span class="footer__author"><a class="navigation__link" href="https://github.com/mserykh/">mserykh</a></span>
     </p>
   </footer>
-  <div class="booking">
+  <div class="booking open">
     <div class="booking__container">
       <div class="booking__btn-close">
       </div>
@@ -703,36 +703,65 @@
             <p class="booking-info__subtitle">Tour to Louvre</p>
           </div>
           <div class="booking-info__form-wrapper">
-            <form class="booking-info__form">
+            <form class="booking-info__form" id="booking-info">
               <div class="field field--date field--short">
                 <div class="field__icon field__icon--date">
                 </div>
-                <input class="input--date" type="date" id="ticket-date" data-placeholder="Date">
+                <input class="input--date" type="date" id="ticket-date" data-placeholder="Date"
+                data-jsv-validate data-jsv-error-message="" data-jsv-required-message="">
               </div>
               <div class="field field--time field--short">
                 <div class="field__icon field__icon--time">
                 </div>
-                <input class="input--time" type="time" id="ticket-time" data-placeholder="Time">
+                <input class="input--time" type="time" id="ticket-time" data-placeholder="Time"
+                data-jsv-validate data-jsv-error-message="" data-jsv-required-message="">
               </div>
               <div class="field field--name">
                 <div class="field__icon field__icon--name">
                 </div>
-                <input class="input--name" type="text" id="client-name" placeholder="Name">
+                <input
+                  class="input--name"
+                  type="text"
+                  id="client-name"
+                  placeholder="Name"
+                  data-jsv-validate
+                  pattern
+                  data-jsv-error-message=""
+                  data-jsv-required-message="">
+                <span class="field__error"></span>
               </div>
               <div class="field field--email">
                 <div class="field__icon field__icon--email">
                 </div>
-                <input class="input--email" type="email" id="client-email" placeholder="E-mail">
+                <input
+                  class="input--email"
+                  type="email"
+                  id="client-email"
+                  placeholder="E-mail"
+                  data-jsv-validate
+                  pattern data-jsv-error-message=""
+                  data-jsv-required-message="">
+                <span class="field__error"></span>
               </div>
               <div class="field field--phone">
                 <div class="field__icon field__icon--phone">
                 </div>
-                <input class="input--tel" type="tel" id="client-telephone" placeholder="Phone">
+                <input
+                  class="input--phone"
+                  type="tel"
+                  id="client-telephone"
+                  placeholder="Phone"
+                  data-jsv-validate
+                  pattern
+                  data-jsv-error-message=""
+                  data-jsv-required-message="">
+                <span class="field__error"></span>
               </div>
               <div class="field field--exhibition">
                 <div class="field__icon field__icon--exhibition">
                 </div>
-                <select class="field__ticket-type" id="ticket-type">
+                <select class="field__ticket-type" id="ticket-type"
+                data-jsv-validate data-jsv-error-message="" data-jsv-required-message="">
                   <option value="" selected>Ticket type</option>
                   <option value="permanent">Permanent exhibition</option>
                   <option value="temporary">Temporary exhibition</option>
@@ -778,18 +807,9 @@
             <div class="booking-overview__overview">
               <h3 class="overview__title">Overview</h3>
               <h5 class="overview__subtitle">Tour to Louvre</h5>
-              <p class="overview__date">
-                <span class="overview__icon field__icon field__icon--date"></span>
-                Friday, August 19
-              </p>
-              <p class="overview__time">
-                <span class="overview__icon field__icon field__icon--time"></span>
-                16:30
-              </p>
-              <p class="overview__ticket-type">
-                <span class="overview__icon field__icon field__icon--type"></span>
-                Temporary exhibition
-              </p>
+                <p class="overview__date">Friday, August 19</p>
+                <p class="overview__time">16:30</p>
+                <p class="overview__ticket-type">Temporary exhibition</p>
             </div>
             <div class="booking-overview__image">
               <img src="./assets/img/booking.jpg" alt="Louvre">
@@ -874,7 +894,6 @@
   </div>
   <div class="overlay"></div>
   <script src="index.js"></script>
-  <script src="selfEval.js"></script>
   <script src="gallery.js"></script>
   <script src="form.js"></script>
   <script src="video.js"></script>
