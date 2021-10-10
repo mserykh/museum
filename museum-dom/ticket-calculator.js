@@ -55,7 +55,6 @@ function removeTicketQty(input) {
   return input.value = (input.value > 0) ? Number(input.value) - 1 : 0;
 }
 
-
 function recalculateAmount(event) {
   const container = findContainer(event.currentTarget);
   const input  = findInput(container);
@@ -70,8 +69,6 @@ function recalculateAmount(event) {
   return inputValue;
 }
 
-let pickedTicketType = ([...ticketTypes].filter(ticketType => ticketType.checked)[0] || {}).id;
-
 function getTicketType() {
   pickedTicketType = ([...ticketTypes].filter(ticketType => ticketType.checked)[0] || {}).id;
   recalculateTotal();
@@ -84,6 +81,7 @@ function recalculateTotal() {
   totalAmountOverview.textContent = BASIC_PRICES[ticketType] * qtyBasic + SENIOR_PRICES[ticketType] * qtySenior;
 }
 
+getTicketType();
 recalculateTotal();
 
 addTicketBtnsOverview.forEach(btn => btn.addEventListener('click', recalculateAmount));
