@@ -12,23 +12,13 @@ const SENIOR_PRICES = {
   'combined_admission': (1 - SENIOR_DISCOUNT) * BASIC_PRICES['combined_admission'],
 };
 
-const ticketTypePermanentOverview = document.querySelector('.js-overview-ticket-type-permanent');
-const ticketTypeTemporaryOverview = document.querySelector('.js-overview-ticket-type-temporary');
-const ticketTypeCombinedOverview = document.querySelector('.js-overview-ticket-type-combined');
-
 const ticketQtyContainer = document.querySelector('.js-overview-ticket-qty-container');
-
 const ticketBasicAmountInputOverview = document.querySelector('.js-overview-basic-ticket-qty-input');
 const ticketSeniorAmountInputOverview = document.querySelector('.js-overview-senior-ticket-qty-input');
 const ticketAmountInputsOverwview = document.querySelectorAll('.js-overview-ticket-qty-input');
-let ticketBasicAmountOverview = ticketBasicAmountInputOverview.value;
-let ticketSeniorAmountOverview = ticketSeniorAmountInputOverview.value;
-
 const addTicketBtnsOverview = document.querySelectorAll('.js-overview-add-ticket');
 const removeTicketBtnsOverview = document.querySelectorAll('.js-overview-remove-ticket');
-
 const ticketTypes = document.querySelectorAll('.js-overview-ticket-type');
-
 const totalAmountOverview = document.querySelector('.js-overview-total');
 
 function findContainer(btn) {
