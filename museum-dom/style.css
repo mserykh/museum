@@ -1025,6 +1025,7 @@ input[type=range] {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: background 0.4s ease-in-out;
 }
 
 .order-form__btn path {
@@ -1032,9 +1033,15 @@ input[type=range] {
   transition: fill 0.4s ease-in-out;
 }
 
+.order-form__btn:hover,
+.order-form__btn:active {
+  background-color: var(--color-highlight2);
+  transition: background 0.4s ease-in-out;
+}
+
 .order-form__btn:hover path, 
 .order-form__btn:active path {
-  fill: var(--color-highlight2);
+  fill: var(--color-primary-light);
   transition: fill 0.4s ease-in-out;
 }
 
@@ -1836,7 +1843,7 @@ select option:checked {
   line-height: 38px;
 }
 
-.booking-overview__total-amount {
+.booking-overview__total-price {
   font-size: 32px;
   font-weight: 500;
   line-height: 38px;

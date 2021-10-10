@@ -478,15 +478,15 @@
                 </legend>
                 <div class="order-form__ticket-wrapper"></div>
                 <label class="order-form__ticket-type radio">
-                  <input class="radio__btn" type="radio" checked="checked" id="permanent_exhibition" name="ticket-type">
+                  <input class="radio__btn js-overview-ticket-type js-overview-ticket-type-permanent" type="radio" checked="checked" id="permanent_exhibition" name="ticket-type">
                   <span class="radio__label">Permanent exhibition</span>
                 </label>
                 <label class="order-form__ticket-type radio">
-                  <input class="radio__btn" type="radio" id="temporary_exhibition" name="ticket-type">
+                  <input class="radio__btn js-overview-ticket-type js-overview-ticket-type-temporary" type="radio" id="temporary_exhibition" name="ticket-type">
                   <span class="radio__label">Temporary exhibition</span>
                 </label>
                 <label class="order-form__ticket-type radio">
-                  <input class="radio__btn" type="radio" id="combined_admission" name="ticket-type">
+                  <input class="radio__btn js-overview-ticket-type js-overview-ticket-type-combined" type="radio" id="combined_admission" name="ticket-type">
                   <span class="radio__label">Combined Admission</span>
                 </label>
               </fieldset>
@@ -498,14 +498,14 @@
                   <label class="order-form__label">
                     Basic 18+
                   </label>
-                  <div class="order-form__amount-wrapper">
-                    <button type="button" class="order-form__btn" aria-label="remove one ticket" onclick="this.nextElementSibling.stepDown(1)">
+                  <div class="order-form__amount-wrapper js-overview-ticket-qty-container">
+                    <button type="button" class="order-form__btn js-overview-remove-ticket" aria-label="remove one ticket" >
                       <svg width="17" height="17" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.6875 2.82812H0.03125V0.46875H15.6875V2.82812Z" fill="white"/>
                         </svg>
                     </button>
-                    <input type="number" class="order-form__qty" min="0" max="20" value="1" id="preview-ticket_18_amount">
-                    <button type="button" class="order-form__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
+                    <input type="number" class="order-form__qty js-overview-ticket-qty-input js-overview-basic-ticket-qty-input" min="0" max="20" value="1" id="preview-ticket_18_amount">
+                    <button type="button" class="order-form__btn js-overview-add-ticket" aria-label="add one ticket">
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.89062 6.79688H16.2344V9.53125H9.89062V16.7188H6.98438V9.53125H0.640625V6.79688H6.98438V0.15625H9.89062V6.79688Z" fill="white"/>
                         </svg>
@@ -516,14 +516,14 @@
                   <label class="order-form__label">
                     Senior 65+
                   </label>
-                  <div class="order-form__amount-wrapper">
-                    <button type="button" class="order-form__btn" aria-label="remove one ticket" onclick="this.nextElementSibling.stepDown(1)">
+                  <div class="order-form__amount-wrapper js-overview-ticket-qty-container">
+                    <button type="button" class="order-form__btn js-overview-remove-ticket" aria-label="remove one ticket">
                       <svg width="17" height="17" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.6875 2.82812H0.03125V0.46875H15.6875V2.82812Z" fill="white"/>
                         </svg>
                     </button>
-                    <input type="number" class="order-form__qty" min="0" max="20" value="1" id="preview-ticket_65_amount">
-                    <button type="button" class="order-form__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
+                    <input type="number" class="order-form__qty js-overview-ticket-qty-input js-overview-senior-ticket-qty-input" min="0" max="20" value="1" id="preview-ticket_65_amount">
+                    <button type="button" class="order-form__btn js-overview-add-ticket" aria-label="add one ticket">
                       <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.89062 6.79688H16.2344V9.53125H9.89062V16.7188H6.98438V9.53125H0.640625V6.79688H6.98438V0.15625H9.89062V6.79688Z" fill="white"/>
                         </svg>
@@ -533,9 +533,9 @@
               </fieldset>
             </div>
             <span class="order-form__total">
-              Total € 220 
+              Total € <span class="js-overview-total">220</span>
             </span>
-            <button class="order-form__btn-buy">
+            <button class="order-form__btn-buy js-overview-btn-buy">
               Buy Now
             </button>
           </div>
@@ -772,28 +772,28 @@
                 <h4 class="ticket-qty__title">Entry ticket</h4>
                 <div class="ticket-qty__wrapper">
                   <label class="ticket-qty__label">
-                    Basic 18+ (20 €)
+                    Basic 18+ (<span class="js-basic-ticket-price">20</span> €)
                   </label>
                   <div class="ticket-qty__amount-wrapper">
-                    <button type="button" class="ticket-qty__btn" aria-label="remove one ticket" onclick="this.nextElementSibling.stepDown(1)">
+                    <button type="button" class="ticket-qty__btn js-booking-remove-ticket" aria-label="remove one ticket">
                       –
                     </button>
-                    <input type="number" class="ticket-qty__qty" min="0" max="20" value="1" id="ticket_18_amount" readonly="readonly">
-                    <button type="button" class="ticket-qty__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
+                    <input type="number" class="ticket-qty__qty js-booking-basic-ticket-qty-input" min="0" max="20" value="1" id="ticket_18_amount" readonly="readonly">
+                    <button type="button" class="ticket-qty__btn js-add-remove-ticket" aria-label="add one ticket">
                       +
                     </button>
                   </div>
                 </div>
                 <div class="ticket-qty__wrapper">
                   <label for="ticket_65_amount" class="ticket-qty__label">
-                    Senior 65+ (10 €)
+                    Senior 65+ (<span class="js-senior-ticket-price">10</span> €)
                   </label>
                   <div class="ticket-qty__amount-wrapper">
-                    <button type="button" class="ticket-qty__btn" aria-label="remove one ticket" onclick="this.nextElementSibling.stepDown(1)">
+                    <button type="button" class="ticket-qty__btn js-booking-remove-ticket" aria-label="remove one ticket">
                       –
                     </button>
-                    <input type="number" class="ticket-qty__qty" min="0" max="20" value="1" id="ticket_65_amount" readonly="readonly">
-                    <button type="button" class="ticket-qty__btn" aria-label="add one ticket" onclick="this.previousElementSibling.stepUp(1)">
+                    <input type="number" class="ticket-qty__qty js-booking-senior-ticket-qty-input" min="0" max="20" value="1" id="ticket_65_amount" readonly="readonly">
+                    <button type="button" class="ticket-qty__btn js-booking-add-ticket" aria-label="add one ticket">
                       +
                     </button>
                   </div>
@@ -817,19 +817,21 @@
           </div>
             <ul class="booking-overview__tickets-list">
               <li class="booking-overview__tickets-item">
-                <span class="tickets__qty">2</span>
-                <span class="tickets__type">Basic (20 €)</span>
-                <span class="tickets__amount">40 €</span>
+                <span class="tickets__qty js-basic-ticket-qty">2</span>
+                <span class="tickets__type">Basic (<span class="js-basic-ticket-price">20</span> €)</span>
+                <span class="tickets__amount"><span class="js-booking-basic-total">40</span> €</span>
               </li>
               <li class="booking-overview__tickets-item">
-                <span class="tickets__qty">2</span>
-                <span class="tickets__type">Senior (10 €)</span>
-                <span class="tickets__amount">20 €</span>
+                <span class="tickets__qty js-senior-ticket-qty">2</span>
+                <span class="tickets__type">Senior (<span class="js-senior-ticket-price">10</span> €)</span>
+                <span class="tickets__amount"><span class="js-booking-senior-total">20</span> €</span>
               </li>
             </ul>
             <div class="booking-overview__total">
               <span class="booking-overview__total-heading">Total:</span>
-              <span class="booking-overview__total-amount">60 €</span>
+              <span class="booking-overview__total-price">
+                <span class="js-booking-total">60</span><span> €</span>
+              </span>
             </div>
           <div class="booking-card">
             <div class="card card--front">
@@ -897,5 +899,6 @@
   <script src="gallery.js"></script>
   <script src="form.js"></script>
   <script src="video.js"></script>
+  <script src="ticket-calculator.js"></script>
 </body>
 </html>
