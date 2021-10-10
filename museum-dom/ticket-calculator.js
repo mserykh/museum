@@ -18,7 +18,7 @@ const ticketSeniorAmountInputOverview = document.querySelector('.js-overview-sen
 const ticketAmountInputsOverwview = document.querySelectorAll('.js-overview-ticket-qty-input');
 const addTicketBtnsOverview = document.querySelectorAll('.js-overview-add-ticket');
 const removeTicketBtnsOverview = document.querySelectorAll('.js-overview-remove-ticket');
-const ticketTypes = document.querySelectorAll('.js-overview-ticket-type');
+const ticketTypesOverview = document.querySelectorAll('.js-overview-ticket-type');
 const totalAmountOverview = document.querySelector('.js-overview-total');
 
 function findContainer(btn) {
@@ -60,7 +60,7 @@ function recalculateAmount(event) {
 }
 
 function getTicketType() {
-  pickedTicketType = ([...ticketTypes].filter(ticketType => ticketType.checked)[0] || {}).id;
+  pickedTicketType = ([...ticketTypesOverview].filter(ticketType => ticketType.checked)[0] || {}).id;
   recalculateTotal();
 }
 
@@ -76,4 +76,4 @@ recalculateTotal();
 
 addTicketBtnsOverview.forEach(btn => btn.addEventListener('click', recalculateAmount));
 removeTicketBtnsOverview.forEach(btn => btn.addEventListener('click', recalculateAmount));
-ticketTypes.forEach(ticketType => ticketType.addEventListener('change', getTicketType));
+ticketTypesOverview.forEach(ticketType => ticketType.addEventListener('change', getTicketType));
