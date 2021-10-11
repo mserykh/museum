@@ -478,15 +478,15 @@
                 </legend>
                 <div class="order-form__ticket-wrapper"></div>
                 <label class="order-form__ticket-type radio">
-                  <input class="radio__btn js-overview-ticket-type js-overview-ticket-type-permanent" type="radio" checked="checked" id="permanent_exhibition" name="ticket-type">
+                  <input class="radio__btn js-overview-ticket-type js-overview-ticket-type-permanent" type="radio" checked="checked" id="permanent_exhibition" name="ticket-type" value="permanent">
                   <span class="radio__label">Permanent exhibition</span>
                 </label>
                 <label class="order-form__ticket-type radio">
-                  <input class="radio__btn js-overview-ticket-type js-overview-ticket-type-temporary" type="radio" id="temporary_exhibition" name="ticket-type">
+                  <input class="radio__btn js-overview-ticket-type js-overview-ticket-type-temporary" type="radio" id="temporary_exhibition" name="ticket-type" value="temporary">
                   <span class="radio__label">Temporary exhibition</span>
                 </label>
                 <label class="order-form__ticket-type radio">
-                  <input class="radio__btn js-overview-ticket-type js-overview-ticket-type-combined" type="radio" id="combined_admission" name="ticket-type">
+                  <input class="radio__btn js-overview-ticket-type js-overview-ticket-type-combined" type="radio" id="combined_admission" name="ticket-type" value="combined">
                   <span class="radio__label">Combined Admission</span>
                 </label>
               </fieldset>
@@ -498,7 +498,7 @@
                   <label class="order-form__label">
                     Basic 18+
                   </label>
-                  <div class="order-form__amount-wrapper js-overview-ticket-qty-container">
+                  <div class="order-form__amount-wrapper js-overview-ticket-qty-container" data-ticket-type="basic">
                     <button type="button" class="order-form__btn js-overview-remove-ticket" aria-label="remove one ticket" >
                       <svg width="17" height="17" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.6875 2.82812H0.03125V0.46875H15.6875V2.82812Z" fill="white"/>
@@ -516,7 +516,7 @@
                   <label class="order-form__label">
                     Senior 65+
                   </label>
-                  <div class="order-form__amount-wrapper js-overview-ticket-qty-container">
+                  <div class="order-form__amount-wrapper js-overview-ticket-qty-container" data-ticket-type="senior">
                     <button type="button" class="order-form__btn js-overview-remove-ticket" aria-label="remove one ticket">
                       <svg width="17" height="17" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.6875 2.82812H0.03125V0.46875H15.6875V2.82812Z" fill="white"/>
@@ -707,20 +707,20 @@
               <div class="field field--date field--short">
                 <div class="field__icon field__icon--date">
                 </div>
-                <input class="input--date" type="date" id="ticket-date" data-placeholder="Date"
+                <input class="input--date js-booking-input-date" type="date" id="ticket-date" data-placeholder="Date"
                 data-jsv-validate data-jsv-error-message="" data-jsv-required-message="">
               </div>
               <div class="field field--time field--short">
                 <div class="field__icon field__icon--time">
                 </div>
-                <input class="input--time" type="time" id="ticket-time" data-placeholder="Time"
+                <input class="input--time js-booking-input-time" type="time" id="ticket-time" data-placeholder="Time"
                 data-jsv-validate data-jsv-error-message="" data-jsv-required-message="">
               </div>
               <div class="field field--name">
                 <div class="field__icon field__icon--name">
                 </div>
                 <input
-                  class="input--name"
+                  class="input--name js-booking-input-name"
                   type="text"
                   id="client-name"
                   placeholder="Name"
@@ -734,7 +734,7 @@
                 <div class="field__icon field__icon--email">
                 </div>
                 <input
-                  class="input--email"
+                  class="input--email js-booking-input-email"
                   type="email"
                   id="client-email"
                   placeholder="E-mail"
@@ -747,7 +747,7 @@
                 <div class="field__icon field__icon--phone">
                 </div>
                 <input
-                  class="input--phone"
+                  class="input--phone  js-booking-input-phone"
                   type="tel"
                   id="client-telephone"
                   placeholder="Phone"
@@ -760,9 +760,9 @@
               <div class="field field--exhibition">
                 <div class="field__icon field__icon--exhibition">
                 </div>
-                <select class="field__ticket-type" id="ticket-type"
+                <select class="field__ticket-type js-booking-select-ticket-type" id="ticket-type"
                 data-jsv-validate data-jsv-error-message="" data-jsv-required-message="">
-                  <option value="" selected>Ticket type</option>
+                  <option value="" selected disabled>Ticket type</option>
                   <option value="permanent">Permanent exhibition</option>
                   <option value="temporary">Temporary exhibition</option>
                   <option value="combined">Combined Admission</option>
@@ -774,12 +774,12 @@
                   <label class="ticket-qty__label">
                     Basic 18+ (<span class="js-basic-ticket-price">20</span> €)
                   </label>
-                  <div class="ticket-qty__amount-wrapper">
+                  <div class="ticket-qty__amount-wrapper js-booking-ticket-qty-container" data-ticket-type="basic">
                     <button type="button" class="ticket-qty__btn js-booking-remove-ticket" aria-label="remove one ticket">
                       –
                     </button>
-                    <input type="number" class="ticket-qty__qty js-booking-basic-ticket-qty-input" min="0" max="20" value="1" id="ticket_18_amount" readonly="readonly">
-                    <button type="button" class="ticket-qty__btn js-add-remove-ticket" aria-label="add one ticket">
+                    <input type="number" class="ticket-qty__qty js-booking-ticket-qty-input js-booking-basic-ticket-qty-input" min="0" max="20" value="1" id="ticket_18_amount" readonly="readonly">
+                    <button type="button" class="ticket-qty__btn js-booking-add-ticket" aria-label="add one ticket">
                       +
                     </button>
                   </div>
@@ -788,11 +788,11 @@
                   <label for="ticket_65_amount" class="ticket-qty__label">
                     Senior 65+ (<span class="js-senior-ticket-price">10</span> €)
                   </label>
-                  <div class="ticket-qty__amount-wrapper">
+                  <div class="ticket-qty__amount-wrapper js-booking-ticket-qty-container" data-ticket-type="senior">
                     <button type="button" class="ticket-qty__btn js-booking-remove-ticket" aria-label="remove one ticket">
                       –
                     </button>
-                    <input type="number" class="ticket-qty__qty js-booking-senior-ticket-qty-input" min="0" max="20" value="1" id="ticket_65_amount" readonly="readonly">
+                    <input type="number" class="ticket-qty__qty js-booking-ticket-qty-input js-booking-senior-ticket-qty-input" min="0" max="20" value="1" id="ticket_65_amount" readonly="readonly">
                     <button type="button" class="ticket-qty__btn js-booking-add-ticket" aria-label="add one ticket">
                       +
                     </button>
@@ -807,9 +807,9 @@
             <div class="booking-overview__overview">
               <h3 class="overview__title">Overview</h3>
               <h5 class="overview__subtitle">Tour to Louvre</h5>
-                <p class="overview__date">Friday, August 19</p>
-                <p class="overview__time">16:30</p>
-                <p class="overview__ticket-type">Temporary exhibition</p>
+                <p class="overview__date js-booking-date">Friday, August 19</p>
+                <p class="overview__time js-booking-time">16:30</p>
+                <p class="overview__ticket-type js-booking-ticket-type">Temporary exhibition</p>
             </div>
             <div class="booking-overview__image">
               <img src="./assets/img/booking.jpg" alt="Louvre">
@@ -817,12 +817,12 @@
           </div>
             <ul class="booking-overview__tickets-list">
               <li class="booking-overview__tickets-item">
-                <span class="tickets__qty js-basic-ticket-qty">2</span>
+                <span class="tickets__qty js-booking-basic-ticket-qty">2</span>
                 <span class="tickets__type">Basic (<span class="js-basic-ticket-price">20</span> €)</span>
                 <span class="tickets__amount"><span class="js-booking-basic-total">40</span> €</span>
               </li>
               <li class="booking-overview__tickets-item">
-                <span class="tickets__qty js-senior-ticket-qty">2</span>
+                <span class="tickets__qty js-booking-senior-ticket-qty">2</span>
                 <span class="tickets__type">Senior (<span class="js-senior-ticket-price">10</span> €)</span>
                 <span class="tickets__amount"><span class="js-booking-senior-total">20</span> €</span>
               </li>
