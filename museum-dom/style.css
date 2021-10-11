@@ -870,23 +870,40 @@ input[type=range] {
   display: block;
   max-width: calc((100% - 72px) / 3);
   max-height: 100%;
+  opacity: 0;
+  transform: scale(0.75) translateY(15%);
+  transform-origin: bottom left;
+  transition: all 0.6s ease-in-out;
+}
+
+.gallery__item.show {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+  transition: all 0.6s ease-in-out;
 }
 
 .gallery__item:nth-child(n) {
-  transform: translateY(50px);
   position: relative;
 }
 
 .gallery__item:nth-child(n + 6) {
   position: relative;
   order: 1;
-  transform: translateY(0);
+  transition-delay: 0.2s;
 }
 
 .gallery__item:nth-child(n + 11) {
   position: relative;
   order: 2;
-  transform: translateY(50px);
+  transition-delay: 0.4s;
+}
+
+.gallery__item:first-child {
+  margin-top: 50px;
+}
+
+.gallery__item:nth-child(11) {
+  margin-top: 50px;
 }
 
 .gallery__bottom {
