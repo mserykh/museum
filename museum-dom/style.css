@@ -1285,6 +1285,8 @@ input[type=range] {
   position: fixed;
   max-width: var(--content-width);
   width: 100%;
+  height: auto;
+  max-height: 100%;
   top: 50%;
   left: -100%;
   line-height: initial;
