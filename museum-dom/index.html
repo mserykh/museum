@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css-adaptive.css">
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
   <header class="header">
@@ -585,12 +587,13 @@
                 </a></dd>
             </div>
           </dl>
-          <picture class="contacts__map" >
+          <div id="map" class="contacts__map"></div>
+          <!--<picture class="contacts__map" >
             <source srcset="./assets/img/map/map-420.png" media="(max-width: 420px)">
             <source srcset="./assets/img/map/map-768.png" media="(max-width: 768px)">
             <source srcset="./assets/img/map/map.webp" type="image/webp">
             <img src="./assets/img/map/map.png" alt="Map">
-          </picture>
+          </picture> -->
         </div>
       </div>
     </section>
@@ -921,5 +924,6 @@
   <script src="form.js"></script>
   <script src="video.js"></script>
   <script src="ticket-calculator.js"></script>
+  <script src="map.js"></script>
 </body>
 </html>

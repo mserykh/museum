@@ -1119,7 +1119,17 @@ input[type=range] {
 }
 
 .contacts__map {
-  max-width: calc(100% - 290px);
+  display: block;
+  width: 960px;
+  height: 620px;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
 }
 
 .contacts__item-wrapper {
