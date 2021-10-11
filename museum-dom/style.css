@@ -467,6 +467,7 @@ fieldset {
 
 .wrapper--wide {
   width: 720px;
+  overflow: hidden;
 }
 
 .explore__slider {
@@ -478,7 +479,8 @@ fieldset {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 440px;
+  width: 61%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -489,10 +491,11 @@ fieldset {
 .explore__slide-bar {
   position: absolute;
   top: 0;
-  left: 440px;
+  left: 61%;
   bottom: 0;
   width: 38px;
   height: 100%;
+  transform: translateX(50%);
 }
 
 .slider-bar__bar {

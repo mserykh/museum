@@ -318,17 +318,17 @@
           </p>
         </div>
         <div class="wrapper--wide">
-          <div class="explore__slider">
-            <div class="explore__image-container">
-              <img src="./assets/img/explore/explore-after.jpg" class="explore__image explore__image--after" alt="Painting «Las Meninas» by Diego Velázquez before restoration">
+          <figure class="explore__slider">
+            <img class="explore__image explore__image--before" data-type="before" src="./assets/img/explore/explore-before@1x.jpg" alt="Painting «Las Meninas» by Diego Velázquez after restoration">
+            <div class="explore__image-container js-explore-overlay">
+              <img class="explore__image explore__image--after" data-type="after" src="./assets/img/explore/explore-after.jpg" alt="Painting «Las Meninas» by Diego Velázquez before restoration">
             </div>
-            <img src="./assets/img/explore/explore-before@1x.jpg" class="explore__image explore__image--before" alt="Painting «Las Meninas» by Diego Velázquez after restoration">
-            <div class="explore__slide-bar">
+            <div class="explore__slide-bar js-explore-slide-bar">
               <div class="slider-bar__bar"></div>
               <div class="slider-bar__thumb"></div>
               <div class="slider-bar__bar"></div>
             </div>
-          </div>
+          </figure>
         </div>
       </div>
     </section>
@@ -908,6 +908,7 @@
   <script src="gallery.js"></script>
   <script src="form.js"></script>
   <script src="video.js"></script>
+  <script src="compare-slider.js"></script>
   <script src="ticket-calculator.js"></script>
   <script src="map.js"></script>
 </body>
