@@ -1511,7 +1511,8 @@ input[type=date]::-webkit-datetime-edit {
 .input--time::-webkit-calendar-picker-indicator {
   color: none;
   background: none;
-  z-index: 2;
+  width: 0;
+  height: 0;
 }
 
 .input--date::after {

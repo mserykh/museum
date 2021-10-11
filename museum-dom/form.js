@@ -6,16 +6,19 @@ const overlay = document.querySelector('.overlay');
 const paymentBtn = document.querySelector('.booking-payment__btn');
 const INPUT_DATE = document.querySelector('.input--date');
 const INPUT_TIME = document.querySelector('.input--time');
+const timeSlotList = document.querySelector('.js-time__list')
+const timeSlots = document.querySelectorAll('.js-time__option')
 const INPUT_NAME = document.querySelector('.input--name');
 const INPUT_EMAIL = document.querySelector('.input--email');
 const INPUT_PHONE = document.querySelector('.input--phone');
 const SELECT_TICKET_TYPE = document.querySelector('.field__ticket-type');
-const TICKET_DATE = document.querySelector('.overview__date');
+const TICKET_DATE = document.querySelector('.js-booking-date');
+const TICKET_TIME = document.querySelector('.js-booking-time');
 
 const TODAY = new Date();
 const MIN_DATE = TODAY.toISOString().slice(0, 10);
 
-const ERROR_TEXT_NAME = 'Please enter your first name, e.g. Alexandra I. Please use 3 to 15 latin or cyrilic characters and spaces.';
+const ERROR_TEXT_NAME = 'Please enter your name, e.g. Alexandra I (3 to 15 latin or cyrilic characters).';
 const ERROR_TEXT_EMAIL = 'Please enter a valid email, e.g. User-Name_@exapmle.com.';
 const ERROR_TEXT_PHONE = 'Please enter a valid phone number, maximum 10 digits, eg. 628-456-179';
 const ERROR_TEXT_DATE = 'Please pick a date of your visit.';
@@ -65,6 +68,20 @@ function setValue(value) {
   TICKET_DATE.innerText = `${day}, ${month} ${date}`;
 }
 
+function openTimeSlots() {
+  timeSlotList.classList.add('picked');
+}
+
+function closeTimeSlots() {
+  timeSlotList.classList.remove('picked');
+}
+
+function pickTimeSlot(event) {
+  TICKET_TIME.innerHTML = event.currentTarget.innerHTML;
+  INPUT_TIME.setAttribute('data-placeholder', TICKET_TIME.innerHTML);
+  closeTimeSlots();
+}
+
 function checkInputs() {
   if (INPUT_EMAIL.value === '') {
     showError(INPUT_EMAIL, ERROR_TEXT_EMAIL);
@@ -76,7 +93,7 @@ function showError(input, message) {
 }
 
 const checkNameParameters = () => {
-  const regName = /^[а-яА-Яёa-zA-Z\s]+$/;
+  const regName = /^[а-яА-Яёa-zA-Я\s]+$/;
 
   if ((INPUT_NAME.value.length > 15 || INPUT_NAME.value.length < 3) || !(regName.test(INPUT_NAME.value))) return false;
   
@@ -168,6 +185,9 @@ paymentBtn.addEventListener('click', addRipple);
 
 INPUT_DATE.addEventListener('input', getValue);
 INPUT_TIME.addEventListener('input', getValue);
+INPUT_TIME.addEventListener('focus', openTimeSlots);
+INPUT_TIME.addEventListener('change', closeTimeSlots);
+timeSlots.forEach(timeSlot => timeSlot.addEventListener('click', pickTimeSlot));
 
 INPUT_DATE.min = MIN_DATE;
 
