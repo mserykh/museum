@@ -871,7 +871,7 @@ input[type=range] {
   max-width: calc((100% - 72px) / 3);
   max-height: 100%;
   opacity: 0;
-  transform: scale(0.75) translateY(15%);
+  transform: scale(0.9) translateY(15%);
   transform-origin: bottom left;
   transition: all 0.6s ease-in-out;
 }
