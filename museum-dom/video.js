@@ -55,7 +55,7 @@ function updatePreviewButton() {
 function handleProgress() {
   const duration = video.duration;
   const currentTime = video.currentTime;
-  const percent = (currentTime / duration) * 100;
+  const percent = Math.floor((currentTime / duration) * 100);
   progress.value = `${percent}`;
   progress.style.background = `linear-gradient(to right, #710707 0%, #710707 ${percent}%, #C4C4C4 ${percent}%)`;
 
