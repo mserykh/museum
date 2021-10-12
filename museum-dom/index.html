@@ -347,25 +347,27 @@
           </div>
         </div>
         <div class="video__inner-container">
-          <div class="video__player player">
+          <div class="video__player js-video-player">
             <span class="visually-hidden">Watch videos</span>
             <div class="player__preview">
-              <picture>
+              <span class="player__playback-rate js-video-playback-rate"></span>
+              <video class="player__poster js-video-viewer" src="assets/video/video0.mp4" poster="assets/img/video/video@1x.jpg"></video>
+              <!-- <picture>
                 <source srcset="./assets/img/video/video@1x.webp" type="image/webp">
                 <img src="./assets/img/video/video@1x.jpg" alt="Video about the Louvre" class="player__poster">
-              </picture>
-              <button class="player__btn player__btn--preview" type="button" title="Play">
+              </picture> -->
+              <button class="player__btn player__btn--preview js-video-button-preview" type="button" title="Play">
                 <span class="visually-hidden">Play video</span>
               </button>
             </div>
-            <div class="player__controls controls">
-              <button class="player__btn--play video-paused player__btn" type="button">
+            <div class="player__controls controls js-video-player-controls">
+              <button class="player__btn--play video-paused player__btn js-video-button-toggle" type="button">
               </button>
-              <input type="range" value="47" min="0" max="100" step="1" class="controls__progress-bar">
-              <button class="player__btn--volume loud player__btn" type="button">
+              <input class="controls__progress-bar js-video-progress-bar" type="range" value="0" min="0" max="100" step="1">
+              <button class="player__btn--volume loud player__btn js-video-button-volume" type="button">
               </button>
-              <input type="range" value="40" min="0" max="100" step="1" class="controls__volume-slider">
-              <button class="player__btn--fullscreen player__btn">
+              <input class="controls__volume-slider js-video-range js-video-volume-range" type="range" name="volume" value="0.5" min="0" max="1" step="0.01">
+              <button class="player__btn--fullscreen player__btn js-video-button-fullscreen">
               </button>
             </div>
           </div>

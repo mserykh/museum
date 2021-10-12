@@ -576,6 +576,25 @@ fieldset {
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.player__playback-rate {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  padding: 10px;
+  border-radius: 3px;
+  color: var(--color-primary-light);
+  background-color: rgba(0,0,0,.5);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.player__playback-rate.active {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 .player__controls {
@@ -595,6 +614,9 @@ fieldset {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .player__btn::before {
@@ -610,8 +632,8 @@ fieldset {
   transition: filter 0.4s ease-in-out;
 }
 
-.player__btn:hover::before,
-.player__btn:active::before {
+.player__btn:hover,
+.player__btn:active {
   filter: invert(63%) sepia(0%) saturate(0%) hue-rotate(83deg) brightness(95%) contrast(96%);
   transition: filter 0.4s ease-in-out;
 }
@@ -643,28 +665,36 @@ fieldset {
 .player__btn--play {
   width: 23px;
   height: 30px;
+  background-image: url("assets/svg/video-player/play.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.player__btn--play::before {
-  background-image: url("assets/svg/play.svg");
-}
 
 .player__btn--volume {
   width: 38px;
   height: 30px;
-}
-
-.player__btn--volume::before {
-  background-image: url("assets/svg/volume.svg");
+  background-image: url("assets/svg/video-player/volume.svg");
 }
 
 .player__btn--fullscreen {
   width: 36px;
   height: 36px;
+  background-image: url("assets/svg/video-player/fullscreen.svg");
 }
 
-.player__btn--fullscreen::before {
-  background-image: url("assets/svg/fullscreen.svg");
+
+.volume-high {
+  background-image: url('assets/svg/video-player/volume.svg');
+}
+
+.volume-low {
+  background-image: url('assets/svg/video-player/volume-50.svg');
+}
+
+.muted {
+  background-image: url('assets/svg/video-player/mute.svg');
 }
 
 .controls__volume {
@@ -721,14 +751,37 @@ input[type=range]::-ms-thumb {
 
 input[type=range] {
   height: 8px;
-  background: linear-gradient(to right, var(--color-accent2) 0%, var(--color-accent2) 40%, var(--color-player2) 40%, var(--color-player2) 100%);
+  background: linear-gradient(to right, var(--color-accent2) 0%, var(--color-accent2) 50%, var(--color-player2) 0%, var(--color-player2) 50%);
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
 }
 
 .controls__progress-bar[type=range] {
-  background: linear-gradient(to right, var(--color-accent2) 0%, var(--color-accent2) 47%, var(--color-player2) 47%, var(--color-player2) 100%);
+  background: linear-gradient(to right, var(--color-accent2) 0%, var(--color-accent2) 0%, var(--color-player2) 0%, var(--color-player2) 0%);
+}
+
+.video__player:fullscreen {
+  position: relative;
+}
+
+.video__player:fullscreen .controls__progress-bar {
+  width: calc(100% - 360px);
+}
+
+.video__player:fullscreen .player__preview{
+  padding-bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video__player:fullscreen .player__controls {
+  transform: translateY(0);
+}
+.video__player:fullscreen .player__controls {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .video__list {
