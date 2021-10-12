@@ -71,8 +71,7 @@ function handleRangeUpdate() {
   const value = this.value;
   video[this.name] = value;
   if (this.name === 'volume') lastVolumeValue = value;
-  console.log(lastVolumeValue);
-}
+     }
 
 function handleRangeProgress() {
   const value = this.value;
@@ -198,13 +197,13 @@ function onKeyElementClick(e) {
     toggleVolume();
   }
 
-  if (e.getModifierState('Shift') && e.code === 'Period') {
+  if (e.getModifierState("Shift") && e.code === 'Period') {
     if (video.playbackRate >= 2) return;
     video.playbackRate += 0.25;
     showSpeedRate(+video.playbackRate);
   }
 
-  if (e.getModifierState('Shift') && e.code === 'Comma') {
+  if (e.getModifierState("Shift") && e.code === 'Comma') {
     if (video.playbackRate <= 0.5) return;
     video.playbackRate -= 0.25;
     showSpeedRate(+video.playbackRate);
