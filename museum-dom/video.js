@@ -180,81 +180,86 @@ function toggleFullscreen() {
 }
 
 function onKeyElementClick(e) {
-  e.preventDefault();
 
-  if (e.code === 'Space' || e.code === 'KeyK') {
-    togglePlay();
-  }
+  if ((video.getBoundingClientRect().top < 400) 
+  && (video.getBoundingClientRect().top > -200)) {
 
-  if (e.code === 'KeyJ') {
-    video.currentTime -= 10;
-    if (video.paused) {
+    e.preventDefault();
+
+    if (e.code === 'Space' || e.code === 'KeyK') {
       togglePlay();
     }
-  }
 
-  if (e.code === 'KeyM') {
-    toggleVolume();
-  }
+    if (e.code === 'KeyJ') {
+      video.currentTime -= 10;
+      if (video.paused) {
+        togglePlay();
+      }
+    }
 
-  if (e.getModifierState("Shift") && e.code === 'Period') {
-    if (video.playbackRate >= 2) return;
-    video.playbackRate += 0.25;
-    showSpeedRate(+video.playbackRate);
-  }
+    if (e.code === 'KeyM') {
+      toggleVolume();
+    }
 
-  if (e.getModifierState("Shift") && e.code === 'Comma') {
-    if (video.playbackRate <= 0.5) return;
-    video.playbackRate -= 0.25;
-    showSpeedRate(+video.playbackRate);
-  }
+    if (e.getModifierState("Shift") && e.code === 'Period') {
+      if (video.playbackRate >= 2) return;
+      video.playbackRate += 0.25;
+      showSpeedRate(+video.playbackRate);
+    }
 
-  if (e.code === 'KeyR') {
-    backToNormalSpeedRate();
-  }
+    if (e.getModifierState("Shift") && e.code === 'Comma') {
+      if (video.playbackRate <= 0.5) return;
+      video.playbackRate -= 0.25;
+      showSpeedRate(+video.playbackRate);
+    }
 
-  if (e.code === 'KeyF') {
-    toggleFullscreen();
-  }
+    if (e.code === 'KeyR') {
+      backToNormalSpeedRate();
+    }
 
-  if (e.code === 'Digit0' || e.code === 'Numpad0') {
-    video.currentTime = 0;
-  }
+    if (e.code === 'KeyF') {
+      toggleFullscreen();
+    }
 
-  if (e.code === 'Digit1' || e.code === 'Numpad1') {
-    video.currentTime = video.duration * 0.1;
-  }
+    if (e.code === 'Digit0' || e.code === 'Numpad0') {
+      video.currentTime = 0;
+    }
 
-  if (e.code === 'Digit2' || e.code === 'Numpad2') {
-    video.currentTime = video.duration * 0.2;
-  }
+    if (e.code === 'Digit1' || e.code === 'Numpad1') {
+      video.currentTime = video.duration * 0.1;
+    }
 
-  if (e.code === 'Digit3' || e.code === 'Numpad3') {
-    video.currentTime = video.duration * 0.3;
-  }
+    if (e.code === 'Digit2' || e.code === 'Numpad2') {
+      video.currentTime = video.duration * 0.2;
+    }
 
-  if (e.code === 'Digit4' || e.code === 'Numpad4') {
-    video.currentTime = video.duration * 0.4;
-  }
+    if (e.code === 'Digit3' || e.code === 'Numpad3') {
+      video.currentTime = video.duration * 0.3;
+    }
 
-  if (e.code === 'Digit5' || e.code === 'Numpad5') {
-    video.currentTime = video.duration * 0.5;
-  }
+    if (e.code === 'Digit4' || e.code === 'Numpad4') {
+      video.currentTime = video.duration * 0.4;
+    }
 
-  if (e.code === 'Digit6' || e.code === 'Numpad6') {
-    video.currentTime = video.duration * 0.6;
-  }
+    if (e.code === 'Digit5' || e.code === 'Numpad5') {
+      video.currentTime = video.duration * 0.5;
+    }
 
-  if (e.code === 'Digit7' || e.code === 'Numpad7') {
-    video.currentTime = video.duration * 0.7;
-  }
+    if (e.code === 'Digit6' || e.code === 'Numpad6') {
+      video.currentTime = video.duration * 0.6;
+    }
 
-  if (e.code === 'Digit8' || e.code === 'Numpad8') {
-    video.currentTime = video.duration * 0.8;
-  }
+    if (e.code === 'Digit7' || e.code === 'Numpad7') {
+      video.currentTime = video.duration * 0.7;
+    }
 
-  if (e.code === 'Digit9' || e.code === 'Numpad9') {
-    video.currentTime = video.duration * 0.9;
+    if (e.code === 'Digit8' || e.code === 'Numpad8') {
+      video.currentTime = video.duration * 0.8;
+    }
+
+    if (e.code === 'Digit9' || e.code === 'Numpad9') {
+      video.currentTime = video.duration * 0.9;
+    }
   }
 }
 
