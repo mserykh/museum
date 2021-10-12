@@ -2248,3 +2248,26 @@ select option:checked {
   z-index: 5;
   transition: opacity 0.4s ease-in-out;
 }
+
+.btn--to-top {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.25);
+  outline: none;
+  transition: 0.2s;
+  z-index: 3; 
+}
+
+.btn--to-top:hover {
+  background-color: var(--color-accent);
+}
