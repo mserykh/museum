@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css-adaptive.css">
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 <body>
   <header class="header">
@@ -171,14 +173,48 @@
         </ul>
       </div>
       <div class="container welcome__container">
-        <div class="welcome__slider slider">
-          <div class="welcome__slide slide">
-            <picture>
-              <source srcset="./assets/img/welcome/monalisa@1x-mob.jpg" media="(max-width: 500px)">
-              <source srcset="./assets/img/welcome/monalisa@1x-mob.webp" media="(max-width: 500px)" type="image/webp">
-              <source srcset="./assets/img/welcome/monalisa@1x.webp" type="image/webp">
-              <img class="welcome__img" src="./assets/img/welcome/monalisa@1x.jpg" alt="Mona Lisa by Leonardo Da Vinci">
-            </picture>
+        <div class="welcome__slider slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="welcome__slide slide swiper-slide">
+              <picture>
+                <source srcset="./assets/img/welcome/monalisa@1x-mob.jpg" media="(max-width: 500px)">
+                <source srcset="./assets/img/welcome/monalisa@1x-mob.webp" media="(max-width: 500px)" type="image/webp">
+                <source srcset="./assets/img/welcome/monalisa@1x.webp" type="image/webp">
+                <img class="welcome__img" src="./assets/img/welcome/monalisa@1x.jpg" alt="Mona Lisa by Leonardo Da Vinci">
+              </picture>
+            </div>
+            <div class="welcome__slide slide swiper-slide">
+              <picture>
+                <source srcset="./assets/img/welcome/liberty@1x-mob.jpg" media="(max-width: 500px)">
+                <source srcset="./assets/img/welcome/liberty@1x-mob.webp" media="(max-width: 500px)" type="image/webp">
+                <source srcset="./assets/img/welcome/liberty@1x.webp" type="image/webp">
+                <img class="welcome__img" src="./assets/img/welcome/liberty@1x.jpg" alt="Liberty">
+              </picture>
+            </div>
+            <div class="welcome__slide slide swiper-slide">
+              <picture>
+                <source srcset="./assets/img/welcome/labelle@1x-mob.jpg" media="(max-width: 500px)">
+                <source srcset="./assets/img/welcome/labelle@1x-mob.webp" media="(max-width: 500px)" type="image/webp">
+                <source srcset="./assets/img/welcome/labelle@1x.webp" type="image/webp">
+                <img class="welcome__img" src="./assets/img/welcome/labelle@1x.jpg" alt="Labelle">
+              </picture>
+            </div>
+            <div class="welcome__slide slide swiper-slide">
+              <picture>
+                <source srcset="./assets/img/welcome/medusa@1x-mob.jpg" media="(max-width: 500px)">
+                <source srcset="./assets/img/welcome/medusa@1x-mob.webp" media="(max-width: 500px)" type="image/webp">
+                <source srcset="./assets/img/welcome/medusa@1x.webp" type="image/webp">
+                <img class="welcome__img" src="./assets/img/welcome/medusa@1x.jpg" alt="Medusa">
+              </picture>
+            </div>
+            <div class="welcome__slide slide swiper-slide">
+              <picture>
+                <source srcset="./assets/img/welcome/astronoom@1x-mob.jpg" media="(max-width: 500px)">
+                <source srcset="./assets/img/welcome/astronoom@1x-mob.webp" media="(max-width: 500px)" type="image/webp">
+                <source srcset="./assets/img/welcome/astronoom@1x.webp" type="image/webp">
+                <img class="welcome__img" src="./assets/img/welcome/astronoom@1x.jpg" alt="Astronoom">
+              </picture>
+            </div>
           </div>
             <div class="slider__navigation">
               <div class="slider__slides-counter">
@@ -186,7 +222,7 @@
                 <span class="slider__number-divider">|</span>
                 <span class="slider__last-slide">05</span>
               </div>
-              <div class="slider__dots">
+              <div class="slider__dots swiper-pagination">
                 <button class="slider__dot slider__dot--active active"></button>
                 <button class="slider__dot"></button>
                 <button class="slider__dot"></button>
@@ -913,6 +949,7 @@
   <script src="compare-slider.js"></script>
   <script src="ticket-calculator.js"></script>
   <script src="map.js"></script>
+  <script src="swiper.js"></script>
   <script src="selfEval.js"></script>
 </body>
 </html>
