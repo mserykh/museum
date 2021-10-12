@@ -496,6 +496,7 @@ fieldset {
   width: 38px;
   height: 100%;
   transform: translateX(50%);
+  cursor: ew-resize;
 }
 
 .slider-bar__bar {
