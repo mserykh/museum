@@ -1,12 +1,34 @@
 const progressVideo = document.querySelector('.controls__progress-bar');
 const scrollToTopButton = document.getElementById("scrollToTop");
+const circle = document.querySelector('.js-progress-ring__circle');
+const radius = circle.r.baseVal.value;
+const length = radius * 2 * Math.PI;
+let currentPosition =  window.scrollY;
+const pageLength = window.pageYOffset;
+
+
+circle.style.strokeDasharray = `${length} ${length}`;
+circle.style.strokeDashoffset = `${length}`;
+
+function percentofPage () {
+  const percent = Math.floor((document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
+  setProgress(percent);
+};
+
+function setProgress(percent) {
+  const offset = length - percent / 100 * length;
+  circle.style.strokeDashoffset = offset;
+
+}
+
+document.addEventListener('scroll', percentofPage)
 
 const handleScroll = () => {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    scrollToTopButton.style.display = "block";
+    scrollToTopButton.style.opacity = "1";
   } 
   else {
-    scrollToTopButton.style.display = "none";
+    scrollToTopButton.style.opacity = "0";
   }
 };
 
