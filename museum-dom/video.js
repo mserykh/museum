@@ -163,15 +163,17 @@ function scrub(e) {
 function toggleFullscreen() {
   if (document.fullscreenElement) {
     document.exitFullscreen();
-    fullscreenButton.style.background = `url(''assets/svg/video-player/fullscreen.svg')`;
+    console.log('2');
+    fullscreenButton.style.background = `url('assets/svg/video-player/fullscreen.svg')`;
   }
   else if (document.webkitFullscrrenElement) {
     document.webkitExitFullscreen();
-    fullscreenButton.style.background = `url(''assets/svg/video-player/fullscreen.svg')`;
+    fullscreenButton.style.background = `url('assets/svg/video-player/fullscreen.svg')`;
   }
   else if (player.fullscreenElement) {
     player.webkitExitFullscreen();
-    fullscreenButton.style.background = `url(''assets/svg/video-player/fullscreen.svg')`;
+
+    fullscreenButton.style.background = `url('assets/svg/video-player/fullscreen.svg')`;
   }
   else {
     player.requestFullscreen();
