@@ -590,15 +590,21 @@ fieldset {
   height: 0;
   padding-bottom: 45.125%;;
   background-color: var(--color-primary);
+  overflow: hidden;
 }
 
 .player__poster {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.player__poster.active {
+  display: block;
 }
 
 .player__playback-rate {
@@ -704,6 +710,7 @@ fieldset {
   width: 36px;
   height: 36px;
   background-image: url("assets/svg/video-player/fullscreen.svg");
+  background-repeat: no-repeat;
 }
 
 
@@ -903,7 +910,7 @@ input[type=range] {
   transition: background 0.3s ease-in-out;
 }
 
-.pagination__page--active {
+.pagination__page.active {
   background-color: #333333;
   transition: background 0.3s ease-in-out;
 }
@@ -2276,14 +2283,14 @@ select option:checked {
 
 .btn--to-top:hover .progress-ring__circle {
   stroke: var(--color-accent);
-  transition: 0.4s ease-in-out;
+  transition: stroke 0.4s ease-in-out;
 }
 
 .progress-ring__logo path {
-  transition: 0.4s ease-in-out;
+  transition: fill 0.4s ease-in-out;
 }
 
 .btn--to-top:hover .progress-ring__logo path {
   fill: var(--color-accent);
-  transition: 0.4s ease-in-out;
+  transition: fill 0.4s ease-in-out;
 }

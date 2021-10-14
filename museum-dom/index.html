@@ -389,7 +389,11 @@
             <span class="visually-hidden">Watch videos</span>
             <div class="player__preview">
               <span class="player__playback-rate js-video-playback-rate"></span>
-              <video class="player__poster js-video-viewer" src="assets/video/video0.mp4" poster="assets/img/video/video@1x.jpg"></video>
+              <video class="player__poster js-video-viewer active" src="assets/video/video0.mp4" poster="assets/img/video/poster0.jpg"></video>
+              <video class="player__poster js-video-viewer" src="assets/video/video1.mp4" poster="assets/img/video/poster1.jpg"></video>
+              <video class="player__poster js-video-viewer" src="assets/video/video2.mp4" poster="assets/img/video/poster2.jpg"></video>
+              <video class="player__poster js-video-viewer" src="assets/video/video3.mp4" poster="assets/img/video/poster3.jpg"></video>
+              <video class="player__poster js-video-viewer" src="assets/video/video4.mp4" poster="assets/img/video/poster4.jpg"></video>
               <!-- <picture>
                 <source srcset="./assets/img/video/video@1x.webp" type="image/webp">
                 <img src="./assets/img/video/video@1x.jpg" alt="Video about the Louvre" class="player__poster">
@@ -404,7 +408,7 @@
               <input class="controls__progress-bar js-video-progress-bar" type="range" value="0" min="0" max="100" step="1">
               <button class="player__btn--volume loud player__btn js-video-button-volume" type="button">
               </button>
-              <input class="controls__volume-slider js-video-range js-video-volume-range" type="range" name="volume" value="0.5" min="0" max="1" step="0.01">
+              <input class="controls__volume-slider js-video-range js-video-volume-range" type="range" name="volume" value="0.2" min="0" max="1" step="0.01">
               <button class="player__btn--fullscreen player__btn js-video-button-fullscreen">
               </button>
             </div>
@@ -456,17 +460,17 @@
             </div>
           </div>
           <div class="video__pagination">
-            <button class="pagination__arrow">
+            <button class="pagination__arrow pagination__arrow--back js-video-arrow-back">
               <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.4777 0.219168C5.87773 0.564178 5.94259 1.19347 5.62256 1.62473L2.37578 6.00004L5.62256 10.3753C5.94259 10.8066 5.87773 11.4359 5.4777 11.7809C5.07766 12.1259 4.49394 12.056 4.17391 11.6247L0 6.00004L4.17391 0.375342C4.49394 -0.0559202 5.07766 -0.125842 5.4777 0.219168ZM9.65184 0.219168C10.0519 0.564178 10.1167 1.19347 9.7967 1.62473L6.54992 6.00004L9.7967 10.3753C10.1167 10.8066 10.0519 11.4359 9.65184 11.7809C9.2518 12.1259 8.66808 12.056 8.34805 11.6247L4.17414 6.00004L8.34805 0.375342C8.66808 -0.0559202 9.2518 -0.125842 9.65184 0.219168Z" fill="#999999"/>
               </svg>
             </button>
-            <button class="pagination__page pagination__page--active"></button>
-            <button class="pagination__page"></button>
-            <button class="pagination__page"></button>
-            <button class="pagination__page"></button>
-            <button class="pagination__page"></button>
-            <button class="pagination__arrow">
+            <button class="pagination__page js-video-pagination-dot"></button>
+            <button class="pagination__page js-video-pagination-dot"></button>
+            <button class="pagination__page js-video-pagination-dot"></button>
+            <button class="pagination__page js-video-pagination-dot"></button>
+            <button class="pagination__page js-video-pagination-dot"></button>
+            <button class="pagination__arrow pagination__arrow--forward js-video-arrow-forward">
               <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.348163 0.219168C0.748196 -0.125842 1.33192 -0.0559202 1.65195 0.375342L5.82586 6.00004L1.65194 11.6247C1.33192 12.056 0.748195 12.1259 0.348162 11.7809C-0.0518709 11.4359 -0.116729 10.8066 0.203297 10.3753L3.45008 6.00004L0.203298 1.62473C-0.116728 1.19347 -0.05187 0.564177 0.348163 0.219168ZM4.5223 0.219168C4.92234 -0.125841 5.50606 -0.0559197 5.82609 0.375342L10 6.00004L5.82609 11.6247C5.50606 12.056 4.92234 12.1259 4.5223 11.7809C4.12227 11.4359 4.05741 10.8066 4.37744 10.3753L7.62422 6.00004L4.37744 1.62473C4.05741 1.19347 4.12227 0.564178 4.5223 0.219168Z" fill="#999999"/>
               </svg>
